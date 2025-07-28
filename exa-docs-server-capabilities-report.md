@@ -16,12 +16,48 @@ The Exa Documentation Server is a Model Context Protocol (MCP) server that provi
    - Content truncation for large documents
 3. **Specialized Tool Implementations**: Five tools, each focused on specific documentation domains
 
+### Documentation Structure
+
+The `.exa-docs/` directory is organized into clear categories for optimal tool performance:
+
+```
+.exa-docs/
+├── api/                    # API endpoint documentation
+│   ├── search.md
+│   ├── get-contents.md
+│   ├── find-similar-links.md
+│   ├── answer.md
+│   └── research/          # Research API endpoints
+├── concepts/              # Conceptual documentation
+│   ├── how-exa-search-works.md
+│   ├── exas-capabilities-explained.md
+│   └── the-exa-index.md
+├── guides/                # How-to guides and tutorials
+│   ├── getting-started.md
+│   ├── quickstart.md
+│   ├── rag-quickstart.md
+│   └── tool-calling-*.md
+├── admin/                 # Administrative documentation
+│   ├── rate-limits.md
+│   ├── security.md
+│   └── setting-up-team.md
+├── reference/             # Reference materials
+│   ├── faqs.md
+│   └── openapi-spec.md
+├── examples/              # Code examples
+├── integrations/          # SDK and framework integrations
+├── sdks/                  # SDK specifications
+├── websets/               # Websets API documentation
+└── changelog/             # Version history
+```
+
 ### Key Design Principles
 
 - **Offline-First**: Pre-scraped documentation stored locally for fast, network-independent access
 - **Smart Retrieval**: Path-based access with fuzzy matching fallbacks
 - **Relevance Scoring**: Title matches weighted 10x higher than content matches
 - **Graceful Degradation**: Helpful suggestions when exact paths aren't found
+- **Category-Aligned Structure**: Folder organization matches tool category expectations
 
 ## Tool Capabilities
 
@@ -42,14 +78,20 @@ The Exa Documentation Server is a Model Context Protocol (MCP) server that provi
 
 **Example Use Case**:
 ```javascript
-// Get all reference documentation
-await exaDocs({ category: 'reference' })
+// Get all API documentation
+await exaDocs({ category: 'api' })
+
+// Get conceptual documentation
+await exaDocs({ category: 'concepts' })
+
+// Get administrative guides
+await exaDocs({ category: 'admin' })
 
 // Search for specific API features
 await exaDocs({ query: ['search', 'contents', 'livecrawl'] })
 
 // Retrieve specific documentation
-await exaDocs({ paths: ['reference/search.md', 'reference/get-contents.md'] })
+await exaDocs({ paths: ['api/search.md', 'api/get-contents.md'] })
 ```
 
 ### 2. exaExamples - Code Examples Tool
@@ -218,7 +260,7 @@ await exaChangelog({
 const concepts = await exaDocs({ query: ['rag', 'retrieval'] })
 
 // 2. Get quickstart guide
-const quickstart = await exaDocs({ paths: ['reference/rag-quickstart.md'] })
+const quickstart = await exaDocs({ paths: ['guides/rag-quickstart.md'] })
 
 // 3. Find implementation examples
 const examples = await exaExamples({ useCase: 'rag' })
@@ -270,16 +312,16 @@ const features = await exaChangelog({ changeType: 'feature' })
 ```javascript
 // 1. Understand Exa's capabilities
 const capabilities = await exaDocs({ 
-  paths: ['reference/exas-capabilities-explained.md'] 
+  paths: ['concepts/exas-capabilities-explained.md'] 
 })
 
 // 2. Review search API documentation
 const searchApi = await exaDocs({ 
-  paths: ['reference/search.md', 'reference/how-exa-search-works.md'] 
+  paths: ['api/search.md', 'concepts/how-exa-search-works.md'] 
 })
 
 // 3. Check rate limits and pricing
-const limits = await exaDocs({ paths: ['reference/rate-limits.md'] })
+const limits = await exaDocs({ paths: ['admin/rate-limits.md'] })
 
 // 4. Find migration examples
 const examples = await exaExamples({ query: ['migration', 'search'] })
@@ -295,7 +337,7 @@ const breaking = await exaChangelog({ changeType: 'breaking' })
 **Tool Combination**:
 ```javascript
 // 1. Understand research capabilities
-const research = await exaDocs({ paths: ['reference/exa-research.md'] })
+const research = await exaDocs({ paths: ['concepts/exa-research.md'] })
 
 // 2. Get research examples
 const researchExamples = await exaExamples({ useCase: 'research' })
@@ -310,7 +352,7 @@ const enrichments = await exaWebsets({
 })
 
 // 5. Configure answer endpoint
-const answer = await exaDocs({ paths: ['reference/answer.md'] })
+const answer = await exaDocs({ paths: ['api/answer.md'] })
 ```
 
 ### Use Case 5: Debugging Integration Issues
@@ -370,17 +412,24 @@ const sdkDocs = await exaIntegrations({
 - Combine category filters with search for precision
 - Leverage fuzzy matching for exploration
 
-### 2. Error Handling
+### 2. Category Usage
+- **api**: For endpoint documentation and technical specifications
+- **concepts**: For understanding how Exa works and its capabilities
+- **guides**: For step-by-step tutorials and integration instructions
+- **admin**: For account management, limits, and security information
+- **reference**: For FAQs and OpenAPI specifications
+
+### 3. Error Handling
 - Always check for "Path Not Found" responses
 - Use suggested paths from fuzzy matching
 - Implement fallback strategies for critical paths
 
-### 3. Performance Optimization
+### 4. Performance Optimization
 - Cache frequently accessed documentation
 - Use category filters to reduce search scope
 - Batch related queries when possible
 
-### 4. Integration Patterns
+### 5. Integration Patterns
 - Start with high-level concepts before implementation details
 - Check changelog before major updates
 - Use examples as templates for implementation
@@ -407,14 +456,26 @@ const sdkDocs = await exaIntegrations({
 - Path changes require server updates
 - No automatic path migration
 
+## Recent Improvements
+
+### Enhanced Category Support (July 2025)
+The documentation structure has been reorganized to align perfectly with the tool's category expectations:
+- Moved API endpoints from `reference/` to `api/`
+- Separated conceptual docs into `concepts/`
+- Organized tutorials and guides into `guides/`
+- Created dedicated `admin/` folder for administrative documentation
+
+This restructuring enables the full power of category-based filtering in the `exaDocs` tool, making documentation discovery more intuitive and efficient.
+
 ## Conclusion
 
 The Exa Documentation Server MCP provides comprehensive access to Exa.ai's documentation ecosystem through five specialized tools. Its offline-first design, intelligent search capabilities, and structured access patterns make it an invaluable resource for AI assistants working with Exa's API.
 
 The server excels at:
-- Rapid documentation retrieval
+- Rapid documentation retrieval with category-based filtering
 - Cross-referenced learning paths
 - Version-aware development
 - Multi-tool workflows for complex tasks
+- Intuitive organization matching user expectations
 
 By leveraging these capabilities, AI assistants can provide accurate, contextual, and timely information about Exa.ai's services, enabling developers to build sophisticated applications with confidence.
