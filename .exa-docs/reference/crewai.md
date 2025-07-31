@@ -1,7 +1,7 @@
 # CrewAI agents with Exa - Exa
 
 > **Source:** https://docs.exa.ai/reference/crewai  
-> **Last Updated:** 2025-07-16T10:33:49.582Z
+> **Last Updated:** 2025-07-31T04:43:39.083Z
 
 ---
 
@@ -31,7 +31,7 @@ CrewAI agents with Exa
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -496,8 +496,8 @@ Best,
 [Your Name]
 ```
 
+[OpenAI Exa Wrapper](/reference/openai)[RAG with LlamaIndex](/reference/llamaindex)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[OpenAI Exa Wrapper](/reference/openai)[RAG with LlamaIndex](/reference/llamaindex)

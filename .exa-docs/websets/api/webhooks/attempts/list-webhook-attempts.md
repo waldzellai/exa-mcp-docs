@@ -1,7 +1,7 @@
 # List webhook attempts - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/attempts/list-webhook-attempts  
-> **Last Updated:** 2025-07-16T10:35:48.521Z
+> **Last Updated:** 2025-07-31T04:45:51.405Z
 
 ---
 
@@ -31,7 +31,7 @@ List webhook attempts
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -286,10 +286,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -380,11 +376,19 @@ Available options:
 
 `import.completed`,
 
-`import.processing`,
-
 `webset.item.created`,
 
 `webset.item.enriched`,
+
+`monitor.created`,
+
+`monitor.updated`,
+
+`monitor.deleted`,
+
+`monitor.run.created`,
+
+`monitor.run.completed`,
 
 `webset.export.created`,
 
@@ -409,3 +413,7 @@ List of webhook attempts
 The response is of type `object`.
 
 [List webhooks](/websets/api/webhooks/list-webhooks)[Verifying Signatures](/websets/api/webhooks/verifying-signatures)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

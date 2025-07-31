@@ -1,7 +1,7 @@
 # How Exa Search Works - Exa
 
 > **Source:** https://docs.exa.ai/reference/how-exa-search-works  
-> **Last Updated:** 2025-07-16T10:34:04.351Z
+> **Last Updated:** 2025-07-31T04:43:53.856Z
 
 ---
 
@@ -31,7 +31,7 @@ How Exa Search Works
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -255,58 +255,51 @@ How Exa Search Works
 
 On this page
 
-*   [Introducing neural searches via ‘next-link prediction’](#introducing-neural-searches-via-%E2%80%98next-link-prediction%E2%80%99)
-*   [Combining neural and keyword - the best of both worlds through Exa Auto search](#combining-neural-and-keyword-the-best-of-both-worlds-through-exa-auto-search)
+*   [Neural search via ‘next-link prediction’](#neural-search-via-%E2%80%98next-link-prediction%E2%80%99)
+*   [Auto search combines keyword and neural](#auto-search-combines-keyword-and-neural)
+*   [Fast search is the world’s fastest search API](#fast-search-is-the-world%E2%80%99s-fastest-search-api)
 
 * * *
 
-## 
+We offer four search types:
 
-[​
-
-](#introducing-neural-searches-via-%E2%80%98next-link-prediction%E2%80%99)
-
-Introducing neural searches via ‘next-link prediction’
-
-At Exa, we’ve built our very own index of high quality web content, and have trained a model to query this index powered by the same embeddings-based technology that makes modern LLMs so powerful.
-
-By using embeddings, we move beyond keyword searches to use ‘next-link prediction’, understanding the semantic content of queries and indexed documents. This method predicts which web links are most relevant based on the semantic meaning, not just direct word matches.
-
-By doing this, our model anticipates the most relevant links by understanding complex queries, including indirect or thematic relationships. This approach is especially effective for exploratory searches, where precise terms may be unknown, or where queries demand many, often semantically dense, layered filters.
+*   **Auto (Default)** - Our best search, intelligently combines keyword and neural
+*   **Fast** - A streamlined implementation of keyword and neural search for faster results
+*   **Keyword** - Uses google-like search to find results with matching keywords
+*   **Neural** - Our AI search model, predicts relevant links based on query meaning
 
 ## 
 
 [​
 
-](#combining-neural-and-keyword-the-best-of-both-worlds-through-exa-auto-search)
+](#neural-search-via-%E2%80%98next-link-prediction%E2%80%99)
 
-Combining neural and keyword - the best of both worlds through Exa Auto search
+Neural search via ‘next-link prediction’
 
-Sometimes keyword search is the best way to query the web - for instance, you may have a specific word or piece of jargon that you want to match explicitly with results (often the case with proper nouns like place-names). In these cases, semantic searches are not the most useful.
+At Exa, we’ve built our very own index of high quality web content, and have trained a model to query this index powered by the same embeddings-based technology that makes modern LLMs so powerful. By using embeddings, we move beyond keyword searches to use ‘next-link prediction’, understanding the semantic content of queries and indexed documents. This method predicts which web links are most relevant based on the semantic meaning, not just direct word matches. By doing this, our model anticipates the most relevant links by understanding complex queries, including indirect or thematic relationships. This approach is especially effective for exploratory searches, where precise terms may be unknown, or where queries demand many, often semantically dense, layered filters. You can query our search model directly with search type `neural`. It is also incorporated into the `auto` and `fast` search types.
 
-To ensure our engine is comprehensive, we have built keyword search in parallel to our novel neural search capability. This means Exa is an ‘all-in-one’ search solution, no matter what your query needs are.
+## 
 
-Lastly, we surface both query archetypes through ‘Auto search’, to give users the best of both worlds - we have built a small categorization model that understands your query, our search infrastructure and therefore routes your particular query to the best matched search type.
+[​
 
-See here for the way we set Auto search in a simple Python example. Type has options `neural`, `keyword` or `auto`.
+](#auto-search-combines-keyword-and-neural)
 
-At one point, Exa auto Auto search was named Magic Search - this has been changed
+Auto search combines keyword and neural
 
-Python
+Sometimes keyword search is the best way to query the web - for instance, you may have a specific word or piece of jargon that you want to match explicitly with results (often the case with proper nouns like place-names). In these cases, semantic searches are not the most useful. To ensure our engine is comprehensive, we have built keyword search in parallel to our novel neural search capability. This means Exa is an ‘all-in-one’ search solution, no matter what your query needs are. We surface both query archetypes through search type `auto`, to give users the best of both worlds. It uses a reranker model that understands your query and ranks results from keyword and neural search according to relevance.
 
-Copy
+## 
 
-Ask AI
+[​
 
-```
-result = exa.search_and_contents(
-  "hottest AI startups",
-  type="auto",
-)
-```
+](#fast-search-is-the-world%E2%80%99s-fastest-search-api)
+
+Fast search is the world’s fastest search API
+
+We built Fast search for when latency matters most. It trades off a small amount of performance for significant speed improvements. Fast search is best for applications where saving milliseconds matters. For real-time applications like interactive voice agents and autocomplete, faster search means a better user experience. Long running agents, like deep research, might use dozens or hundreds of search calls to complete their task so speed improvements add up. We achieved these latency improvements by making streamlined versions of our keyword, neural, and reranker models. You can expect Fast search to run in less than 400 milliseconds, not accounting for network latency or live crawling contents.
+
+[OpenAI Responses API](/reference/openai-responses-api-with-exa)[The Exa Index](/reference/the-exa-index)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[OpenAI Responses API](/reference/openai-responses-api-with-exa)[The Exa Index](/reference/the-exa-index)

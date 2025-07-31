@@ -1,7 +1,7 @@
 # Exploring your results - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/walkthroughs/Exploring-your-results  
-> **Last Updated:** 2025-07-16T10:36:37.854Z
+> **Last Updated:** 2025-07-31T04:46:45.778Z
 
 ---
 
@@ -31,7 +31,7 @@ Exploring your results
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -170,8 +170,8 @@ Matched Result: matched results are results that match all of your criteria.
 
 Evaluated Results: evaluated results are all the possible results that were analyzed by Websets - some were deemed matches, some were deemed that they did not comply with your criteria.
 
+[Creating Enrichments](/websets/dashboard/walkthroughs/Creating-enrichments) [Adding and Managing Your Team Members in Websets](/websets/dashboard/walkthroughs/Managing-Team-Members)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Creating Enrichments](/websets/dashboard/walkthroughs/Creating-enrichments) [Adding and Managing Your Team Members in Websets](/websets/dashboard/walkthroughs/Managing-Team-Members)

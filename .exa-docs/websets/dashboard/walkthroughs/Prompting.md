@@ -1,7 +1,7 @@
 # Prompting Websets - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/walkthroughs/Prompting  
-> **Last Updated:** 2025-07-16T10:36:42.135Z
+> **Last Updated:** 2025-07-31T04:46:54.279Z
 
 ---
 
@@ -31,7 +31,7 @@ Prompting Websets
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -171,12 +171,10 @@ Websets is a web research agent designed to find a perfect list of results that 
 **How not to prompt Websets:** Websets is not an answer engine, so it’s not meant for queries like “How your I think about xyz” or “Give me a report on abc”.
 
 *   Type in your query, thinking of the type of thing you’re trying to find (e.g. Companies, People, Research Papers, Articles, Reports, etc.)
-    
 *   Describing in detail the type of results you’d like. Common descriptors include location, size, theme, industry, qualifiers (e.g. have ISO certification, know rust), past experience etc.
-    
+
+[Adding and Managing Your Team Members in Websets](/websets/dashboard/walkthroughs/Managing-Team-Members)[Downloading and Sharing Your Results](/websets/dashboard/walkthroughs/Sharing-and-Downloading-Your-Results)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Adding and Managing Your Team Members in Websets](/websets/dashboard/walkthroughs/Managing-Team-Members)[Downloading and Sharing Your Results](/websets/dashboard/walkthroughs/Sharing-and-Downloading-Your-Results)

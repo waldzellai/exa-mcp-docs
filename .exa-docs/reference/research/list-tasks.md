@@ -1,7 +1,7 @@
 # List tasks - Exa
 
 > **Source:** https://docs.exa.ai/reference/research/list-tasks  
-> **Last Updated:** 2025-07-16T10:34:28.343Z
+> **Last Updated:** 2025-07-31T04:44:18.023Z
 
 ---
 
@@ -31,7 +31,7 @@ List tasks
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -376,10 +376,6 @@ Ask AI
 
 ](https://dashboard.exa.ai/api-keys)
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -433,3 +429,7 @@ List of research tasks
 The response is of type `object`.
 
 [Get a task](/reference/research/get-a-task)[Websets](/reference/websets-api)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

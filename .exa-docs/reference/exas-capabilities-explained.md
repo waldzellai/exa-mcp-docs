@@ -1,7 +1,7 @@
 # Exa's Capabilities Explained - Exa
 
 > **Source:** https://docs.exa.ai/reference/exas-capabilities-explained  
-> **Last Updated:** 2025-07-16T10:33:53.832Z
+> **Last Updated:** 2025-07-31T04:43:43.335Z
 
 ---
 
@@ -31,7 +31,7 @@ Exa's Capabilities Explained
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -550,8 +550,8 @@ and potentially lead to more efficient identification of promising drug candidat
 result = exa.search(long_query, type="neural")
 ```
 
+[Contents retrieval with Exa API](/reference/contents-retrieval-with-exa-api)[Crawling Subpages with Exa](/reference/crawling-subpages-with-exa)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Contents retrieval with Exa API](/reference/contents-retrieval-with-exa-api)[Crawling Subpages with Exa](/reference/crawling-subpages-with-exa)

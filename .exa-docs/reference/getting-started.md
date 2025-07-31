@@ -1,7 +1,7 @@
 # Welcome to Exa - Exa
 
 > **Source:** https://docs.exa.ai/reference/getting-started  
-> **Last Updated:** 2025-07-16T10:34:02.251Z
+> **Last Updated:** 2025-07-31T04:43:51.763Z
 
 ---
 
@@ -31,7 +31,7 @@ Welcome to Exa
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -259,24 +259,12 @@ On this page
 
 * * *
 
-Exa finds the exact content you’re looking for on the web, with four core functionalities:
-
-[**/SEARCH ->**](search)  
-Find webpages using Exa’s embeddings-based or Google-style keyword search.
-
-[**/CONTENTS ->**](get-contents)  
-Obtain clean, up-to-date, parsed HTML from Exa search results.
-
-[**/FINDSIMILAR ->**](find-similar-links)  
-Based on a link, find and return pages that are similar in meaning.
-
-[**/ANSWER ->**](answer)  
-Get direct answers to questions using Exa’s Answer API.
-
-[**/RESEARCH ->**](research/create-a-task)  
-Automate in-depth web research and receive structured JSON results with citations.
-
-  
+Exa finds the exact content you’re looking for on the web, with four core functionalities: [**/SEARCH ->**](search)  
+Find webpages using Exa’s embeddings-based or Google-style keyword search. [**/CONTENTS ->**](get-contents)  
+Obtain clean, up-to-date, parsed HTML from Exa search results. [**/FINDSIMILAR ->**](find-similar-links)  
+Based on a link, find and return pages that are similar in meaning. [**/ANSWER ->**](answer)  
+Get direct answers to questions using Exa’s Answer API. [**/RESEARCH ->**](research/create-a-task)  
+Automate in-depth web research and receive structured JSON results with citations.  
 
 ## 
 
@@ -300,8 +288,6 @@ Explore the API playground and try Exa API.
 
 
 
-
-
 ](https://dashboard.exa.ai)[
 
 ## 
@@ -309,8 +295,6 @@ Explore the API playground and try Exa API.
 QuickStart
 
 Use our SDKs to do your first Exa search.
-
-
 
 
 
@@ -332,8 +316,6 @@ Use our integrations to peform RAG with Exa.
 
 
 
-
-
 ](rag-quickstart)[
 
 ## 
@@ -348,14 +330,12 @@ Learn from our pre-built tutorials and live demos.
 
 
 
-
-
 ](../examples)
 
 ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/be0cab3-blue-wanderer.png)
 
+[Quickstart](/reference/quickstart)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Quickstart](/reference/quickstart)

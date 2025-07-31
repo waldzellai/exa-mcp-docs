@@ -1,7 +1,7 @@
 # Rate Limits - Exa
 
 > **Source:** https://docs.exa.ai/reference/rate-limits  
-> **Last Updated:** 2025-07-16T10:34:21.846Z
+> **Last Updated:** 2025-07-31T04:44:11.393Z
 
 ---
 
@@ -31,7 +31,7 @@ Rate Limits
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -255,12 +255,10 @@ Rate Limits
 
 * * *
 
-Our rate limit for an individual account is currently 5 requests per second.
+Our rate limit for an individual account is currently 5 requests per second. To discuss an Enterprise plan with rate limits above this level, you can contact us at [\[email protected\]](/cdn-cgi/l/email-protection#6c04090000032c09140d420d05)
 
-To discuss an Enterprise plan with rate limits above this level, you can contact us at [\[email protected\]](/cdn-cgi/l/email-protection#731b161f1f1c33160b125d121a)
+[Setting Up and Managing Your Team](/reference/setting-up-team)[Enterprise Documentation & Security](/reference/security)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Setting Up and Managing Your Team](/reference/setting-up-team)[Enterprise Documentation & Security](/reference/security)

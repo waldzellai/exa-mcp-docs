@@ -1,7 +1,7 @@
 # Event Types - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/events/types  
-> **Last Updated:** 2025-07-16T10:35:07.736Z
+> **Last Updated:** 2025-07-31T04:44:57.681Z
 
 ---
 
@@ -31,7 +31,7 @@ Event Types
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -157,7 +157,7 @@ On this page
 *   [Webset](#webset)
 *   [Search](#search)
 *   [Item](#item)
-*   [Export](#export)
+*   [Import](#import)
 
 The Websets API uses events to notify you about changes in your Websets. You can monitor these events through our [events endpoint](/websets/api/events/list-all-events) or by setting up [webhooks](/websets/api/webhooks/create-a-webhook).
 
@@ -202,12 +202,12 @@ Item
 
 [​
 
-](#export)
+](#import)
 
-Export
+Import
 
-*   `webset.export.created` - Emitted when a new export is initiated.
-*   `webset.export.completed` - Emitted when an export is ready for download.
+*   `import.created` - Emitted when a new import is initiated.
+*   `import.completed` - Emitted when an import has been completed.
 
 Each event includes:
 
@@ -223,8 +223,8 @@ You can use these events to:
 *   Trigger workflows when new items are found
 *   Monitor the status of your exports
 
+[Verifying Signatures](/websets/api/webhooks/verifying-signatures)[List all Events](/websets/api/events/list-all-events)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Verifying Signatures](/websets/api/webhooks/verifying-signatures)[List all Events](/websets/api/events/list-all-events)

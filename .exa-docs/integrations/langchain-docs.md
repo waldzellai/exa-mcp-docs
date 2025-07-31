@@ -1,7 +1,7 @@
 # LangChain Docs - Exa
 
 > **Source:** https://docs.exa.ai/integrations/langchain-docs  
-> **Last Updated:** 2025-07-16T10:33:32.434Z
+> **Last Updated:** 2025-07-31T04:43:21.944Z
 
 ---
 
@@ -31,7 +31,7 @@ LangChain Docs
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -85,12 +85,10 @@ LangChain Docs
     
     ](/integrations/ibm-watsonx-docs)
 
-Learn how to use Exa’s search API with LangChain. LangChain has a dedicated Exa tool. This enables AI agents to perform web search.
+Learn how to use Exa’s search API with LangChain. LangChain has a dedicated Exa tool. This enables AI agents to perform web search. For detailed instructions on using Exa with LangChain, visit the [LangChain documentation](https://python.langchain.com/v0.2/docs/integrations/tools/exa_search/#using-the-exa-sdk-as-langchain-agent-tools).
 
-For detailed instructions on using Exa with LangChain, visit the [LangChain documentation](https://python.langchain.com/v0.2/docs/integrations/tools/exa_search/#using-the-exa-sdk-as-langchain-agent-tools).
+[OpenRouter](/integrations/openrouter)[LlamaIndex Docs](/integrations/llamaIndex-docs)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[OpenRouter](/integrations/openrouter)[LlamaIndex Docs](/integrations/llamaIndex-docs)

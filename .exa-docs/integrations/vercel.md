@@ -1,7 +1,7 @@
 # Vercel AI SDK - Exa
 
 > **Source:** https://docs.exa.ai/integrations/vercel  
-> **Last Updated:** 2025-07-16T10:33:38.920Z
+> **Last Updated:** 2025-07-31T04:43:28.359Z
 
 ---
 
@@ -31,7 +31,7 @@ Vercel AI SDK
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -89,9 +89,7 @@ On this page
 
 *   [Web Search Tool Implementation](#web-search-tool-implementation)
 
-Learn how to build a web agent with Vercel AI SDK and Exa. Create intelligent agents that can search the web for up-to-date information and provide contextual responses.
-
-**[View the guide in Vercel AI SDK docs →](https://ai-sdk.dev/cookbook/node/web-search-agent#exa)**
+Learn how to build a web agent with Vercel AI SDK and Exa. Create intelligent agents that can search the web for up-to-date information and provide contextual responses. **[View the guide in Vercel AI SDK docs →](https://ai-sdk.dev/cookbook/node/web-search-agent#exa)**
 
 ## 
 
@@ -146,8 +144,8 @@ const { text } = await generateText({
 
 For detailed instructions on building web agents with Vercel AI SDK and Exa, visit the [Vercel AI SDK documentation](https://ai-sdk.dev/cookbook/node/web-search-agent#exa).
 
+[OpenRouter](/integrations/openrouter)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[OpenRouter](/integrations/openrouter)

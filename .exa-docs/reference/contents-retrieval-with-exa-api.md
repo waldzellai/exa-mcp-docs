@@ -1,7 +1,7 @@
 # Contents retrieval with Exa API - Exa
 
 > **Source:** https://docs.exa.ai/reference/contents-retrieval-with-exa-api  
-> **Last Updated:** 2025-07-16T10:33:45.280Z
+> **Last Updated:** 2025-07-31T04:43:34.785Z
 
 ---
 
@@ -31,7 +31,7 @@ Contents retrieval with Exa API
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -256,7 +256,7 @@ Contents retrieval with Exa API
 On this page
 
 *   [Text (text=True):](#text-text%3Dtrue-%3A)
-*   [Highlights (highlights=True):](#highlights-highlights%3Dtrue-%3A)
+*   [Highlights:](#highlights%3A)
 *   [Summary (summary=True):](#summary-summary%3Dtrue-%3A)
 *   [Structured Summaries](#structured-summaries)
 *   [Images and favicons](#images-and-favicons)
@@ -280,11 +280,32 @@ Returns the full text content of the result, such as the main body of an article
 
 [​
 
-](#highlights-highlights%3Dtrue-%3A)
+](#highlights%3A)
 
-Highlights (highlights=True):
+Highlights:
 
-Delivers key excerpts from the text that are most relevant to your search query, emphasizing important information within the content. This is also extractive content from the source.
+Delivers key excerpts from the text that are most relevant to your search query, emphasizing important information within the content. This is also extractive content from the source. You can configure highlights in two ways:
+
+1.  **Simple boolean** (`highlights=True`): Returns default highlights based on the search query
+2.  **Detailed configuration** (pass as an object):
+    
+    Copy
+    
+    Ask AI
+    
+    ```
+    {
+      "highlights": {
+        "query": "Your specific highlight query",
+        "numSentences": 3,
+        "highlightsPerUrl": 5
+      }
+    }
+    ```
+    
+    *   `query`: The specific query to use for generating highlights (if different from search query)
+    *   `numSentences`: Number of sentences per highlight
+    *   `highlightsPerUrl`: Maximum number of highlights to return per URL
 
 ## 
 
@@ -329,11 +350,7 @@ Ask AI
 }
 ```
 
-The API will return the summary as a JSON string that matches your schema structure, which you can parse to access the structured data.
-
-By specifying these options in your API call, you can control the depth and focus of the information returned, making your search results more actionable and relevant.
-
-To see the full configurability of the contents returns, [check out our Dashboard](https://dashboard.exa.ai/) and sample queries.
+The API will return the summary as a JSON string that matches your schema structure, which you can parse to access the structured data. By specifying these options in your API call, you can control the depth and focus of the information returned, making your search results more actionable and relevant. To see the full configurability of the contents returns, [check out our Dashboard](https://dashboard.exa.ai/) and sample queries.
 
 ## 
 
@@ -356,9 +373,7 @@ When making API requests, Exa can return:
 
 Crawl Errors
 
-The contents endpoint provides detailed status information for each URL through the `statuses` field in the response. The endpoint only returns an error if there’s an internal issue on Exa’s end - all other cases are reported through individual URL statuses.
-
-Each response includes a `statuses` array with status information for each requested URL:
+The contents endpoint provides detailed status information for each URL through the `statuses` field in the response. The endpoint only returns an error if there’s an internal issue on Exa’s end - all other cases are reported through individual URL statuses. Each response includes a `statuses` array with status information for each requested URL:
 
 Copy
 
@@ -403,8 +418,8 @@ for status in result.statuses:
 
 This allows you to handle different failure scenarios appropriately for each URL in your request.
 
+[The Exa Index](/reference/the-exa-index)[Exa's Capabilities Explained](/reference/exas-capabilities-explained)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[The Exa Index](/reference/the-exa-index)[Exa's Capabilities Explained](/reference/exas-capabilities-explained)

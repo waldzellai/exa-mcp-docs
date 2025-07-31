@@ -1,7 +1,7 @@
 # Delete Import - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/imports/delete-import  
-> **Last Updated:** 2025-07-16T10:35:12.038Z
+> **Last Updated:** 2025-07-31T04:45:03.182Z
 
 ---
 
@@ -31,7 +31,7 @@ Delete Import
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -262,10 +262,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -305,3 +301,7 @@ Import deleted successfully
 The response is of type `object`.
 
 [Update Import](/websets/api/imports/update-import)[List Imports](/websets/api/imports/list-imports)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

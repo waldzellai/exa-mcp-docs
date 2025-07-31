@@ -1,7 +1,7 @@
 # Get Import - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/imports/get-import  
-> **Last Updated:** 2025-07-16T10:35:14.219Z
+> **Last Updated:** 2025-07-31T04:45:05.361Z
 
 ---
 
@@ -31,7 +31,7 @@ Get Import
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -262,10 +262,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -305,3 +301,7 @@ Import details
 The response is of type `object`.
 
 [Create an Import](/websets/api/imports/create-an-import)[Update Import](/websets/api/imports/update-import)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

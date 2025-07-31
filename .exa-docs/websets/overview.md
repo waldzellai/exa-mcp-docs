@@ -1,7 +1,7 @@
 # Welcome to Websets - Exa
 
 > **Source:** https://docs.exa.ai/websets/overview  
-> **Last Updated:** 2025-07-16T10:34:52.547Z
+> **Last Updated:** 2025-07-31T04:44:42.183Z
 
 ---
 
@@ -31,7 +31,7 @@ Welcome to Websets
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -180,8 +180,8 @@ Use Websets programatically through our API.
 
 ](api)
 
+[FAQ](/websets/faq)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[FAQ](/websets/faq)

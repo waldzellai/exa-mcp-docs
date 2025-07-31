@@ -1,7 +1,7 @@
 # Create a task - Exa
 
 > **Source:** https://docs.exa.ai/reference/research/create-a-task  
-> **Last Updated:** 2025-07-16T10:34:24.001Z
+> **Last Updated:** 2025-07-31T04:44:13.538Z
 
 ---
 
@@ -31,7 +31,7 @@ Create a task
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -382,10 +382,6 @@ Ask AI
 
 ](https://dashboard.exa.ai/api-keys)
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -415,3 +411,7 @@ Research task created
 The response is of type `object`.
 
 [Answer](/reference/answer)[Get a task](/reference/research/get-a-task)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

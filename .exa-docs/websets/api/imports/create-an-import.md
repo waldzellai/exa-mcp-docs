@@ -1,7 +1,7 @@
 # Create an Import - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/imports/create-an-import  
-> **Last Updated:** 2025-07-16T10:35:09.845Z
+> **Last Updated:** 2025-07-31T04:45:01.029Z
 
 ---
 
@@ -31,7 +31,7 @@ Create an Import
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -290,10 +290,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -323,3 +319,7 @@ Import created successfully
 The response to a successful import. Includes the upload URL and the upload valid until date.
 
 [Cancel a running Enrichment](/websets/api/websets/enrichments/cancel-a-running-enrichment)[Get Import](/websets/api/imports/get-import)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

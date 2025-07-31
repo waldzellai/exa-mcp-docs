@@ -1,7 +1,7 @@
 # OpenAI Responses API - Exa
 
 > **Source:** https://docs.exa.ai/reference/openai-responses-api-with-exa  
-> **Last Updated:** 2025-07-16T10:34:13.062Z
+> **Last Updated:** 2025-07-31T04:44:02.550Z
 
 ---
 
@@ -31,7 +31,7 @@ OpenAI Responses API
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -269,9 +269,7 @@ On this page
 
 What is Exa?
 
-Exa is the search engine built for AI. It finds information from across the web and delivers both links and the actual content from pages, making it easy to use with AI models.
-
-Exa uses neural search technology to understand the meaning of queries, not just keywords. The API works with both semantic search and traditional keyword methods.
+Exa is the search engine built for AI. It finds information from across the web and delivers both links and the actual content from pages, making it easy to use with AI models. Exa uses neural search technology to understand the meaning of queries, not just keywords. The API works with both semantic search and traditional keyword methods.
 
 * * *
 
@@ -705,7 +703,6 @@ Let’s break down how the Exa web search tool works with OpenAI’s Response AP
     ```
     
 2.  **Initial Request**: When you send a message to OpenAI, the API looks at your message and decides if it needs to search the web. If it does, instead of giving a direct answer, it will return a “function call” in its output.
-    
 3.  **Function Call**: If OpenAI decides to search, it returns something like:
     
     Copy
@@ -721,17 +718,15 @@ Let’s break down how the Exa web search tool works with OpenAI’s Response AP
     ```
     
 4.  **Search Execution**: Your code then:
-    
     *   Takes this search query
     *   Calls Exa’s API to perform the actual web search
     *   Gets real web results back
 5.  **Final Response**: You send these web results back to OpenAI, and it gives you a final answer using the fresh information from the web.
-    
 
 This back-and-forth process happens automatically in the code above, letting OpenAI use Exa’s web search when it needs to find current information.
+
+[OpenAI Chat Completions](/reference/chat-completions)[How Exa Search Works](/reference/how-exa-search-works)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[OpenAI Chat Completions](/reference/chat-completions)[How Exa Search Works](/reference/how-exa-search-works)

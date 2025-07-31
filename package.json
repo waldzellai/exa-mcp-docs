@@ -1,10 +1,10 @@
 {
-  "name": "@exa/mcp-docs-server",
+  "name": "@waldzellai/exa-mcp-docs",
   "version": "1.0.0",
   "description": "Exa API Documentation MCP Server - Comprehensive offline-first access to Exa.ai documentation",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
   "bin": {
-    "exa-docs-server": "dist/index.js"
+    "exa-docs-server": "dist/index.mjs"
   },
   "scripts": {
     "build": "tsup",
@@ -14,7 +14,7 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "prepare": "npm run build",
-    "start": "node dist/index.js"
+    "start": "node dist/index.mjs"
   },
   "keywords": [
     "exa",
@@ -28,7 +28,7 @@
   "author": "Exa Labs",
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.6.0",
+    "@modelcontextprotocol/sdk": "^1.7.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -52,10 +52,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/exa-labs/exa-docs-server.git"
+    "url": "https://github.com/glassBead-tc/exa-documentation-server.git"
   },
   "bugs": {
-    "url": "https://github.com/exa-labs/exa-docs-server/issues"
+    "url": "https://github.com/glassBead-tc/exa-documentation-server/issues"
   },
-  "homepage": "https://github.com/exa-labs/exa-docs-server#readme"
+  "homepage": "https://github.com/glassBead-tc/exa-documentation-server#readme"
 }

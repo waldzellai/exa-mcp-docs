@@ -1,7 +1,7 @@
 # List all Items for a Webset - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/items/list-all-items-for-a-webset  
-> **Last Updated:** 2025-07-16T10:36:16.423Z
+> **Last Updated:** 2025-07-31T04:46:21.862Z
 
 ---
 
@@ -31,7 +31,7 @@ List all Items for a Webset
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -340,10 +340,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -396,11 +392,11 @@ limit
 
 number
 
-default:25
+default:20
 
 The number of results to return
 
-Required range: `1 <= x <= 200`
+Required range: `1 <= x <= 100`
 
 [​
 
@@ -421,3 +417,7 @@ Webset Items
 The response is of type `object`.
 
 [Delete an Item](/websets/api/websets/items/delete-an-item)[Create a Search](/websets/api/websets/searches/create-a-search)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

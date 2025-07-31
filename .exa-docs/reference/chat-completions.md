@@ -1,7 +1,7 @@
 # OpenAI Chat Completions - Exa
 
 > **Source:** https://docs.exa.ai/reference/chat-completions  
-> **Last Updated:** 2025-07-16T10:33:43.151Z
+> **Last Updated:** 2025-07-31T04:43:32.613Z
 
 ---
 
@@ -31,7 +31,7 @@ OpenAI Chat Completions
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -361,8 +361,8 @@ for chunk in completion:
         print(chunk.choices[0].delta.content, end="", flush=True)
 ```
 
+[Tool calling with Claude](/reference/tool-calling-with-claude)[OpenAI Responses API](/reference/openai-responses-api-with-exa)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Tool calling with Claude](/reference/tool-calling-with-claude)[OpenAI Responses API](/reference/openai-responses-api-with-exa)

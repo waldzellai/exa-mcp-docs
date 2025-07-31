@@ -1,7 +1,7 @@
 # RAG Q&A - Exa
 
 > **Source:** https://docs.exa.ai/examples/exa-rag  
-> **Last Updated:** 2025-07-16T10:33:04.452Z
+> **Last Updated:** 2025-07-31T04:42:53.723Z
 
 ---
 
@@ -31,7 +31,7 @@ RAG Q&A
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -201,11 +201,7 @@ The Jupyter notebook for this tutorial is available on [Colab](https://colab.res
 
 Answer your questions with context
 
-LLMs are powerful because they compress large amounts of data into a format that allows convenient access, but this compressions isn’t lossless. LLMs are prone to hallucination, corrupting facts and details from training data.
-
-To get around this fundamental issue with LLM reliability, we can use Exa to bring the most relevant data into context—a fancy way of saying: put the info in the LLM prompt directly. This lets us combine the compressed data and _reasoning abilities_ of the LLM with a curated selection of uncompressed, accurate data for the problem at hand for the best answers possible.
-
-Exa’s SDKs make incorporating quality data into your LLM pipelines quick and painless. Install the SDK by running this command in your terminal:
+LLMs are powerful because they compress large amounts of data into a format that allows convenient access, but this compressions isn’t lossless. LLMs are prone to hallucination, corrupting facts and details from training data. To get around this fundamental issue with LLM reliability, we can use Exa to bring the most relevant data into context—a fancy way of saying: put the info in the LLM prompt directly. This lets us combine the compressed data and _reasoning abilities_ of the LLM with a curated selection of uncompressed, accurate data for the problem at hand for the best answers possible. Exa’s SDKs make incorporating quality data into your LLM pipelines quick and painless. Install the SDK by running this command in your terminal:
 
 Shell
 
@@ -543,8 +539,8 @@ https://rationalwiki.org/wiki/Georgism
 
 Using Exa, we can easily find related papers, either for further research or to provide a source for our claims. This is just a brief intro into what Exa can do. For a look at how you can leverage getting full contents, check out [this article](/search-api/get-contents-of-documents-many-different-types).
 
+[Building a Hallucination Checker](/examples/identifying-hallucinations-with-exa)[Company Analyst](/examples/company-analyst)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Building a Hallucination Checker](/examples/identifying-hallucinations-with-exa)[Company Analyst](/examples/company-analyst)

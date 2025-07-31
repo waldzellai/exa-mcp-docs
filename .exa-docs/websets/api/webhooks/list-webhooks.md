@@ -1,7 +1,7 @@
 # List webhooks - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/list-webhooks  
-> **Last Updated:** 2025-07-16T10:35:42.004Z
+> **Last Updated:** 2025-07-31T04:45:44.823Z
 
 ---
 
@@ -31,7 +31,7 @@ List webhooks
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -276,10 +276,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -333,3 +329,7 @@ List of webhooks
 The response is of type `object`.
 
 [Delete a Webhook](/websets/api/webhooks/delete-a-webhook)[List webhook attempts](/websets/api/webhooks/attempts/list-webhook-attempts)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

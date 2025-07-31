@@ -1,7 +1,7 @@
 # Delete an Item - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/items/delete-an-item  
-> **Last Updated:** 2025-07-16T10:36:12.109Z
+> **Last Updated:** 2025-07-31T04:46:16.446Z
 
 ---
 
@@ -31,7 +31,7 @@ Delete an Item
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -332,10 +332,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -387,3 +383,7 @@ Webset Item deleted
 The response is of type `object`.
 
 [Get an Item](/websets/api/websets/items/get-an-item)[List all Items for a Webset](/websets/api/websets/items/list-all-items-for-a-webset)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

@@ -1,7 +1,7 @@
 # Example queries - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/websets-example-queries  
-> **Last Updated:** 2025-07-16T10:36:33.511Z
+> **Last Updated:** 2025-07-31T04:46:39.084Z
 
 ---
 
@@ -31,7 +31,7 @@ Example queries
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -215,8 +215,8 @@ Research Papers
 2.  Research papers that disagree with transformer based model methodology for AI training
 3.  Research papers written by someone with a phd, focused on astrophysics.
 
+[Get started](/websets/dashboard/get-started)[Import from CSV](/websets/dashboard/import-from-csv)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Get started](/websets/dashboard/get-started)[Import from CSV](/websets/dashboard/import-from-csv)

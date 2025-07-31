@@ -1,7 +1,7 @@
 # Get an Event - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/events/get-an-event  
-> **Last Updated:** 2025-07-16T10:35:03.414Z
+> **Last Updated:** 2025-07-31T04:44:52.849Z
 
 ---
 
@@ -31,7 +31,7 @@ Get an Event
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -190,6 +190,7 @@ Ask AI
         "id": "<string>",
         "object": "<string>",
         "status": "created",
+        "websetId": "<string>",
         "query": "<string>",
         "entity": {
           "type": "<string>"
@@ -206,6 +207,16 @@ Ask AI
           {
             "source": "import",
             "id": "<string>"
+          }
+        ],
+        "scope": [
+          {
+            "source": "import",
+            "id": "<string>",
+            "relationship": {
+              "definition": "<string>",
+              "limit": 5.5
+            }
           }
         ],
         "progress": {
@@ -381,6 +392,7 @@ Ask AI
         "id": "<string>",
         "object": "<string>",
         "status": "created",
+        "websetId": "<string>",
         "query": "<string>",
         "entity": {
           "type": "<string>"
@@ -397,6 +409,16 @@ Ask AI
           {
             "source": "import",
             "id": "<string>"
+          }
+        ],
+        "scope": [
+          {
+            "source": "import",
+            "id": "<string>",
+            "relationship": {
+              "definition": "<string>",
+              "limit": 5.5
+            }
           }
         ],
         "progress": {
@@ -518,10 +540,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -570,27 +588,18 @@ application/json
 *   WebsetSearchUpdatedEvent
 *   WebsetSearchCanceledEvent
 *   WebsetSearchCompletedEvent
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
-
-The response is of type `object`.
+*   ImportCreatedEvent
+*   ImportCompletedEvent
+*   MonitorCreatedEvent
+*   MonitorUpdatedEvent
+*   MonitorDeletedEvent
+*   MonitorRunCreatedEvent
+*   MonitorRunCompletedEvent
 
 The response is of type `object`.
 
 [List all Events](/websets/api/events/list-all-events)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

@@ -1,7 +1,7 @@
 # Cancel a running Enrichment - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/enrichments/cancel-a-running-enrichment  
-> **Last Updated:** 2025-07-16T10:36:03.614Z
+> **Last Updated:** 2025-07-31T04:46:06.743Z
 
 ---
 
@@ -31,7 +31,7 @@ Cancel a running Enrichment
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -277,10 +277,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -332,3 +328,7 @@ Enrichment cancelled
 The response is of type `object`.
 
 [Delete an Enrichment](/websets/api/websets/enrichments/delete-an-enrichment)[Create an Import](/websets/api/imports/create-an-import)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

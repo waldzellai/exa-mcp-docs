@@ -1,7 +1,7 @@
 # Create a Monitor - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/create-a-monitor  
-> **Last Updated:** 2025-07-16T10:35:20.629Z
+> **Last Updated:** 2025-07-31T04:45:16.013Z
 
 ---
 
@@ -31,7 +31,7 @@ Create a Monitor
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -362,10 +362,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -395,3 +391,7 @@ Monitor created successfully
 The response is of type `object`.
 
 [List Imports](/websets/api/imports/list-imports)[Get Monitor](/websets/api/monitors/get-monitor)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

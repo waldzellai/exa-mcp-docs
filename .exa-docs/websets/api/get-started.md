@@ -1,7 +1,7 @@
 # Get started - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/get-started  
-> **Last Updated:** 2025-07-16T10:34:58.932Z
+> **Last Updated:** 2025-07-31T04:44:48.481Z
 
 ---
 
@@ -31,7 +31,7 @@ Get started
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -252,200 +252,6 @@ for item in items.data:
     print(f"Item: {item.model_dump_json(indent=2)}")
 ```
 
-Install the latest version of the python SDK with pip. If you want to store your API key in a `.env` file, make sure to install the dotenv library.
-
-Copy
-
-Ask AI
-
-```
-pip install exa-py
-pip install python-dotenv
-```
-
-Create a file called `webset.py` and add the code below:
-
-python
-
-Copy
-
-Ask AI
-
-```
-from exa_py import Exa
-from dotenv import load_dotenv
-from exa_py.websets.types import CreateWebsetParameters, CreateEnrichmentParameters
-
-import os
-
-load_dotenv()
-exa = Exa(os.getenv('EXA_API_KEY'))
-
-# Create a Webset with search and enrichments
-webset = exa.websets.create(
-    params=CreateWebsetParameters(
-        search={
-            "query": "Top AI research labs focusing on large language models",
-            "count": 5
-        },
-        enrichments=[
-            CreateEnrichmentParameters(
-                description="LinkedIn profile of VP of Engineering or related role",
-                format="text",
-            ),
-        ],
-    )
-)
-
-print(f"Webset created with ID: {webset.id}")
-
-# Wait until Webset completes processing
-webset = exa.websets.wait_until_idle(webset.id)
-
-# Retrieve Webset Items
-items = exa.websets.items.list(webset_id=webset.id)
-for item in items.data:
-    print(f"Item: {item.model_dump_json(indent=2)}")
-```
-
-Install the latest version of the JavaScript SDK with npm or pnpm:
-
-Copy
-
-Ask AI
-
-```
-npm install exa-js
-```
-
-Create a file called `webset.js` and add the code below:
-
-javascript
-
-Copy
-
-Ask AI
-
-```
-import * as dotenv from "dotenv";
-import Exa, { CreateWebsetParameters, CreateEnrichmentParameters } from "exa-js";
-
-// Load environment variables
-dotenv.config();
-
-async function main() {
-  const exa = new Exa(process.env.EXA_API_KEY);
-
-  try {
-    // Create a Webset with search and enrichments
-    const webset = await exa.websets.create({
-      search: {
-        query: "Top AI research labs focusing on large language models",
-        count: 10
-      },
-      enrichments: [
-        {
-          description: "Estimate the company'\''s founding year",
-          format: "number"
-        }
-      ],
-    });
-
-    console.log(`Webset created with ID: ${webset.id}`);
-
-    // Wait until Webset completes processing
-    const idleWebset = await exa.websets.waitUntilIdle(webset.id, {
-      timeout: 60000,
-      pollInterval: 2000,
-      onPoll: (status) => console.log(`Current status: ${status}...`)
-    });
-
-    // Retrieve Webset Items
-    const items = await exa.websets.items.list(webset.id, { limit: 10 });
-    for (const item of items.data) {
-      console.log(`Item: ${JSON.stringify(item, null, 2)}`);
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
-
-main();
-```
-
-Pass the following command to your terminal to create a Webset:
-
-bash
-
-Copy
-
-Ask AI
-
-```
-curl --request POST \
-  --url https://api.exa.ai/websets/v0/websets/ \
-  --header 'accept: application/json' \
-  --header 'content-type: application/json' \
-  --header "x-api-key: ${EXA_API_KEY}" \
-  --data '{
-    "search": {
-      "query": "Top AI research labs focusing on large language models",
-      "count": 5
-    },
-    "enrichments": [
-      {
-        "description": "Find the company'\''s founding year",
-        "format": "number"
-      }
-    ]
-  }'
-```
-
-To check the status of your Webset:
-
-bash
-
-Copy
-
-Ask AI
-
-```
-curl --request GET \
-  --url https://api.exa.ai/websets/v0/websets/{WEBSET_ID} \
-  --header 'accept: application/json' \
-  --header "x-api-key: ${EXA_API_KEY}"
-```
-
-To list items in your Webset:
-
-bash
-
-Copy
-
-Ask AI
-
-```
-curl --request GET \
-  --url https://api.exa.ai/websets/v0/websets/{WEBSET_ID}/items \
-  --header 'accept: application/json' \
-  --header "x-api-key: ${EXA_API_KEY}"
-```
-
-Or you can use the `expand` parameter to get the latest 100 within your Webset:
-
-bash
-
-Copy
-
-Ask AI
-
-```
-curl --request GET \
-  --url https://api.exa.ai/websets/v0/websets/{WEBSET_ID}?expand=items \
-  --header 'accept: application/json' \
-  --header "x-api-key: ${EXA_API_KEY}"
-```
-
 * * *
 
 ## 
@@ -462,8 +268,8 @@ What’s next?
 *   Learn about [Enrichments](/websets/api/websets/enrichments) to extract specific data points
 *   See how to [Manage Items](/websets/api/websets/items) in your Webset
 
+[Overview](/websets/api/overview)[How It Works](/websets/api/how-it-works)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Overview](/websets/api/overview)[How It Works](/websets/api/how-it-works)

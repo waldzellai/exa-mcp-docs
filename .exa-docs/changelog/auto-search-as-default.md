@@ -1,7 +1,7 @@
 # Auto search as Default - Exa
 
 > **Source:** https://docs.exa.ai/changelog/auto-search-as-default  
-> **Last Updated:** 2025-07-16T10:32:45.030Z
+> **Last Updated:** 2025-07-31T04:42:34.350Z
 
 ---
 
@@ -15,7 +15,7 @@ Search...
 
 Navigation
 
-Changelog
+May 2025
 
 Auto search as Default
 
@@ -31,7 +31,7 @@ Auto search as Default
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -40,7 +40,31 @@ Auto search as Default
     
     Blog](https://exa.ai/blog)
 
-##### Changelog
+##### July 2025
+
+*   [
+    
+    Geolocation Filter Support
+    
+    
+    
+    ](/changelog/geolocation-filter-support)
+*   [
+    
+    New Fast Search Type
+    
+    
+    
+    ](/changelog/new-fast-search-type)
+*   [
+    
+    Score Deprecation in Auto and Keyword Search
+    
+    
+    
+    ](/changelog/auto-keyword-score-deprecation)
+
+##### June 2025
 
 *   [
     
@@ -56,6 +80,9 @@ Auto search as Default
     
     
     ](/changelog/livecrawl-preferred-option)
+
+##### May 2025
+
 *   [
     
     Contents Endpoint Status Changes
@@ -123,12 +150,10 @@ result = exa.search_and_contents("hottest AI startups", type="neural")
 result = exa.search_and_contents("hottest AI startups", type="keyword")
 ```
 
-We’re confident this update will significantly improve your search experience. If you have any questions or want to chat about how this might impact your specific use case, please reach out to [\[\[email protected\]\]](/cdn-cgi/l/email-protection#90f8f5fcfcffd0f5e8f1bef1f9).
+We’re confident this update will significantly improve your search experience. If you have any questions or want to chat about how this might impact your specific use case, please reach out to [\[\[email protected\]\]](/cdn-cgi/l/email-protection#90f8f5fcfcffd0f5e8f1bef1f9). We can’t wait for you to try out the new Auto search as default!
 
-We can’t wait for you to try out the new Auto search as default!
+[Contents Endpoint Status Changes](/changelog/contents-endpoint-status-changes)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Contents Endpoint Status Changes](/changelog/contents-endpoint-status-changes)

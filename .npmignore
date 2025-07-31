@@ -1,0 +1,65 @@
+# Source files (only need dist/ for npm)
+src/
+scripts/
+specs/
+src/tutorial/
+
+# Test files
+**/*.test.ts
+**/*.spec.ts
+__tests__/
+*.test.*
+*.spec.*
+
+# Development files
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+.hive-mind/
+
+# Documentation source files
+REDUNDANCY_REPORT.md
+TODOS.md
+CHECKLIST.md
+smithery.yaml
+
+# Local config
+claude_code_mcp_config.json
+.env
+.env.*
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Git files
+.git/
+.gitignore
+
+# Build artifacts that shouldn't be published
+*.map
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+src/tools/jump-to-step.ts
+src/tools/next-step.ts
+src/tools/reset-progress.ts
+src/tools/start-tutorial.ts
+src/tools/get-status.ts

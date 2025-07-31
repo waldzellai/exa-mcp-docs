@@ -1,7 +1,7 @@
 # OpenAPI Specification - Exa
 
 > **Source:** https://docs.exa.ai/reference/openapi-spec  
-> **Last Updated:** 2025-07-16T10:34:15.341Z
+> **Last Updated:** 2025-07-31T04:44:04.794Z
 
 ---
 
@@ -31,7 +31,7 @@ OpenAPI Specification
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -1624,8 +1624,8 @@ components:
                     example: "b5947044c4b78efa9552a7c89b306d95"
 ```
 
+[Websets](/reference/websets-api)[RAG with Exa and OpenAI](/reference/rag-quickstart)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Websets](/reference/websets-api)[RAG with Exa and OpenAI](/reference/rag-quickstart)

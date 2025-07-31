@@ -1,7 +1,7 @@
 # Tool calling with Claude - Exa
 
 > **Source:** https://docs.exa.ai/reference/tool-calling-with-claude  
-> **Last Updated:** 2025-07-16T10:34:41.505Z
+> **Last Updated:** 2025-07-31T04:44:31.052Z
 
 ---
 
@@ -31,7 +31,7 @@ Tool calling with Claude
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -277,9 +277,7 @@ Get Started
 
 Prerequisites and installation
 
-Before you can use this guide you will need to have [python3](https://www.python.org/doc/) and [pip](https://pip.pypa.io/en/stable/installation/) installed on your machine.
-
-For the purpose of this guide we will need to install:
+Before you can use this guide you will need to have [python3](https://www.python.org/doc/) and [pip](https://pip.pypa.io/en/stable/installation/) installed on your machine.For the purpose of this guide we will need to install:
 
 *   `anthropic` library to perform Claude API calls and completions
 *   `exa_py` library to perform Exa search
@@ -298,13 +296,7 @@ pip install anthropic exa_py rich
 ```
 
 To successfully use the Exa search client and Anthropic client you will need to have your `ANTHROPIC_API_KEY` and `EXA_API_KEY`  
-set as environment variables.
-
-To get an Anthropic API key, you will first need an Anthropic account, visit the [Anthropic console](https://console.anthropic.com/settings/keys) to generate your API key.
-
-Similarly, to get the Exa API key, you will first need an Exa account, visit the Exa dashboard to generate your API key.
-
-[
+set as environment variables.To get an Anthropic API key, you will first need an Anthropic account, visit the [Anthropic console](https://console.anthropic.com/settings/keys) to generate your API key.Similarly, to get the Exa API key, you will first need an Exa account, visit the Exa dashboard to generate your API key.[
 
 ## Get your Exa API key
 
@@ -527,9 +519,7 @@ if __name__ == "__main__":
     main()
 ```
 
-The implementation creates a loop that continually prompts the user for search queries, uses Claude’s tool use feature to determine when to perform a search, and then uses the Exa search results to provide an informed response to the user’s query.
-
-We also use the rich library to provide a more visually appealing console interface, including coloured output and markdown rendering for the responses.
+The implementation creates a loop that continually prompts the user for search queries, uses Claude’s tool use feature to determine when to perform a search, and then uses the Exa search results to provide an informed response to the user’s query.We also use the rich library to provide a more visually appealing console interface, including coloured output and markdown rendering for the responses.
 
 4
 
@@ -677,9 +667,7 @@ We have now written an advanced search tool that combines the power of Claude’
 
 Running the code
 
-Save the code in a file, e.g. `claude_search.py`, and make sure the `.env` file containing the API keys we previously created is in the same directory as the script.
-
-Then run the script using the following command from your terminal:
+Save the code in a file, e.g. `claude_search.py`, and make sure the `.env` file containing the API keys we previously created is in the same directory as the script.Then run the script using the following command from your terminal:
 
 Bash
 
@@ -730,8 +718,8 @@ So in summary, Steve Rogers is the original and most well-known character to tak
 
 That’s it, enjoy your search agent!
 
+[Tool calling with GPT](/reference/tool-calling-with-gpt4o)[OpenAI Chat Completions](/reference/chat-completions)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Tool calling with GPT](/reference/tool-calling-with-gpt4o)[OpenAI Chat Completions](/reference/chat-completions)

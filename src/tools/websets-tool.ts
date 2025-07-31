@@ -74,7 +74,7 @@ export class ExaWebsetsTool extends BaseTool {
     );
   }
 
-  private formatResults(results: DocumentationFile[], includeExamples: boolean = false): string {
+  protected override formatResults(results: DocumentationFile[], includeExamples: boolean = false): string {
     if (results.length === 0) {
       return 'No Websets documentation found matching your query.';
     }

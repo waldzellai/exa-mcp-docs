@@ -1,7 +1,7 @@
 # Crawling Subpages with Exa - Exa
 
 > **Source:** https://docs.exa.ai/reference/crawling-subpages-with-exa  
-> **Last Updated:** 2025-07-16T10:33:47.467Z
+> **Last Updated:** 2025-07-31T04:43:36.964Z
 
 ---
 
@@ -31,7 +31,7 @@ Crawling Subpages with Exa
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -582,12 +582,10 @@ result = exa.get_contents(
 )
 ```
 
-This ensures you get fresh content from all discovered subpages.
+This ensures you get fresh content from all discovered subpages. Note that regarding usage, additional subpages count as an additional piece of content retrieval for each type you specify.
 
-Note that regarding usage, additional subpages count as an additional piece of content retrieval for each type you specify.
+[Exa's Capabilities Explained](/reference/exas-capabilities-explained)[Exa LiveCrawl](/reference/should-we-use-livecrawl)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Exa's Capabilities Explained](/reference/exas-capabilities-explained)[Exa LiveCrawl](/reference/should-we-use-livecrawl)

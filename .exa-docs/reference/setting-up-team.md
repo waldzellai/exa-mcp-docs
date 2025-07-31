@@ -1,7 +1,7 @@
 # Setting Up and Managing Your Team - Exa
 
 > **Source:** https://docs.exa.ai/reference/setting-up-team  
-> **Last Updated:** 2025-07-16T10:34:34.879Z
+> **Last Updated:** 2025-07-31T04:44:24.502Z
 
 ---
 
@@ -31,7 +31,7 @@ Setting Up and Managing Your Team
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -261,9 +261,7 @@ On this page
 
 * * *
 
-Exa organizes account usage and paid feature access through ‘Teams’:
-
-Upon account creation, you’re placed in a ‘Personal’ Team. You can use the dropdown in the top-left of the Exa dashboard shown below to create a new Team or select between other Teams you have. You can make as many Teams as you like.
+Exa organizes account usage and paid feature access through ‘Teams’: Upon account creation, you’re placed in a ‘Personal’ Team. You can use the dropdown in the top-left of the Exa dashboard shown below to create a new Team or select between other Teams you have. You can make as many Teams as you like.
 
 ## 
 
@@ -273,9 +271,7 @@ Upon account creation, you’re placed in a ‘Personal’ Team. You can use the
 
 Seeing your teams
 
-![Team dropdown (top-left) within the Exa dashboard under Team settings](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/7f964a0-Screenshot_2024-07-14_at_18.55.37.png)
-
-Team dropdown (top-left) within the Exa dashboard under Team settings
+![Team dropdown (top-left) within the Exa dashboard under Team settings](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/7f964a0-Screenshot_2024-07-14_at_18.55.37.png) Team dropdown (top-left) within the Exa dashboard under Team settings
 
 ## 
 
@@ -285,9 +281,7 @@ Team dropdown (top-left) within the Exa dashboard under Team settings
 
 Topping up a Team’s balance
 
-With the desired Team selected, you can top up your credit balance in the Billing page.
-
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/522f9a0-Screenshot_2024-07-14_at_18.57.25.png)
+With the desired Team selected, you can top up your credit balance in the Billing page. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/522f9a0-Screenshot_2024-07-14_at_18.57.25.png)
 
 ## 
 
@@ -297,24 +291,10 @@ With the desired Team selected, you can top up your credit balance in the Billin
 
 Inviting people to your team
 
-Team admins can add members via the Invite feature in Team settings.
+Team admins can add members via the Invite feature in Team settings. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/ac51b5b-Screenshot_2024-07-14_at_18.57.50.png) Once a team member is invited, their status will be ‘Pending’ on the team management menu. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/291cf4a-Screenshot_2024-07-14_at_18.59.29.png) They will receive an email inviting them to join the team. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/5168c00-Screenshot_2024-07-08_at_21.01.10.png) Once accepted, you’ll see both members are ‘Accepted’. All Team members share the usage limits and features of their respective Team’s plan. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/858e63a-Screenshot_2024-07-14_at_19.01.19.png)
 
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/ac51b5b-Screenshot_2024-07-14_at_18.57.50.png)
-
-Once a team member is invited, their status will be ‘Pending’ on the team management menu.
-
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/291cf4a-Screenshot_2024-07-14_at_18.59.29.png)
-
-They will receive an email inviting them to join the team.
-
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/5168c00-Screenshot_2024-07-08_at_21.01.10.png)
-
-Once accepted, you’ll see both members are ‘Accepted’. All Team members share the usage limits and features of their respective Team’s plan.
-
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/858e63a-Screenshot_2024-07-14_at_19.01.19.png)
+[FAQs](/reference/faqs)[Rate Limits](/reference/rate-limits)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[FAQs](/reference/faqs)[Rate Limits](/reference/rate-limits)

@@ -1,7 +1,7 @@
 # RAG with LangChain - Exa
 
 > **Source:** https://docs.exa.ai/reference/langchain  
-> **Last Updated:** 2025-07-16T10:34:06.474Z
+> **Last Updated:** 2025-07-31T04:43:56.103Z
 
 ---
 
@@ -31,7 +31,7 @@ RAG with LangChain
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -555,8 +555,8 @@ Ask AI
 
 As you can see, the output generation is enriched with the context of our Exa Search query result!
 
+[RAG with Exa and OpenAI](/reference/rag-quickstart)[OpenAI Exa Wrapper](/reference/openai)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[RAG with Exa and OpenAI](/reference/rag-quickstart)[OpenAI Exa Wrapper](/reference/openai)

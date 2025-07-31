@@ -1,7 +1,7 @@
 # Exa Research - Exa
 
 > **Source:** https://docs.exa.ai/reference/exa-research  
-> **Last Updated:** 2025-07-16T10:33:51.724Z
+> **Last Updated:** 2025-07-31T04:43:41.225Z
 
 ---
 
@@ -31,7 +31,7 @@ Exa Research
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -270,18 +270,12 @@ On this page
 
 How It Works
 
-The Research API is an **asynchronous, multi-step pipeline** that transforms open-ended questions into structured JSON answers backed by citations. You provide natural-language instructions (e.g. _“Compare the hardware roadmaps of the top GPU manufacturers”_) and an optional JSON Schema describing the output you want.
-
-Under the hood, Exa agents perform multiple steps:
+The Research API is an **asynchronous, multi-step pipeline** that transforms open-ended questions into structured JSON answers backed by citations. You provide natural-language instructions (e.g. _“Compare the hardware roadmaps of the top GPU manufacturers”_) and an optional JSON Schema describing the output you want. Under the hood, Exa agents perform multiple steps:
 
 1.  **Planning** – Your natural-language `instructions` are parsed by an LLM that decomposes the task into one or more research steps.
-    
 2.  **Searching** – Specialized search agents issue semantic and keyword queries to Exa’s search engine, continuously expanding and refining the result set until they can fulfil the request.
-    
 3.  **Reasoning & synthesis** – Reasoning models combine facts across sources and return structured JSON (if you provide `output.schema`) or a detailed markdown report.
-    
 4.  **Citations** – Generates a `citations` object mapping each root-level field to its supporting source passages so you can surface inline sources to your users.
-    
 
 Because tasks are **asynchronous**, you submit a request and immediately receive a `task_id`. You can [poll the task](/reference/research/get-a-task) until it is complete or failed, or [list all tasks](/reference/research/list-tasks) to monitor progress in bulk.
 
@@ -338,9 +332,7 @@ exa-research-pro
 
 Pricing
 
-The Research API now uses **variable usage-based pricing**. You are billed based on how much work and reasoning the research agent does.
-
-NOTE: You are ONLY charged for tasks that complete successfully.
+The Research API now uses **variable usage-based pricing**. You are billed based on how much work and reasoning the research agent does. NOTE: You are ONLY charged for tasks that complete successfully.
 
 Operation
 
@@ -375,13 +367,7 @@ $5/1M tokens
 Specific LLM tokens used for reasoning and synthesis
 
 **Example:**  
-A research task with `exa-research` that performs 6 searches, reads 20 pages of content, and uses 1,000 reasoning tokens would cost:
-
-$0.03 (6 searches × $5/1000)+$0.10 (20 pages × $5/1000)+$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.135\\begin{array}{rl} & \\$0.03 \\text{ (6 searches × \\$5/1000)} \\\\ + & \\$0.10 \\text{ (20 pages × \\$5/1000)} \\\\ + & \\$0.005 \\text{ (1{,}000 reasoning tokens × \\$5/1{,}000{,}000)} \\\\ \\hline & \\$0.135 \\end{array}++​$0.03 (6 searches × $5/1000)$0.10 (20 pages × $5/1000)$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.135​​
-
-For `exa-research-pro`, the same task would cost:
-
-$0.03 (6 searches × $5/1000)+$0.20 (20 pages × $10/1000)+$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.235\\begin{array}{rl} & \\$0.03 \\text{ (6 searches × \\$5/1000)} \\\\ + & \\$0.20 \\text{ (20 pages × \\$10/1000)} \\\\ + & \\$0.005 \\text{ (1{,}000 reasoning tokens × \\$5/1{,}000{,}000)} \\\\ \\hline & \\$0.235 \\end{array}++​$0.03 (6 searches × $5/1000)$0.20 (20 pages × $10/1000)$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.235​​
+A research task with `exa-research` that performs 6 searches, reads 20 pages of content, and uses 1,000 reasoning tokens would cost: $0.03 (6 searches × $5/1000)+$0.10 (20 pages × $5/1000)+$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.135\\begin{array}{rl} & \\$0.03 \\text{ (6 searches × \\$5/1000)} \\\\ + & \\$0.10 \\text{ (20 pages × \\$5/1000)} \\\\ + & \\$0.005 \\text{ (1{,}000 reasoning tokens × \\$5/1{,}000{,}000)} \\\\ \\hline & \\$0.135 \\end{array}++​$0.03 (6 searches × $5/1000)$0.10 (20 pages × $5/1000)$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.135​​ For `exa-research-pro`, the same task would cost: $0.03 (6 searches × $5/1000)+$0.20 (20 pages × $10/1000)+$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.235\\begin{array}{rl} & \\$0.03 \\text{ (6 searches × \\$5/1000)} \\\\ + & \\$0.20 \\text{ (20 pages × \\$10/1000)} \\\\ + & \\$0.005 \\text{ (1{,}000 reasoning tokens × \\$5/1{,}000{,}000)} \\\\ \\hline & \\$0.235 \\end{array}++​$0.03 (6 searches × $5/1000)$0.20 (20 pages × $10/1000)$0.005 (1,000 reasoning tokens × $5/1,000,000)$0.235​​
 
 ## 
 
@@ -555,13 +541,9 @@ Tasks generally complete in 20–40 seconds. Simple tasks that can be solved wit
 What are best practices for writing instructions?
 
 *   Be explicit about the objective and any constraints
-    
 *   Specify the **time range** or **types of sources** to consult if important
-    
 *   Use imperative verbs (“Compare”, “List”, “Summarize”)
-    
 *   Keep it under 4096 characters
-    
 
 Are citations guaranteed?
 
@@ -575,8 +557,8 @@ What happens if my schema validation fails?
 
 If your schema is not valid, an error will surface _before the task is created_ with a message about what is invalid. You will not be charged for such requests.
 
+[Exa LiveCrawl](/reference/should-we-use-livecrawl)[FAQs](/reference/faqs)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Exa LiveCrawl](/reference/should-we-use-livecrawl)[FAQs](/reference/faqs)

@@ -1,7 +1,7 @@
 # Structured Outputs with Instructor - Exa
 
 > **Source:** https://docs.exa.ai/examples/getting-started-with-exa-in-instructor  
-> **Last Updated:** 2025-07-16T10:33:13.029Z
+> **Last Updated:** 2025-07-31T04:43:02.718Z
 
 ---
 
@@ -31,7 +31,7 @@ Structured Outputs with Instructor
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -222,9 +222,7 @@ Ask AI
 pip install exa_py instructor openai
 ```
 
-Ensure API keys are initialized properly. The environment variable names are `EXA_API_KEY` and `OPENAI_API_KEY`.
-
-[
+Ensure API keys are initialized properly. The environment variable names are `EXA_API_KEY` and `OPENAI_API_KEY`.[
 
 ## Get your Exa API key
 
@@ -242,13 +240,7 @@ Ensure API keys are initialized properly. The environment variable names are `EX
 
 2\. Why use Instructor?
 
-Instructor is a Python library that allows you to generate structured outputs from a language model.
-
-We could instruct the LLM to return a structured output, but the output will still be a string, which we need to convert to a dictionary. What if the dictionary is not structured as we want? What if the LLM forgot to add the last ”}” in the JSON? We would have to handle all of these errors manually.
-
-We could use `{ "type": "json_object" }` [](https://platform.openai.com/docs/guides/structured-outputs/json-mode)which will make the LLM return a JSON object. But for this, we would need to provide a JSON schema, which can get [large and complex](https://python.useinstructor.com/why/#pydantic-over-raw-schema).
-
-Instead of doing this, we can use Instructor. Instructor is powered by [pydantic](https://docs.pydantic.dev/latest/), which means that it integrates with your IDE. We use pydantic’s `BaseModel` to define the output model:
+Instructor is a Python library that allows you to generate structured outputs from a language model. We could instruct the LLM to return a structured output, but the output will still be a string, which we need to convert to a dictionary. What if the dictionary is not structured as we want? What if the LLM forgot to add the last ”}” in the JSON? We would have to handle all of these errors manually. We could use `{ "type": "json_object" }` [](https://platform.openai.com/docs/guides/structured-outputs/json-mode)which will make the LLM return a JSON object. But for this, we would need to provide a JSON schema, which can get [large and complex](https://python.useinstructor.com/why/#pydantic-over-raw-schema). Instead of doing this, we can use Instructor. Instructor is powered by [pydantic](https://docs.pydantic.dev/latest/), which means that it integrates with your IDE. We use pydantic’s `BaseModel` to define the output model:
 
 ## 
 
@@ -313,9 +305,7 @@ structured_output = client.chat.completions.create(
 print(structured_output)
 ```
 
-Here we define a `QuantumComputingAdvancement` class that inherits from `BaseModel` from Pydantic. This class will be used by Instructor to validate the output from the LLM and for the LLM as a response model. We also implement the `__str__()` method for easy printing of the output. We then initialize `OpenAI()` and wrap instructor on top of it with `instructor.from_openai` to create a client that will return structured outputs. If the output is not structured as our class, Instructor makes the LLM retry until max\_retries is reached. You can read more about how Instructor retries [here](https://python.useinstructor.com/why/#retries).
-
-This example demonstrates how to use Exa to search for content about quantum computing advancements and structure the output using Instructor.
+Here we define a `QuantumComputingAdvancement` class that inherits from `BaseModel` from Pydantic. This class will be used by Instructor to validate the output from the LLM and for the LLM as a response model. We also implement the `__str__()` method for easy printing of the output. We then initialize `OpenAI()` and wrap instructor on top of it with `instructor.from_openai` to create a client that will return structured outputs. If the output is not structured as our class, Instructor makes the LLM retry until max\_retries is reached. You can read more about how Instructor retries [here](https://python.useinstructor.com/why/#retries). This example demonstrates how to use Exa to search for content about quantum computing advancements and structure the output using Instructor.
 
 ## 
 
@@ -405,9 +395,7 @@ structured_output = client.chat.completions.create(
 print(structured_output)
 ```
 
-By using pydantic’s `field_validator`, we can create our own rules to validate each field to be exactly what we want, so that we can work with predictable data even though we are using an LLM. Additionally, implementing the `__str__()` method allows for more readable and convenient output formatting. Read more about different pydantic validators [here](https://docs.pydantic.dev/latest/concepts/validators/#field-validators). Because we don’t specify that the `Title` should be in uppercase in the prompt, this will result in _at least_ two API calls. You should avoid using `field_validator`s as the _only_ means to get the data in the right format; instead, you should include instructions in the prompt, such as specifying that the `Title` should be in uppercase/all-caps.
-
-This advanced example demonstrates how to use Exa and Instructor to analyze multiple research papers, extract structured information, and provide a comprehensive summary of the findings.
+By using pydantic’s `field_validator`, we can create our own rules to validate each field to be exactly what we want, so that we can work with predictable data even though we are using an LLM. Additionally, implementing the `__str__()` method allows for more readable and convenient output formatting. Read more about different pydantic validators [here](https://docs.pydantic.dev/latest/concepts/validators/#field-validators). Because we don’t specify that the `Title` should be in uppercase in the prompt, this will result in _at least_ two API calls. You should avoid using `field_validator`s as the _only_ means to get the data in the right format; instead, you should include instructions in the prompt, such as specifying that the `Title` should be in uppercase/all-caps. This advanced example demonstrates how to use Exa and Instructor to analyze multiple research papers, extract structured information, and provide a comprehensive summary of the findings.
 
 ## 
 
@@ -417,9 +405,7 @@ This advanced example demonstrates how to use Exa and Instructor to analyze mult
 
 5\. Streaming Structured Outputs
 
-Instructor also supports streaming structured outputs, which is useful for getting partial results as they’re generated (this does not support validators due to the nature of streaming responses, you can read more about it [here](https://python.useinstructor.com/concepts/partial/)):
-
-To make the output easier to see, we will use the [rich](https://pypi.org/project/rich/) Python package. It should already be installed, but if it isn’t, just run `pip install rich`.
+Instructor also supports streaming structured outputs, which is useful for getting partial results as they’re generated (this does not support validators due to the nature of streaming responses, you can read more about it [here](https://python.useinstructor.com/concepts/partial/)): To make the output easier to see, we will use the [rich](https://pypi.org/project/rich/) Python package. It should already be installed, but if it isn’t, just run `pip install rich`.
 
 Python
 
@@ -607,12 +593,10 @@ Algorithmic Bias in AI,"Artificial intelligence and machine learning are increas
 Algorithmic Bias in AI Systems,"This research explores the misconception that algorithms can replace humans in decision-making without bias. It sheds light on the absurdity of assuming that algorithms are inherently unbiased and discusses emotional responses to algorithmic bias. The study suggests clarity in language about bias, new auditing methods, and capacity-building in AI systems to address bias concerns.",Misleading perception of unbiased AI leading to potential unfairness in decision-making.; Emotional and ethical concerns due to algorithmic bias perceived unfairness.; Need for consistent auditing methods to ensure fairness in AI systems.
 ```
 
-Instructor has enabled the creation of structured data that can as such be stored in tabular format, e.g.in a CRM or similar.
+Instructor has enabled the creation of structured data that can as such be stored in tabular format, e.g.in a CRM or similar. By combining Exa’s powerful search capabilities with Instructor’s predictable output generation, you can extract and analyze information from web content efficiently and accurately.
 
-By combining Exa’s powerful search capabilities with Instructor’s predictable output generation, you can extract and analyze information from web content efficiently and accurately.
+[Build a Retrieval Agent with LangGraph](/examples/getting-started-with-rag-in-langgraph)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Build a Retrieval Agent with LangGraph](/examples/getting-started-with-rag-in-langgraph)

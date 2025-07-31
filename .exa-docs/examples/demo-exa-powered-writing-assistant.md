@@ -1,7 +1,7 @@
 # Writing Assistant - Exa
 
 > **Source:** https://docs.exa.ai/examples/demo-exa-powered-writing-assistant  
-> **Last Updated:** 2025-07-16T10:32:55.842Z
+> **Last Updated:** 2025-07-31T04:42:45.273Z
 
 ---
 
@@ -31,7 +31,7 @@ Writing Assistant
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -181,9 +181,7 @@ On this page
 *   [Prompting Claude with Exa results](#prompting-claude-with-exa-results)
 *   [Conclusion](#conclusion)
 
-[Click here to try the Exa-powered Writing Assistant](https://demo.exa.ai/writing)
-
-[Click here to see the relevant GitHub repo and hosting instructions](https://github.com/exa-labs/exa-writing-assist)
+[Click here to try the Exa-powered Writing Assistant](https://demo.exa.ai/writing) [Click here to see the relevant GitHub repo and hosting instructions](https://github.com/exa-labs/exa-writing-assist)
 
 ## 
 
@@ -213,11 +211,7 @@ Demo overview
 
 High-level overview
 
-This demo showcases a real-time writing assistant that uses Exa’s search capabilities to provide relevant information and citations as a user writes. The system combines Exa’s neural search with Anthropic’s Claude AI model to generate contextually appropriate content and citations.
-
-![Conceptual block diagram of how the writing assistant works](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/77dd3c1-image.png)
-
-Conceptual block diagram of how the writing assistant works
+This demo showcases a real-time writing assistant that uses Exa’s search capabilities to provide relevant information and citations as a user writes. The system combines Exa’s neural search with Anthropic’s Claude AI model to generate contextually appropriate content and citations. ![Conceptual block diagram of how the writing assistant works](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/77dd3c1-image.png) Conceptual block diagram of how the writing assistant works
 
 ## 
 
@@ -329,14 +323,10 @@ Once again, experimenting with this prompt is crucial to getting best results fo
 
 Conclusion
 
-This demo illustrates the power of combining Exa’s advanced search capabilities with generative AI to create a writing assistant. By leveraging Exa’s neural search and content retrieval features, the system can provide relevant, up-to-date information to any AI model, resulting in contextually appropriate content generation with citations.
+This demo illustrates the power of combining Exa’s advanced search capabilities with generative AI to create a writing assistant. By leveraging Exa’s neural search and content retrieval features, the system can provide relevant, up-to-date information to any AI model, resulting in contextually appropriate content generation with citations. This approach showcases how Exa can be integrated into AI-powered applications to enhance user experiences and productivity. [Click here to try the Exa-powered Writing Assistant](https://demo.exa.ai/writing)
 
-This approach showcases how Exa can be integrated into AI-powered applications to enhance user experiences and productivity.
-
-[Click here to try the Exa-powered Writing Assistant](https://demo.exa.ai/writing)
+[Hallucination Detector](/examples/demo-hallucination-detector)[Chat app](/examples/demo-chat)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Hallucination Detector](/examples/demo-hallucination-detector)[Chat app](/examples/demo-chat)

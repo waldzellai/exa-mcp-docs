@@ -1,7 +1,7 @@
 # IBM WatsonX - Exa
 
 > **Source:** https://docs.exa.ai/integrations/ibm-watsonx-docs  
-> **Last Updated:** 2025-07-16T10:33:30.252Z
+> **Last Updated:** 2025-07-31T04:43:19.804Z
 
 ---
 
@@ -31,7 +31,7 @@ IBM WatsonX
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -103,8 +103,6 @@ Check out our example notebook to get started quickly
 
 
 
-
-
 ](https://github.com/exa-labs/ibm-exa/blob/main/ibm_exa_integration.ipynb)
 
 ## 
@@ -129,9 +127,7 @@ This integration connects IBM WatsonX with Exa to create an AI that can:
 
 Try Notebook
 
-Want to see it in action? [Try notebook here.](https://github.com/exa-labs/ibm-exa/blob/main/ibm_exa_integration.ipynb)
-
-Make sure to add your API keys to the notebook.
+Want to see it in action? [Try notebook here.](https://github.com/exa-labs/ibm-exa/blob/main/ibm_exa_integration.ipynb) Make sure to add your API keys to the notebook.
 
 ## 
 
@@ -145,8 +141,8 @@ Resources
 *   [Exa API Playground](https://dashboard.exa.ai/)
 *   [Github Repository for this integration](https://github.com/exa-labs/ibm-exa)
 
+[CrewAI Docs](/integrations/crew-ai-docs)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[CrewAI Docs](/integrations/crew-ai-docs)

@@ -1,7 +1,7 @@
 # Get a Webhook - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/get-a-webhook  
-> **Last Updated:** 2025-07-16T10:35:39.892Z
+> **Last Updated:** 2025-07-31T04:45:42.606Z
 
 ---
 
@@ -31,7 +31,7 @@ Get a Webhook
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -272,10 +272,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -319,3 +315,7 @@ Webhook
 The response is of type `object`.
 
 [Create a Webhook](/websets/api/webhooks/create-a-webhook)[Update a Webhook](/websets/api/webhooks/update-a-webhook)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

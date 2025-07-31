@@ -1,7 +1,7 @@
 # FAQ - Exa
 
 > **Source:** https://docs.exa.ai/websets/faq  
-> **Last Updated:** 2025-07-16T10:34:54.688Z
+> **Last Updated:** 2025-07-31T04:44:44.273Z
 
 ---
 
@@ -31,7 +31,7 @@ FAQ
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -155,17 +155,7 @@ Yes. On the results page, you can manually delete any entries that you don’t w
 
 How do credits and pricing work?
 
-Free: 1,000 credits. Websets up to 25 results, with limited features.
-
-Subscription Core plan: $49/month - 8,000 credits per month
-
-Pro plan: $449/month - 100,000 credits per month
-
-We also have an Enterprise plan.
-
-10 credit = 1 all-green result in a generated webset. For example, if you generate a webset of 50 perfect matches, that uses 500 credits. Credits are also used for special features such as custom columns, requesting emails/contact information & alerts.
-
-Topping up credits: If you run out, you can contact your point person to purchase additional credits manually.
+Free: 1,000 credits. Websets up to 25 results, with limited features.Subscription Core plan: $49/month - 8,000 credits per monthPro plan: $449/month - 100,000 credits per monthWe also have an Enterprise plan.10 credit = 1 all-green result in a generated webset. For example, if you generate a webset of 50 perfect matches, that uses 500 credits. Credits are also used for special features such as custom columns, requesting emails/contact information & alerts.Topping up credits: If you run out, you can contact your point person to purchase additional credits manually.
 
 Why is my Webset taking a long time?
 
@@ -181,10 +171,10 @@ Absolutely. You can revise your original query or tweak the criteria from the Se
 
 What if I still have more questions or need more credits?
 
-Contact your account representative or point person if you need help, additional credits, or have feedback about your results, or [\[email protected\]](/cdn-cgi/l/email-protection#325a575e5e5d72574a531c535b).
+Contact your account representative or point person if you need help, additional credits, or have feedback about your results, or [\[email protected\]](/cdn-cgi/l/email-protection#b2dad7dededdf2d7cad39cd3db).
+
+[Overview](/websets/overview)[Get started](/websets/dashboard/get-started)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Overview](/websets/overview)[Get started](/websets/dashboard/get-started)

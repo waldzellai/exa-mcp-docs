@@ -1,7 +1,7 @@
 # Cancel a running Search - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/searches/cancel-a-running-search  
-> **Last Updated:** 2025-07-16T10:36:18.613Z
+> **Last Updated:** 2025-07-31T04:46:24.015Z
 
 ---
 
@@ -31,7 +31,7 @@ Cancel a running Search
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -185,6 +185,7 @@ Ask AI
   "id": "<string>",
   "object": "webset_search",
   "status": "created",
+  "websetId": "<string>",
   "query": "<string>",
   "entity": {
     "type": "company"
@@ -201,6 +202,16 @@ Ask AI
     {
       "source": "import",
       "id": "<string>"
+    }
+  ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
     }
   ],
   "progress": {
@@ -281,6 +292,7 @@ Ask AI
   "id": "<string>",
   "object": "webset_search",
   "status": "created",
+  "websetId": "<string>",
   "query": "<string>",
   "entity": {
     "type": "company"
@@ -297,6 +309,16 @@ Ask AI
     {
       "source": "import",
       "id": "<string>"
+    }
+  ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
     }
   ],
   "progress": {
@@ -323,10 +345,6 @@ Ask AI
   "updatedAt": "2023-11-07T05:31:56Z"
 }
 ```
-
-Assistant
-
-Responses are generated using AI and may contain mistakes.
 
 #### Authorizations
 
@@ -379,3 +397,7 @@ Search canceled
 The response is of type `object`.
 
 [Get a Search](/websets/api/websets/searches/get-a-search)[Create an Enrichment](/websets/api/websets/enrichments/create-an-enrichment)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

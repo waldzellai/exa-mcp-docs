@@ -1,7 +1,7 @@
 # Creating Enrichments - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/walkthroughs/Creating-enrichments  
-> **Last Updated:** 2025-07-16T10:36:35.658Z
+> **Last Updated:** 2025-07-31T04:46:41.241Z
 
 ---
 
@@ -31,7 +31,7 @@ Creating Enrichments
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -170,29 +170,20 @@ Creating Enrichments
 
 Use the chat: you can add enrichments by prompting directly in the Chat! Or click on “Add Enrichment” in the top-right corner.
 
-**Fill in your prompt:** Prompt the AI generator to have our agent fill in the fields for you, or fill in the enrichment type, title and prompt directly.
-
-**Enrichment types:** text, contact information (email & phone number), date, number, options (think of these as tags!)
+**Fill in your prompt:** Prompt the AI generator to have our agent fill in the fields for you, or fill in the enrichment type, title and prompt directly. **Enrichment types:** text, contact information (email & phone number), date, number, options (think of these as tags!)
 
 Cool examples of enrichments:
 
 *   “Find me this candidate’s contact information” - Contact
-    
 *   “Do a sentiment analysis on each article” - Text or Options
-    
 *   “Categorize these companies by B2B or B2C” - Options
-    
 *   “Create a custom email based on this company’s main product”- Text
-    
 *   “Give me this candidate’s years of experience” - Number
-    
 *   “Find any public data on this company’s revenue or valuation” - Text
-    
 *   “What is the most powerful data point mentioned in each research paper?” - Text
-    
+
+[Integrations](/websets/dashboard/integrations)[Exploring your results](/websets/dashboard/walkthroughs/Exploring-your-results)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Integrations](/websets/dashboard/integrations)[Exploring your results](/websets/dashboard/walkthroughs/Exploring-your-results)

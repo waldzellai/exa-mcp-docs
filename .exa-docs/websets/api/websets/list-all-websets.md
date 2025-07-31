@@ -1,7 +1,7 @@
 # List all Websets - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/list-all-websets  
-> **Last Updated:** 2025-07-16T10:35:59.294Z
+> **Last Updated:** 2025-07-31T04:46:02.336Z
 
 ---
 
@@ -31,7 +31,7 @@ List all Websets
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -154,6 +154,13 @@ List all Websets
             ](/websets/api/websets/delete-a-webset)
         *   [POST
             
+            Preview a webset
+            
+            
+            
+            ](/websets/api/websets/preview-a-webset)
+        *   [POST
+            
             Cancel a running Webset
             
             
@@ -215,6 +222,7 @@ Ask AI
           "id": "<string>",
           "object": "webset_search",
           "status": "created",
+          "websetId": "<string>",
           "query": "<string>",
           "entity": {
             "type": "company"
@@ -231,6 +239,16 @@ Ask AI
             {
               "source": "import",
               "id": "<string>"
+            }
+          ],
+          "scope": [
+            {
+              "source": "import",
+              "id": "<string>",
+              "relationship": {
+                "definition": "<string>",
+                "limit": 5.5
+              }
             }
           ],
           "progress": {
@@ -400,6 +418,7 @@ Ask AI
           "id": "<string>",
           "object": "webset_search",
           "status": "created",
+          "websetId": "<string>",
           "query": "<string>",
           "entity": {
             "type": "company"
@@ -416,6 +435,16 @@ Ask AI
             {
               "source": "import",
               "id": "<string>"
+            }
+          ],
+          "scope": [
+            {
+              "source": "import",
+              "id": "<string>",
+              "relationship": {
+                "definition": "<string>",
+                "limit": 5.5
+              }
             }
           ],
           "progress": {
@@ -539,10 +568,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -596,3 +621,7 @@ List of Websets
 The response is of type `object`.
 
 [Cancel a running Webset](/websets/api/websets/cancel-a-running-webset)[Get an Item](/websets/api/websets/items/get-an-item)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

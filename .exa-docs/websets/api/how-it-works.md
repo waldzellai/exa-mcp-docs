@@ -1,7 +1,7 @@
 # How It Works - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/how-it-works  
-> **Last Updated:** 2025-07-16T10:35:01.114Z
+> **Last Updated:** 2025-07-31T04:44:50.675Z
 
 ---
 
@@ -31,7 +31,7 @@ How It Works
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -214,23 +214,19 @@ When your request is received:
 The search flows through several stages:
 
 1.  **Initialization**
-    
     *   A new WebsetSearch is created
     *   Status is set to `running`
     *   `webset.search.created` event is emitted
 2.  **Discovery & Verification**
-    
     *   The system starts retrieving results leveraging Exa Search and verifies each one
     *   Items that pass verification and match your search criteria are automatically added to your Webset
     *   Each new item triggers a `webset.item.created` event
     *   Items are immediately available through the [list endpoint](/websets/api/list-all-items-for-a-webset)
 3.  **Enrichment** (if configured)
-    
     *   Each item is processed through specified enrichments
     *   `webset.item.enriched` events are emitted as results come in
     *   Enrichment results are added to the item’s data
 4.  **Completion**
-    
     *   When the search finds all items, its status changes to `completed`
     *   A `webset.search.completed` event is emitted
     *   If no other operations are running, you’ll receive a `webset.idle` event
@@ -246,11 +242,9 @@ Accessing Results
 You can access your data throughout the process:
 
 1.  **Real-time Access**
-    
     *   Use the list endpoint to paginate through items
     *   Listen for item events (`webset.item.created` and `webset.item.enriched`) to process results as they arrive
 2.  **Bulk Export**
-    
     *   Available once the Webset becomes `idle`
     *   Includes all items with their content, verifications and enrichments
     *   Useful for processing the complete dataset
@@ -314,9 +308,7 @@ Up-to-date Websets using Monitors
 Behavior
 
 *   **Search behavior**: Automatically run new searches to find fresh content matching your criteria. New items are added to your Webset with automatic deduplication.
-    
 *   **Refresh behavior**: Update existing items by refreshing their content from source URLs or re-running specific enrichments to capture data changes.
-    
 
 ### 
 
@@ -370,8 +362,8 @@ Ask AI
 }
 ```
 
+[Get started](/websets/api/get-started)[Create a Webset](/websets/api/websets/create-a-webset)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Get started](/websets/api/get-started)[Create a Webset](/websets/api/websets/create-a-webset)

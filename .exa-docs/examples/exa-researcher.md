@@ -1,7 +1,7 @@
 # Exa Researcher - JavaScript - Exa
 
 > **Source:** https://docs.exa.ai/examples/exa-researcher  
-> **Last Updated:** 2025-07-16T10:33:08.745Z
+> **Last Updated:** 2025-07-31T04:42:58.018Z
 
 ---
 
@@ -31,7 +31,7 @@ Exa Researcher - JavaScript
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -195,13 +195,7 @@ What this doc covers
 
 * * *
 
-In this example, we will build Exa Researcher, a JavaScript app that, given a research topic, automatically searches for relevant sources with Exa’s [**Auto search**](/v2.0/reference/magic-search-as-default) and synthesizes the information into a reliable research report.
-
-Fastest setup: Interact with the code in your browser with this Replit [template](https://replit.com/@olafblitz/exa-researcher?v=1).
-
-Alternatively, this [interactive notebook](https://github.com/exa-labs/exa-js/tree/master/examples/researcher/researcher.ipynb) was made with the Deno Javascript kernel for Jupyter so you can easily run it locally. Check out the [plain JS version](https://github.com/exa-labs/exa-js/tree/master/examples/researcher/researcher.mjs) if you prefer a regular Javascript file you can run with NodeJS, or want to skip to the final result. If you’d like to run this notebook locally, [Installing Deno](https://docs.deno.com/runtime/manual/getting%5Fstarted/installation) and [connecting Deno to Jupyter](https://docs.deno.com/runtime/manual/tools/jupyter) is fast and easy.
-
-To play with this code, first we need a [Exa API key](https://dashboard.exa.ai/api-keys) and an [OpenAI API key](https://platform.openai.com/api-keys).
+In this example, we will build Exa Researcher, a JavaScript app that, given a research topic, automatically searches for relevant sources with Exa’s [**Auto search**](/v2.0/reference/magic-search-as-default) and synthesizes the information into a reliable research report. Fastest setup: Interact with the code in your browser with this Replit [template](https://replit.com/@olafblitz/exa-researcher?v=1). Alternatively, this [interactive notebook](https://github.com/exa-labs/exa-js/tree/master/examples/researcher/researcher.ipynb) was made with the Deno Javascript kernel for Jupyter so you can easily run it locally. Check out the [plain JS version](https://github.com/exa-labs/exa-js/tree/master/examples/researcher/researcher.mjs) if you prefer a regular Javascript file you can run with NodeJS, or want to skip to the final result. If you’d like to run this notebook locally, [Installing Deno](https://docs.deno.com/runtime/manual/getting%5Fstarted/installation) and [connecting Deno to Jupyter](https://docs.deno.com/runtime/manual/tools/jupyter) is fast and easy. To play with this code, first we need a [Exa API key](https://dashboard.exa.ai/api-keys) and an [OpenAI API key](https://platform.openai.com/api-keys).
 
 ## 
 
@@ -285,16 +279,12 @@ const SAMA_TOPIC = 'Sam Altman';
 const ART_TOPIC = 'renaissance art';
 ```
 
-The first thing our researcher has to do is decide what kind of search to do for the given topic.
-
-Exa offers two kinds of search: **neural** and **keyword** search. Here’s how we decide:
+The first thing our researcher has to do is decide what kind of search to do for the given topic. Exa offers two kinds of search: **neural** and **keyword** search. Here’s how we decide:
 
 *   Neural search is preferred when the query is broad and complex because it lets us retrieve high quality, semantically relevant data. Neural search is especially suitable when a topic is well-known and popularly discussed on the Internet, allowing the machine learning model to retrieve contents which are more likely recommended by real humans.
 *   Keyword search is useful when the topic is specific, local or obscure. If the query is a specific person’s name, and identifier, or acronym, such that relevant results will contain the query itself, keyword search may do well. And if the machine learning model doesn’t know about the topic, but relevant documents can be found by directly matching the search query, keyword search may be necessary.
 
-Conveniently, Exa’s autosearch feature (on by default) will automatically decide whether to use `keyword` or `neural` search for each query. For example, if a query is a specific person’s name, Exa would decide to use keyword search.
-
-Now, we’ll create a helper function to generate search queries for our topic.
+Conveniently, Exa’s autosearch feature (on by default) will automatically decide whether to use `keyword` or `neural` search for each query. For example, if a query is a specific person’s name, Exa would decide to use keyword search. Now, we’ll create a helper function to generate search queries for our topic.
 
 TypeScript
 
@@ -425,8 +415,8 @@ researcher("llama antibodies").then(console.log);
 
 For a link to a complete, cleaned up version of this project that you can execute in your NodeJS environment, check out the [alternative JS-only version](https://github.com/exa-labs/exa-js/tree/master/examples/researcher/researcher.mjs).
 
+[Company Analyst](/examples/company-analyst)[Exa Researcher - Python](/examples/exa-researcher-python)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Company Analyst](/examples/company-analyst)[Exa Researcher - Python](/examples/exa-researcher-python)

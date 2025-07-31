@@ -1,7 +1,7 @@
 # Exclude Results - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/exclude-results  
-> **Last Updated:** 2025-07-16T10:36:24.978Z
+> **Last Updated:** 2025-07-31T04:46:30.576Z
 
 ---
 
@@ -31,7 +31,7 @@ Exclude Results
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -147,9 +147,7 @@ On this page
 
 Overview
 
-The Exclude Results feature ensures you don’t get duplicate results when creating new searches. By specifying URLs to exclude based on previous Websets or uploaded CSV files, you can focus on discovering fresh, unique results that complement your existing data.
-
-  
+The Exclude Results feature ensures you don’t get duplicate results when creating new searches. By specifying URLs to exclude based on previous Websets or uploaded CSV files, you can focus on discovering fresh, unique results that complement your existing data.  
 
 ## 
 
@@ -166,9 +164,7 @@ How it works
 3.  Select from past Websets or upload a CSV with URLs to exclude. You can select multiple sources to exclude from.
 4.  Start your search, with only new results that don’t match your exclusions
 
-The maximum number of results you can exclude is determined by your plan.
-
-  
+The maximum number of results you can exclude is determined by your plan.  
 
 ## 
 
@@ -182,8 +178,8 @@ When to use exclusions
 *   Following up on previous searches with refined criteria
 *   Excluding results you already know about
 
+[Import from CSV](/websets/dashboard/import-from-csv)[Integrations](/websets/dashboard/integrations)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Import from CSV](/websets/dashboard/import-from-csv)[Integrations](/websets/dashboard/integrations)

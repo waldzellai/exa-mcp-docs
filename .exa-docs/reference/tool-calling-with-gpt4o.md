@@ -1,7 +1,7 @@
 # Tool calling with GPT - Exa
 
 > **Source:** https://docs.exa.ai/reference/tool-calling-with-gpt4o  
-> **Last Updated:** 2025-07-16T10:34:43.661Z
+> **Last Updated:** 2025-07-31T04:44:33.199Z
 
 ---
 
@@ -31,7 +31,7 @@ Tool calling with GPT
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -300,9 +300,7 @@ pip install openai exa_py rich
 
 Set up the environment variables
 
-Create an `.env` file in the root of your project and set the `EXA_API_KEY` and `OPENAI_API_KEY` environment variable to your API keys respectively. Visit the [OpenAI playground](https://platform.openai.com/api-keys) and the [Exa dashboard](https://dashboard.exa.ai/api-keys) to generate your API keys.
-
-  
+Create an `.env` file in the root of your project and set the `EXA_API_KEY` and `OPENAI_API_KEY` environment variable to your API keys respectively. Visit the [OpenAI playground](https://platform.openai.com/api-keys) and the [Exa dashboard](https://dashboard.exa.ai/api-keys) to generate your API keys.  
 [
 
 ## Get your Exa API key
@@ -527,17 +525,13 @@ if __name__ == "__main__":
     main()
 ```
 
-The implementation creates a loop that continually prompts the user for search queries, uses OpenAI’s tool calling feature to determine when to perform a search, and then uses the Exa search results to provide an informed response to the user’s query.
-
-We also use the rich library to provide a more visually appealing console interface, including coloured output and markdown rendering for the responses.
+The implementation creates a loop that continually prompts the user for search queries, uses OpenAI’s tool calling feature to determine when to perform a search, and then uses the Exa search results to provide an informed response to the user’s query.We also use the rich library to provide a more visually appealing console interface, including coloured output and markdown rendering for the responses.
 
 5
 
 Running the code
 
-Save the code in a file, e.g. `openai_search.py`, and make sure the `.env` file containing the API keys we previously created is in the same directory as the script.
-
-Then run the script using the following command from your terminal:
+Save the code in a file, e.g. `openai_search.py`, and make sure the `.env` file containing the API keys we previously created is in the same directory as the script.Then run the script using the following command from your terminal:
 
 Bash
 
@@ -729,8 +723,8 @@ if __name__ == "__main__":
     main()
 ```
 
+[RAG with LlamaIndex](/reference/llamaindex)[Tool calling with Claude](/reference/tool-calling-with-claude)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[RAG with LlamaIndex](/reference/llamaindex)[Tool calling with Claude](/reference/tool-calling-with-claude)

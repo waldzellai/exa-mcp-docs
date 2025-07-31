@@ -1,7 +1,7 @@
 # Create a Webhook - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/create-a-webhook  
-> **Last Updated:** 2025-07-16T10:35:35.592Z
+> **Last Updated:** 2025-07-31T04:45:38.288Z
 
 ---
 
@@ -31,7 +31,7 @@ Create a Webhook
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -280,10 +280,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -313,3 +309,7 @@ Webhook
 The response is of type `object`.
 
 [Get Monitor Run](/websets/api/monitors/runs/get-monitor-run)[Get a Webhook](/websets/api/webhooks/get-a-webhook)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

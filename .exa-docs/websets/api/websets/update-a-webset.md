@@ -1,7 +1,7 @@
 # Update a Webset - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/update-a-webset  
-> **Last Updated:** 2025-07-16T10:36:01.432Z
+> **Last Updated:** 2025-07-31T04:46:04.538Z
 
 ---
 
@@ -31,7 +31,7 @@ Update a Webset
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -154,6 +154,13 @@ Update a Webset
             ](/websets/api/websets/delete-a-webset)
         *   [POST
             
+            Preview a webset
+            
+            
+            
+            ](/websets/api/websets/preview-a-webset)
+        *   [POST
+            
             Cancel a running Webset
             
             
@@ -219,6 +226,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -235,6 +243,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -408,6 +426,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -424,6 +443,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -543,10 +572,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -594,3 +619,7 @@ Webset updated
 The response is of type `object`.
 
 [Get a Webset](/websets/api/websets/get-a-webset)[Delete a Webset](/websets/api/websets/delete-a-webset)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.
