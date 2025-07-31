@@ -2,6 +2,15 @@
 
 A comprehensive Model Context Protocol (MCP) server providing AI assistants with complete, offline-first access to Exa.ai's documentation. This server enables developers to seamlessly integrate Exa's search capabilities into their workflows through their AI assistants.
 
+## How It Works
+
+When you ask your MCP client (such as Claude Desktop, Cursor IDE, or other MCP-compatible AI assistants) for help with Exa's technology, the assistant will automatically call this server to retrieve the relevant documentation, code examples, and integration guides. This means you can ask questions like:
+- "How do I use Exa's search API?"
+- "Show me an example of RAG with Exa"
+- "Help me integrate Exa with LangChain"
+
+And your AI assistant will use this MCP server to provide accurate, up-to-date information from Exa's documentation.
+
 ## Features
 
 - **Complete Documentation Coverage**: Access to all Exa API documentation, examples, integrations, and changelogs

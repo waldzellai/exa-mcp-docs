@@ -1,7 +1,7 @@
 # Phrase Filters: Niche Company Finder - Exa
 
 > **Source:** https://docs.exa.ai/examples/niche-company-finder-with-phrase-filters  
-> **Last Updated:** 2025-07-16T10:33:23.768Z
+> **Last Updated:** 2025-07-31T04:43:13.385Z
 
 ---
 
@@ -31,7 +31,7 @@ Phrase Filters: Niche Company Finder
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -201,9 +201,7 @@ In this simple example, we’ll demonstrate a company discovery search that help
 
 How Phrase Filters work
 
-Exa’s search combines semantic relevance with precise filtering: a neural query first retrieves contextually relevant documents, then a phrase filter refines these results by checking for specific text in the content. This two-stage approach delivers highly targeted outputs by leveraging both semantic understanding and exact text matching.
-
-![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/1864e57-Screenshot_2024-07-16_at_05.41.13.png)
+Exa’s search combines semantic relevance with precise filtering: a neural query first retrieves contextually relevant documents, then a phrase filter refines these results by checking for specific text in the content. This two-stage approach delivers highly targeted outputs by leveraging both semantic understanding and exact text matching. ![](https://mintlify.s3.us-west-1.amazonaws.com/exa-52/images/1864e57-Screenshot_2024-07-16_at_05.41.13.png)
 
 ## 
 
@@ -355,8 +353,8 @@ Ask AI
 
 Nice! On inspection, these results include companies located in Hamburg, Munich and other close by European locations. This example can be extended to any key phrase - have a play with filtering via [other company suffixes -](https://en.wikipedia.org/wiki/List%5Fof%5Flegal%5Fentity%5Ftypes%5Fby%5Fcountry) and see what interesting results you get back!
 
+[Recruiting Agent](/examples/exa-recruiting-agent)[Job Search with Exa](/examples/job-search-with-exa)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Recruiting Agent](/examples/exa-recruiting-agent)[Job Search with Exa](/examples/job-search-with-exa)

@@ -1,7 +1,7 @@
 # Adding and Managing Your Team Members in Websets - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/walkthroughs/Managing-Team-Members  
-> **Last Updated:** 2025-07-16T10:36:39.987Z
+> **Last Updated:** 2025-07-31T04:46:50.152Z
 
 ---
 
@@ -31,7 +31,7 @@ Adding and Managing Your Team Members in Websets
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -167,14 +167,11 @@ Adding and Managing Your Team Members in Websets
     
 
 *   Click on the top right-hand side icon. Go to team settings.
-    
 *   Edit permissions per team member or add emails at the bottom.
-    
 *   Your team member will receive an email confirmation to be added.
-    
+
+[Exploring your results](/websets/dashboard/walkthroughs/Exploring-your-results) [Prompting Websets](/websets/dashboard/walkthroughs/Prompting)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Exploring your results](/websets/dashboard/walkthroughs/Exploring-your-results) [Prompting Websets](/websets/dashboard/walkthroughs/Prompting)

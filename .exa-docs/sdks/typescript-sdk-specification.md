@@ -1,7 +1,7 @@
 # TypeScript SDK Specification - Exa
 
 > **Source:** https://docs.exa.ai/sdks/typescript-sdk-specification  
-> **Last Updated:** 2025-07-16T10:34:50.456Z
+> **Last Updated:** 2025-07-31T04:44:40.071Z
 
 ---
 
@@ -31,7 +31,7 @@ TypeScript SDK Specification
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -156,23 +156,6 @@ Ask AI
 npm install exa-js
 ```
 
-Copy
-
-Ask AI
-
-```
-
-npm install exa-js
-```
-
-Copy
-
-Ask AI
-
-```
-pnpm install exa-js
-```
-
 and then instantiate an Exa client
 
 TypeScript
@@ -198,8 +181,6 @@ Follow this link to get your API key
 
 
 
-
-
 ](https://dashboard.exa.ai/login?redirect=/docs?path=/reference/typescript-sdk-specification)  
 
 * * *
@@ -212,9 +193,7 @@ Follow this link to get your API key
 
 `search` Method
 
-Perform an Exa search given an input query and retrieve a list of relevant results as links.
-
-  
+Perform an Exa search given an input query and retrieve a list of relevant results as links.  
 
 ### 
 
@@ -467,9 +446,7 @@ Author of the content, if available
 
 `searchAndContents` Method
 
-Perform an Exa search given an input query and retrieve a list of relevant results as links, optionally including the full text and/or highlights of the content.
-
-  
+Perform an Exa search given an input query and retrieve a list of relevant results as links, optionally including the full text and/or highlights of the content.  
 
 ### 
 
@@ -808,9 +785,7 @@ number\[\]
 
 Scores of the highlights (if requested)
 
-Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `searchAndContents` call.
-
-  
+Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `searchAndContents` call.  
 
 ## 
 
@@ -820,9 +795,7 @@ Note: The actual fields present in the `SearchResult<T>` object depend on the op
 
 `findSimilar` Method
 
-Find a list of similar results based on a webpage’s URL.
-
-  
+Find a list of similar results based on a webpage’s URL.  
 
 ### 
 
@@ -1081,9 +1054,7 @@ Author of the content, if available
 
 `findSimilarAndContents` Method
 
-Find a list of similar results based on a webpage’s URL, optionally including the text content or highlights of each result.
-
-  
+Find a list of similar results based on a webpage’s URL, optionally including the text content or highlights of each result.  
 
 ### 
 
@@ -1407,9 +1378,7 @@ number\[\]
 
 Scores of the highlights (if requested)
 
-Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `findSimilarAndContents` call.
-
-  
+Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `findSimilarAndContents` call.  
 
 * * *
 
@@ -1421,9 +1390,7 @@ Note: The actual fields present in the `SearchResult<T>` object depend on the op
 
 `getContents` Method
 
-Retrieves contents of documents based on a list of document IDs.
-
-  
+Retrieves contents of documents based on a list of document IDs.  
 
 ### 
 
@@ -1658,9 +1625,7 @@ number\[\]
 
 Scores of the highlights (if requested)
 
-Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `getContents` call. If neither `text` nor `highlights` is specified, the method defaults to including the full text content.
-
-  
+Note: The actual fields present in the `SearchResult<T>` object depend on the options provided in the `getContents` call. If neither `text` nor `highlights` is specified, the method defaults to including the full text content.  
 
 * * *
 
@@ -1672,9 +1637,7 @@ Note: The actual fields present in the `SearchResult<T>` object depend on the op
 
 `answer` Method
 
-Generate an answer to a query using Exa’s search and LLM capabilities. This returns an AnswerResponse object with the answer text and citations used. You may optionally retrieve the full text of each source by setting `text: true`.
-
-  
+Generate an answer to a query using Exa’s search and LLM capabilities. This returns an AnswerResponse object with the answer text and citations used. You may optionally retrieve the full text of each source by setting `text: true`.  
 
 ### 
 
@@ -1821,9 +1784,7 @@ string
 
 Optional request ID for reference
 
-Each citation is a `SearchResult<{}>` — a basic result object that can include text if options.text was set to true.
-
-  
+Each citation is a `SearchResult<{}>` — a basic result object that can include text if options.text was set to true.  
 
 * * *
 
@@ -1835,9 +1796,7 @@ Each citation is a `SearchResult<{}>` — a basic result object that can include
 
 `streamAnswer` Method
 
-Generate a streaming answer to a query with Exa’s LLM capabilities. This returns an async generator yielding chunks of text and/or citations as they become available.
-
-  
+Generate a streaming answer to a query with Exa’s LLM capabilities. This returns an async generator yielding chunks of text and/or citations as they become available.  
 
 ### 
 
@@ -1932,9 +1891,7 @@ interface AnswerStreamChunk {
 *   `content` is the partial text content of the answer so far (streamed in chunks).
 *   `citations` is an array of citation objects that appear at this chunk in the response.
 
-You can end iteration by using a break or by letting the loop finish naturally.
-
-  
+You can end iteration by using a break or by letting the loop finish naturally.  
 
 * * *
 
@@ -1946,9 +1903,7 @@ You can end iteration by using a break or by letting the loop finish naturally.
 
 `research.createTask` Method
 
-Create an asynchronous research task that performs multi-step web research and returns structured JSON results with citations.
-
-  
+Create an asynchronous research task that performs multi-step web research and returns structured JSON results with citations.  
 
 ### 
 
@@ -2102,9 +2057,7 @@ The unique identifier for the task
 
 `research.getTask` Method
 
-Get the current status and results of a research task by its ID.
-
-  
+Get the current status and results of a research task by its ID.  
 
 ### 
 
@@ -2291,9 +2244,7 @@ Citations grouped by root field (when completed)
 
 `research.pollTask` Method
 
-Poll a research task until it completes or fails, returning the final result.
-
-  
+Poll a research task until it completes or fails, returning the final result.  
 
 ### 
 
@@ -2356,9 +2307,7 @@ The unique identifier of the task
 
 Required
 
-Note: The pollTask method automatically polls every 1 second with a timeout of 10 minutes.
-
-  
+Note: The pollTask method automatically polls every 1 second with a timeout of 10 minutes.  
 
 ### 
 
@@ -2368,9 +2317,7 @@ Note: The pollTask method automatically polls every 1 second with a timeout of 1
 
 Returns
 
-Returns a `ResearchTask` object with the completed task data (same structure as `getTask`).
-
-  
+Returns a `ResearchTask` object with the completed task data (same structure as `getTask`).  
 
 ## 
 
@@ -2380,9 +2327,7 @@ Returns a `ResearchTask` object with the completed task data (same structure as 
 
 `research.listTasks` Method
 
-List all research tasks with optional pagination.
-
-  
+List all research tasks with optional pagination.  
 
 ### 
 
@@ -2531,8 +2476,8 @@ string (optional)
 
 Cursor for the next page (if hasMore is true)
 
+[Python SDK Specification](/sdks/python-sdk-specification)[Python and TS Cheat Sheets](/sdks/cheat-sheet)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Python SDK Specification](/sdks/python-sdk-specification)[Python and TS Cheat Sheets](/sdks/cheat-sheet)

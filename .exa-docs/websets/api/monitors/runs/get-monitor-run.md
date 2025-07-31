@@ -1,7 +1,7 @@
 # Get Monitor Run - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/runs/get-monitor-run  
-> **Last Updated:** 2025-07-16T10:35:31.365Z
+> **Last Updated:** 2025-07-31T04:45:33.463Z
 
 ---
 
@@ -31,7 +31,7 @@ Get Monitor Run
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -278,10 +278,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -331,3 +327,7 @@ Monitor run details
 The response is of type `object`.
 
 [List Monitor Runs](/websets/api/monitors/runs/list-monitor-runs)[Create a Webhook](/websets/api/webhooks/create-a-webhook)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

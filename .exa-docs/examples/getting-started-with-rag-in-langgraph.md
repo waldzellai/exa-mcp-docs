@@ -1,7 +1,7 @@
 # Build a Retrieval Agent with LangGraph - Exa
 
 > **Source:** https://docs.exa.ai/examples/getting-started-with-rag-in-langgraph  
-> **Last Updated:** 2025-07-16T10:33:15.207Z
+> **Last Updated:** 2025-07-31T04:43:04.854Z
 
 ---
 
@@ -31,7 +31,7 @@ Build a Retrieval Agent with LangGraph
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -222,11 +222,7 @@ This guide will show you how you can define and use Exa search within the LangGr
 
 Brief Intro to LangGraph
 
-Before we dive into our implementation, a quick primer on the LangGraph framework.
-
-LangGraph is a powerful tool for building complex LLM-based agents. It allows for cyclical workflows, gives you granular control, and offers built-in persistence. This means you can create reliable agents with intricate logic, pause and resume execution, and even incorporate human oversight.
-
-Read more about [LangGraph here](https://langchain-ai.github.io/langgraph/)
+Before we dive into our implementation, a quick primer on the LangGraph framework. LangGraph is a powerful tool for building complex LLM-based agents. It allows for cyclical workflows, gives you granular control, and offers built-in persistence. This means you can create reliable agents with intricate logic, pause and resume execution, and even incorporate human oversight. Read more about [LangGraph here](https://langchain-ai.github.io/langgraph/)
 
 ## 
 
@@ -236,11 +232,7 @@ Read more about [LangGraph here](https://langchain-ai.github.io/langgraph/)
 
 Our Research Assistant Workflow
 
-For our AI-powered research assistant, we’re leveraging LangGraph’s capabilities to create a workflow that combines an AI model (Claude) with a web search retrieval tool powered by Exa’s API, to fetch, find and analyze any documents (in this case research on climate tech). Here’s a visual representation of our workflow:
-
-![Alt text](https://files.readme.io/a2674bdce9b576860cd8eeec735ebd8959e8a8b41d4e5fab829dbbdcae37d6b0-Screenshot_2024-08-22_at_11.50.08.png)
-
-This diagram illustrates how our workflow takes advantage of LangGraph’s cycle support, allowing the agent to repeatedly use tools and make decisions until it has gathered sufficient information to provide a final response.
+For our AI-powered research assistant, we’re leveraging LangGraph’s capabilities to create a workflow that combines an AI model (Claude) with a web search retrieval tool powered by Exa’s API, to fetch, find and analyze any documents (in this case research on climate tech). Here’s a visual representation of our workflow: ![Alt text](https://files.readme.io/a2674bdce9b576860cd8eeec735ebd8959e8a8b41d4e5fab829dbbdcae37d6b0-Screenshot_2024-08-22_at_11.50.08.png) This diagram illustrates how our workflow takes advantage of LangGraph’s cycle support, allowing the agent to repeatedly use tools and make decisions until it has gathered sufficient information to provide a final response.
 
 ## 
 
@@ -277,9 +269,7 @@ Ask AI
 pip install langchain-anthropic langchain-exa langgraph
 ```
 
-Make sure to set up your API keys. For LangChain libraries, the environment variables should be named `ANTHROPIC_API_KEY` and `EXA_API_KEY` for Anthropic and Exa keys respectively.
-
-[
+Make sure to set up your API keys. For LangChain libraries, the environment variables should be named `ANTHROPIC_API_KEY` and `EXA_API_KEY` for Anthropic and Exa keys respectively.[
 
 ## Get your Exa API key
 
@@ -307,9 +297,7 @@ export EXA_API_KEY=<your-api-key>
 
 2\. Set Up Exa Search as a LangChain Tool
 
-After setting env variables, we can start configuring a search tool using `ExaSearchRetriever`. This tool ([read more here](https://api.python.langchain.com/en/latest/retrievers/langchain_exa.retrievers.ExaSearchRetriever.html)) will help retrieve relevant documents based on a query.
-
-First we need to import the required libraries:
+After setting env variables, we can start configuring a search tool using `ExaSearchRetriever`. This tool ([read more here](https://api.python.langchain.com/en/latest/retrievers/langchain_exa.retrievers.ExaSearchRetriever.html)) will help retrieve relevant documents based on a query. First we need to import the required libraries:
 
 Copy
 
@@ -323,11 +311,7 @@ from langchain_core.runnables import RunnableLambda
 from langchain_core.tools import tool
 ```
 
-After we have imported the necessary libraries, we need to define and register a tool so that the agent know what tools it can use.
-
-We use LangGraph `tool` decorator which you can read more about [here](https://python.langchain.com/v0.1/docs/modules/tools/custom_tools/#tool-decorator). The decorator uses the function name as the tool name. The docstring provides the agent with a tool description.
-
-The `retriever` is where we initialize the Exa search retriever and configure it with parameters such as `highlights=True`. You can read more about all the available parameters [here](https://docs.exa.ai/reference/python-sdk-specification#input-parameters-1).
+After we have imported the necessary libraries, we need to define and register a tool so that the agent know what tools it can use. We use LangGraph `tool` decorator which you can read more about [here](https://python.langchain.com/v0.1/docs/modules/tools/custom_tools/#tool-decorator). The decorator uses the function name as the tool name. The docstring provides the agent with a tool description. The `retriever` is where we initialize the Exa search retriever and configure it with parameters such as `highlights=True`. You can read more about all the available parameters [here](https://docs.exa.ai/reference/python-sdk-specification#input-parameters-1).
 
 Copy
 
@@ -369,13 +353,7 @@ def retrieve_web_content(query: str) -> List[str]:
     return documents
 ```
 
-Here, `ExaSearchRetriever` is set to fetch 3 documents.
-
-Then we use LangChain’s `PromptTemplate` to structure the results from Exa in a more AI friendly way. Creating and using this template is optional, but recommended. Read more about PromptTemplate ([here](https://python.langchain.com/v0.1/docs/modules/model_io/prompts/quick_start/#).
-
-We also use a RunnableLambda to extract necessary metadata (like URL and highlights) from the search results and format it using the prompt template.
-
-After all of this we start the retrieval and processing chain and store the results in the `documents` variable which is returned.
+Here, `ExaSearchRetriever` is set to fetch 3 documents. Then we use LangChain’s `PromptTemplate` to structure the results from Exa in a more AI friendly way. Creating and using this template is optional, but recommended. Read more about PromptTemplate ([here](https://python.langchain.com/v0.1/docs/modules/model_io/prompts/quick_start/#). We also use a RunnableLambda to extract necessary metadata (like URL and highlights) from the search results and format it using the prompt template. After all of this we start the retrieval and processing chain and store the results in the `documents` variable which is returned.
 
 ## 
 
@@ -673,8 +651,8 @@ print(final_state["messages"][-1].content)
 
 Full code in Google Colab [here](https://docs.exa.ai/reference/getting-started-with-rag-in-langgraph)
 
+[Job Search with Exa](/examples/job-search-with-exa)[Structured Outputs with Instructor](/examples/getting-started-with-exa-in-instructor)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Job Search with Exa](/examples/job-search-with-exa)[Structured Outputs with Instructor](/examples/getting-started-with-exa-in-instructor)

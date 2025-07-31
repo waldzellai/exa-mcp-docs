@@ -1,7 +1,7 @@
 # Websets News Monitor - Exa
 
 > **Source:** https://docs.exa.ai/examples/demo-websets-news-monitor  
-> **Last Updated:** 2025-07-16T10:33:00.155Z
+> **Last Updated:** 2025-07-31T04:42:49.498Z
 
 ---
 
@@ -31,7 +31,7 @@ Websets News Monitor
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -199,9 +199,7 @@ On this page
 
 Overview
 
-We created a Websets News Monitor that uses the Websets API to monitor the web semantically for queries like “startup funding round announcements” or “new product launches.” Each tab uses a different Webset that updates daily using a monitor.
-
-It demonstrates best practices for news monitoring including:
+We created a Websets News Monitor that uses the Websets API to monitor the web semantically for queries like “startup funding round announcements” or “new product launches.” Each tab uses a different Webset that updates daily using a monitor. It demonstrates best practices for news monitoring including:
 
 *   Deduplicating articles about the same story
 *   Filtering out low-quality data sources
@@ -251,9 +249,7 @@ Save `webhook.secret`, we’ll use it later to validate incoming webhook request
 
 Create a Webset
 
-Now we’ll create a Webset that searches for the types of articles we are looking for. Use `query` to direct the search and `criteria` to narrow down the results.
-
-In this example we’re looking for articles about recent startup fundraises.
+Now we’ll create a Webset that searches for the types of articles we are looking for. Use `query` to direct the search and `criteria` to narrow down the results.In this example we’re looking for articles about recent startup fundraises.
 
 Javascript
 
@@ -295,9 +291,7 @@ console.log(`✅ Webset created with ID: ${webset.id}`);
 
 Monitor the Webset
 
-We want our Webset to update with new articles daily, so we’ll create a monitor with the `webset.id`. We set the `cadence` parameter to run daily and the `search` behavior so it looks for new results.
-
-By default, monitors use the last search the Webset ran. When we created the Webset we used “in the last 24 hours” so it’s always relative to when the monitor runs.
+We want our Webset to update with new articles daily, so we’ll create a monitor with the `webset.id`. We set the `cadence` parameter to run daily and the `search` behavior so it looks for new results.By default, monitors use the last search the Webset ran. When we created the Webset we used “in the last 24 hours” so it’s always relative to when the monitor runs.
 
 Javascript
 
@@ -322,9 +316,7 @@ console.log(`✅ Monitor created with ID: ${monitor.id}`);
 
 Handle the Webhook
 
-Lastly, we need to create an endpoint to handle the webhook requests. We’ll setup a Next.js route to handle POST requests and parse the event data.
-
-For security purposes, you should verify the request’s signature using the webhook secret from the first step. See the [signature verification guide](https://docs.exa.ai/websets/api/webhooks/verifying-signatures) for more info.
+Lastly, we need to create an endpoint to handle the webhook requests. We’ll setup a Next.js route to handle POST requests and parse the event data.For security purposes, you should verify the request’s signature using the webhook secret from the first step. See the [signature verification guide](https://docs.exa.ai/websets/api/webhooks/verifying-signatures) for more info.
 
 Javascript
 
@@ -383,9 +375,7 @@ View the full route implementation [here](https://github.com/exa-labs/websets-ne
 
 Semantic Whitelisting
 
-We want our feeds to contain high-quality links and avoid SEO spam. This would normally require manually maintaining lists of domains to include/exclude from your results, but with Websets it’s simple.
-
-You can create criteria that function as a _semantic whitelist_, telling the LLM what kinds of articles to allow. Here’s an example:
+We want our feeds to contain high-quality links and avoid SEO spam. This would normally require manually maintaining lists of domains to include/exclude from your results, but with Websets it’s simple. You can create criteria that function as a _semantic whitelist_, telling the LLM what kinds of articles to allow. Here’s an example:
 
 Copy
 
@@ -405,9 +395,7 @@ You can see all of the criteria used in the demo [here](https://github.com/exa-l
 
 Storyline Deduplication
 
-A common issue when monitoring news is handling multiple articles about the same storyline. Often you want to group articles by storyline or remove duplicates so users don’t see repeated content.
-
-In our demo, we solve this using embeddings, vector search, and an LLM to classify duplicates.
+A common issue when monitoring news is handling multiple articles about the same storyline. Often you want to group articles by storyline or remove duplicates so users don’t see repeated content. In our demo, we solve this using embeddings, vector search, and an LLM to classify duplicates.
 
 1
 
@@ -502,8 +490,8 @@ const isDuplicate = response.output_parsed.is_duplicate;
 
 You can view the complete deduplication implementation [here](https://github.com/exa-labs/websets-news-monitor/blob/main/src/lib/dedupe.ts).
 
+[Exa MCP](/examples/exa-mcp)[Hallucination Detector](/examples/demo-hallucination-detector)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Exa MCP](/examples/exa-mcp)[Hallucination Detector](/examples/demo-hallucination-detector)

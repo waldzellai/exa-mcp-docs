@@ -1,7 +1,7 @@
 # FAQs - Exa
 
 > **Source:** https://docs.exa.ai/reference/faqs  
-> **Last Updated:** 2025-07-16T10:33:55.921Z
+> **Last Updated:** 2025-07-31T04:43:45.426Z
 
 ---
 
@@ -31,7 +31,7 @@ FAQs
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -259,9 +259,7 @@ Exa is a search engine built specifically for AI applications. We’ve built our
 
 What's different about Exa Search?
 
-Traditional search engines like Google that are optimized for clicks and ads. Because nearly every search API wrap Google, they all have a similar problem.
-
-In contrast, Exa is optimized to return the highest quality information for LLM applications. We do not make money from ads, so we are fully incentivized to return the highest quality results to our customers. Because we’ve built our own search engine from scratch, we’re able to provide all sorts of customized features that other providers can’t.
+Traditional search engines like Google that are optimized for clicks and ads. Because nearly every search API wrap Google, they all have a similar problem.In contrast, Exa is optimized to return the highest quality information for LLM applications. We do not make money from ads, so we are fully incentivized to return the highest quality results to our customers. Because we’ve built our own search engine from scratch, we’re able to provide all sorts of customized features that other providers can’t.
 
 How is Exa different from LLMs?
 
@@ -289,11 +287,7 @@ We update our index every hour, and are constantly adding batches of new links. 
 
 How does similarity search work?
 
-When you search using a URL, Exa crawls the URL, parses the main content from the HTML, and searches the index with that parsed content.
-
-The model chooses webpages which it predicts are talked about in similar ways to the prompt URL. That means the model considers a range of factors about the page, including the text style, the domain, and the main ideas inside the text.
-
-Similarity search is natural extension for a neural search engine like Exa, and something that’s difficult with keyword search engines like google
+When you search using a URL, Exa crawls the URL, parses the main content from the HTML, and searches the index with that parsed content.The model chooses webpages which it predicts are talked about in similar ways to the prompt URL. That means the model considers a range of factors about the page, including the text style, the domain, and the main ideas inside the text.Similarity search is natural extension for a neural search engine like Exa, and something that’s difficult with keyword search engines like google
 
 What security measures does Exa take?
 
@@ -309,8 +303,8 @@ What's on our roadmap?
 *   Build a (much) larger index
 *   Solve search. No, really.
 
+[Exa Research](/reference/exa-research)[Setting Up and Managing Your Team](/reference/setting-up-team)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Exa Research](/reference/exa-research)[Setting Up and Managing Your Team](/reference/setting-up-team)

@@ -1,7 +1,7 @@
 # List Monitor Runs - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/runs/list-monitor-runs  
-> **Last Updated:** 2025-07-16T10:35:33.488Z
+> **Last Updated:** 2025-07-31T04:45:36.146Z
 
 ---
 
@@ -31,7 +31,7 @@ List Monitor Runs
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -286,10 +286,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -329,3 +325,7 @@ List of monitor runs
 The response is of type `object`.
 
 [List Monitors](/websets/api/monitors/list-monitors)[Get Monitor Run](/websets/api/monitors/runs/get-monitor-run)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

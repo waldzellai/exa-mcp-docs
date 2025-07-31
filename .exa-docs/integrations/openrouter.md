@@ -1,7 +1,7 @@
 # OpenRouter - Exa
 
 > **Source:** https://docs.exa.ai/integrations/openrouter  
-> **Last Updated:** 2025-07-16T10:33:36.813Z
+> **Last Updated:** 2025-07-31T04:43:26.250Z
 
 ---
 
@@ -31,7 +31,7 @@ OpenRouter
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -85,12 +85,10 @@ OpenRouter
     
     ](/integrations/ibm-watsonx-docs)
 
-Learn how to use Exa’s search API with OpenRouter. OpenRouter provides web search capabilities that enable AI models to access current information from the web.
+Learn how to use Exa’s search API with OpenRouter. OpenRouter provides web search capabilities that enable AI models to access current information from the web. For detailed instructions on using Exa with OpenRouter, visit the [OpenRouter documentation](https://openrouter.ai/docs/features/web-search).
 
-For detailed instructions on using Exa with OpenRouter, visit the [OpenRouter documentation](https://openrouter.ai/docs/features/web-search).
+[Vercel AI SDK](/integrations/vercel)[LangChain Docs](/integrations/langchain-docs)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Vercel AI SDK](/integrations/vercel)[LangChain Docs](/integrations/langchain-docs)

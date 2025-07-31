@@ -1,7 +1,7 @@
 # Get a task - Exa
 
 > **Source:** https://docs.exa.ai/reference/research/get-a-task  
-> **Last Updated:** 2025-07-16T10:34:26.164Z
+> **Last Updated:** 2025-07-31T04:44:15.783Z
 
 ---
 
@@ -31,7 +31,7 @@ Get a task
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -366,10 +366,6 @@ Ask AI
 
 ](https://dashboard.exa.ai/api-keys)
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -407,3 +403,7 @@ Research task details
 The response is of type `object`.
 
 [Create a task](/reference/research/create-a-task)[List tasks](/reference/research/list-tasks)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

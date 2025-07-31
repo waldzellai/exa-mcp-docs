@@ -1,7 +1,7 @@
 # Create an Enrichment - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/enrichments/create-an-enrichment  
-> **Last Updated:** 2025-07-16T10:36:05.779Z
+> **Last Updated:** 2025-07-31T04:46:09.920Z
 
 ---
 
@@ -31,7 +31,7 @@ Create an Enrichment
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -291,10 +291,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -338,3 +334,7 @@ Enrichment created
 The response is of type `object`.
 
 [Cancel a running Search](/websets/api/websets/searches/cancel-a-running-search)[Get an Enrichment](/websets/api/websets/enrichments/get-an-enrichment)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

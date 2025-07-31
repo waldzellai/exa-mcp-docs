@@ -1,7 +1,7 @@
 # Python SDK Specification - Exa
 
 > **Source:** https://docs.exa.ai/sdks/python-sdk-specification  
-> **Last Updated:** 2025-07-16T10:34:48.113Z
+> **Last Updated:** 2025-07-31T04:44:37.677Z
 
 ---
 
@@ -31,7 +31,7 @@ Python SDK Specification
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -165,8 +165,6 @@ exa = Exa(os.getenv('EXA_API_KEY'))
 ## Get API Key
 
 Follow this link to get your API key
-
-
 
 
 
@@ -1252,9 +1250,7 @@ The return type depends on the combination of `text` and `highlights` parameters
 *   `SearchResponse[ResultWithHighlights]`: When only `highlights` is provided.
 *   `SearchResponse[ResultWithTextAndHighlights]`: When both `text` and `highlights` are provided.
 
-The response contains similar results and an optional autoprompt string.
-
-Note: If neither `text` nor `highlights` is specified, the method defaults to including the full text content.
+The response contains similar results and an optional autoprompt string. Note: If neither `text` nor `highlights` is specified, the method defaults to including the full text content.
 
 ## 
 
@@ -2079,8 +2075,8 @@ Ask AI
 }
 ```
 
+[TypeScript SDK Specification](/sdks/typescript-sdk-specification)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[TypeScript SDK Specification](/sdks/typescript-sdk-specification)

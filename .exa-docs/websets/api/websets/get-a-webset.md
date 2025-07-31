@@ -1,7 +1,7 @@
 # Get a Webset - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/get-a-webset  
-> **Last Updated:** 2025-07-16T10:35:57.173Z
+> **Last Updated:** 2025-07-31T04:46:00.096Z
 
 ---
 
@@ -31,7 +31,7 @@ Get a Webset
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -154,6 +154,13 @@ Get a Webset
             ](/websets/api/websets/delete-a-webset)
         *   [POST
             
+            Preview a webset
+            
+            
+            
+            ](/websets/api/websets/preview-a-webset)
+        *   [POST
+            
             Cancel a running Webset
             
             
@@ -215,6 +222,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -231,6 +239,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -453,6 +471,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -469,6 +488,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -641,10 +670,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -702,3 +727,7 @@ Webset
 The response is of type `object`.
 
 [Create a Webset](/websets/api/websets/create-a-webset)[Update a Webset](/websets/api/websets/update-a-webset)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

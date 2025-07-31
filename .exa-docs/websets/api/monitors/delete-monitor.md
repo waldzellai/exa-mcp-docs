@@ -1,7 +1,7 @@
 # Delete Monitor - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/delete-monitor  
-> **Last Updated:** 2025-07-16T10:35:22.854Z
+> **Last Updated:** 2025-07-31T04:45:18.706Z
 
 ---
 
@@ -31,7 +31,7 @@ Delete Monitor
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -316,10 +316,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -359,3 +355,7 @@ Monitor deleted successfully
 The response is of type `object`.
 
 [Update Monitor](/websets/api/monitors/update-monitor)[List Monitors](/websets/api/monitors/list-monitors)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

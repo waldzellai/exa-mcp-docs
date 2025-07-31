@@ -1,7 +1,7 @@
 # List Monitors - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/list-monitors  
-> **Last Updated:** 2025-07-16T10:35:27.120Z
+> **Last Updated:** 2025-07-31T04:45:27.710Z
 
 ---
 
@@ -31,7 +31,7 @@ List Monitors
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -324,10 +324,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -391,3 +387,7 @@ List of monitors
 The response is of type `object`.
 
 [Delete Monitor](/websets/api/monitors/delete-monitor)[List Monitor Runs](/websets/api/monitors/runs/list-monitor-runs)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

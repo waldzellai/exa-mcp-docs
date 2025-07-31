@@ -1,7 +1,7 @@
 # Exa LiveCrawl - Exa
 
 > **Source:** https://docs.exa.ai/reference/should-we-use-livecrawl  
-> **Last Updated:** 2025-07-16T10:34:37.148Z
+> **Last Updated:** 2025-07-31T04:44:26.692Z
 
 ---
 
@@ -31,7 +31,7 @@ Exa LiveCrawl
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -261,9 +261,7 @@ On this page
 
 * * *
 
-With Exa, we can already search the web using LLMs.
-
-However, by default, we cache all of our links to bias for the fastest response possible. You may be interested in the live version of the page, which our `livecrawl` parameter can help with.
+With Exa, we can already search the web using LLMs. However, by default, we cache all of our links to bias for the fastest response possible. You may be interested in the live version of the page, which our `livecrawl` parameter can help with.
 
 ## 
 
@@ -360,13 +358,7 @@ This will try to get the freshest content available, but if live crawling fails 
 4.  **Event Coverage**: Live events like conferences or sports
 5.  **Social Media Trends**: To stay updated on the latest trends or viral content
 
-`livecrawl:'always'` ensures you’re working with the freshest data available, though it may take slightly longer than using cached results.
-
-`livecrawl:'preferred'` tries to crawl fresh content first, but falls back to cached content if crawling fails. This provides the best balance of freshness and reliability.
-
-`livecrawl:'never'` means that you will always get cached results.
-
-`livecrawl:'fallback'` means that Exa will livecrawl results if its not available in cache (for keyword search).
+`livecrawl:'always'` ensures you’re working with the freshest data available, though it may take slightly longer than using cached results. `livecrawl:'preferred'` tries to crawl fresh content first, but falls back to cached content if crawling fails. This provides the best balance of freshness and reliability. `livecrawl:'never'` means that you will always get cached results. `livecrawl:'fallback'` means that Exa will livecrawl results if its not available in cache (for keyword search).
 
 ## 
 
@@ -426,12 +418,10 @@ Maximum speed, static content
 
 When LiveCrawl Isn’t Necessary
 
-Cached data is sufficient for many queries, especially for historical topics like “What were the major causes of World War II?” or educational content such as “How does photosynthesis work?” These subjects rarely change, so reliable cached results can provide accurate information quickly.
+Cached data is sufficient for many queries, especially for historical topics like “What were the major causes of World War II?” or educational content such as “How does photosynthesis work?” These subjects rarely change, so reliable cached results can provide accurate information quickly. \`
 
-\`
+[Crawling Subpages with Exa](/reference/crawling-subpages-with-exa)[Exa Research](/reference/exa-research)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Crawling Subpages with Exa](/reference/crawling-subpages-with-exa)[Exa Research](/reference/exa-research)

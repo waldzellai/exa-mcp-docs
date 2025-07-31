@@ -1,7 +1,7 @@
 # Markdown Contents as Default - Exa
 
 > **Source:** https://docs.exa.ai/changelog/markdown-contents-as-default  
-> **Last Updated:** 2025-07-16T10:32:51.548Z
+> **Last Updated:** 2025-07-31T04:42:40.924Z
 
 ---
 
@@ -15,7 +15,7 @@ Search...
 
 Navigation
 
-Changelog
+June 2025
 
 Markdown Contents as Default
 
@@ -31,7 +31,7 @@ Markdown Contents as Default
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -40,7 +40,31 @@ Markdown Contents as Default
     
     Blog](https://exa.ai/blog)
 
-##### Changelog
+##### July 2025
+
+*   [
+    
+    Geolocation Filter Support
+    
+    
+    
+    ](/changelog/geolocation-filter-support)
+*   [
+    
+    New Fast Search Type
+    
+    
+    
+    ](/changelog/new-fast-search-type)
+*   [
+    
+    Score Deprecation in Auto and Keyword Search
+    
+    
+    
+    ](/changelog/auto-keyword-score-deprecation)
+
+##### June 2025
 
 *   [
     
@@ -56,6 +80,9 @@ Markdown Contents as Default
     
     
     ](/changelog/livecrawl-preferred-option)
+
+##### May 2025
+
 *   [
     
     Contents Endpoint Status Changes
@@ -79,9 +106,7 @@ On this page
 
 * * *
 
-**Date: 23 June 2025**
-
-We’ve updated all Exa API endpoints to return content in markdown format by default. This change provides cleaner, more structured content that’s optimized for AI applications, RAG systems, and general text processing workflows.
+**Date: 23 June 2025** We’ve updated all Exa API endpoints to return content in markdown format by default. This change provides cleaner, more structured content that’s optimized for AI applications, RAG systems, and general text processing workflows.
 
 All endpoints now process webpage content into clean markdown format by default. Use the `includeHtmlTags` parameter to control content formatting.
 
@@ -108,9 +133,7 @@ The `includeHtmlTags` parameter now controls how we process webpage content:
 *   **`includeHtmlTags=false` (default)**: We process webpage content into clean markdown format
 *   **`includeHtmlTags=true`**: We return content as HTML without processing to markdown
 
-In all cases, we remove extraneous data, advertisements, navigation elements, and other boilerplate content, keeping only what we detect as the main content of the page.
-
-**No action required** if you want the new markdown format - it’s now the default! If you need HTML content instead:
+In all cases, we remove extraneous data, advertisements, navigation elements, and other boilerplate content, keeping only what we detect as the main content of the page. **No action required** if you want the new markdown format - it’s now the default! If you need HTML content instead:
 
 ## 
 
@@ -124,12 +147,10 @@ Benefits of Markdown Default
 2.  **Improved readability**: Clean formatting without HTML tags makes content more readable
 3.  **RAG optimization**: Markdown content chunks more naturally for retrieval systems
 
-If you have any questions about this change or need help adapting your implementation, please reach out to [\[email protected\]](/cdn-cgi/l/email-protection#cba3aea7a7a48baeb3aae5aaa2).
+If you have any questions about this change or need help adapting your implementation, please reach out to [\[email protected\]](/cdn-cgi/l/email-protection#9bf3fef7f7f4dbfee3fab5faf2). We’re excited for you to experience the improved content quality with markdown as the default!
 
-We’re excited for you to experience the improved content quality with markdown as the default!
+[Score Deprecation in Auto and Keyword Search](/changelog/auto-keyword-score-deprecation)[New Livecrawl Option: Preferred](/changelog/livecrawl-preferred-option)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[New Livecrawl Option: Preferred](/changelog/livecrawl-preferred-option)

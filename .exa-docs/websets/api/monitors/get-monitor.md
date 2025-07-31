@@ -1,7 +1,7 @@
 # Get Monitor - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/monitors/get-monitor  
-> **Last Updated:** 2025-07-16T10:35:24.991Z
+> **Last Updated:** 2025-07-31T04:45:20.864Z
 
 ---
 
@@ -31,7 +31,7 @@ Get Monitor
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -316,10 +316,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -359,3 +355,7 @@ Monitor details
 The response is of type `object`.
 
 [Create a Monitor](/websets/api/monitors/create-a-monitor)[Update Monitor](/websets/api/monitors/update-monitor)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

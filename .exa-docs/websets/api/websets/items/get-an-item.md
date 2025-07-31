@@ -1,7 +1,7 @@
 # Get an Item - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/items/get-an-item  
-> **Last Updated:** 2025-07-16T10:36:14.221Z
+> **Last Updated:** 2025-07-31T04:46:19.609Z
 
 ---
 
@@ -31,7 +31,7 @@ Get an Item
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -332,10 +332,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -387,3 +383,7 @@ Webset Item
 The response is of type `object`.
 
 [List all Websets](/websets/api/websets/list-all-websets)[Delete an Item](/websets/api/websets/items/delete-an-item)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

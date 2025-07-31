@@ -1,7 +1,7 @@
 # New Livecrawl Option: Preferred - Exa
 
 > **Source:** https://docs.exa.ai/changelog/livecrawl-preferred-option  
-> **Last Updated:** 2025-07-16T10:32:49.358Z
+> **Last Updated:** 2025-07-31T04:42:38.720Z
 
 ---
 
@@ -15,7 +15,7 @@ Search...
 
 Navigation
 
-Changelog
+June 2025
 
 New Livecrawl Option: Preferred
 
@@ -31,7 +31,7 @@ New Livecrawl Option: Preferred
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -40,7 +40,31 @@ New Livecrawl Option: Preferred
     
     Blog](https://exa.ai/blog)
 
-##### Changelog
+##### July 2025
+
+*   [
+    
+    Geolocation Filter Support
+    
+    
+    
+    ](/changelog/geolocation-filter-support)
+*   [
+    
+    New Fast Search Type
+    
+    
+    
+    ](/changelog/new-fast-search-type)
+*   [
+    
+    Score Deprecation in Auto and Keyword Search
+    
+    
+    
+    ](/changelog/auto-keyword-score-deprecation)
+
+##### June 2025
 
 *   [
     
@@ -56,6 +80,9 @@ New Livecrawl Option: Preferred
     
     
     ](/changelog/livecrawl-preferred-option)
+
+##### May 2025
+
 *   [
     
     Contents Endpoint Status Changes
@@ -81,9 +108,7 @@ On this page
 
 * * *
 
-**Date: 7 June 2025**
-
-We’ve added a new `livecrawl` option called `"preferred"` that provides a more resilient approach to content fetching. This option attempts to crawl fresh content but gracefully falls back to cached results when live crawling fails.
+**Date: 7 June 2025** We’ve added a new `livecrawl` option called `"preferred"` that provides a more resilient approach to content fetching. This option attempts to crawl fresh content but gracefully falls back to cached results when live crawling fails.
 
 The `preferred` option is now available in both `/contents` and `/search_and_contents` endpoints.
 
@@ -130,9 +155,7 @@ Returns crawl error
 
 Returns crawl error
 
-This makes `"preferred"` more resilient for production applications where you want fresh content when possible, but don’t want requests to fail when websites are temporarily unavailable.
-
-If content freshness is critical and you want nothing else, then using `"always"` might be better.
+This makes `"preferred"` more resilient for production applications where you want fresh content when possible, but don’t want requests to fail when websites are temporarily unavailable. If content freshness is critical and you want nothing else, then using `"always"` might be better.
 
 ## 
 
@@ -223,8 +246,8 @@ result = exa.get_contents(urls, livecrawl="preferred")
 
 This change maintains your preference for fresh content while improving reliability.
 
+[Markdown Contents as Default](/changelog/markdown-contents-as-default)[Contents Endpoint Status Changes](/changelog/contents-endpoint-status-changes)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Markdown Contents as Default](/changelog/markdown-contents-as-default)[Contents Endpoint Status Changes](/changelog/contents-endpoint-status-changes)

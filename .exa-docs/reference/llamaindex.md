@@ -1,7 +1,7 @@
 # RAG with LlamaIndex - Exa
 
 > **Source:** https://docs.exa.ai/reference/llamaindex  
-> **Last Updated:** 2025-07-16T10:34:08.746Z
+> **Last Updated:** 2025-07-31T04:43:58.211Z
 
 ---
 
@@ -31,7 +31,7 @@ RAG with LlamaIndex
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -290,9 +290,7 @@ Ask AI
 pip install llama-index llama-index-core llama-index-tools-exa
 ```
 
-Also ensure API keys are initialized properly. The following code uses the `EXA_API_KEY` as the relevant environment variable name.
-
-[
+Also ensure API keys are initialized properly. The following code uses the `EXA_API_KEY` as the relevant environment variable name.[
 
 ## Get your Exa API key
 
@@ -419,8 +417,8 @@ AgentChatResponse(response="Here are some highlights related to the US stock mar
 
 As you can see, the output generation is enriched with the context of our Exa Search query result!
 
+[CrewAI agents with Exa](/reference/crewai)[Tool calling with GPT](/reference/tool-calling-with-gpt4o)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[CrewAI agents with Exa](/reference/crewai)[Tool calling with GPT](/reference/tool-calling-with-gpt4o)

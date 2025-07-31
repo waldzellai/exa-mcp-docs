@@ -1,7 +1,7 @@
 # Cancel a running Webset - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/cancel-a-running-webset  
-> **Last Updated:** 2025-07-16T10:35:50.774Z
+> **Last Updated:** 2025-07-31T04:45:53.604Z
 
 ---
 
@@ -31,7 +31,7 @@ Cancel a running Webset
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -154,6 +154,13 @@ Cancel a running Webset
             ](/websets/api/websets/delete-a-webset)
         *   [POST
             
+            Preview a webset
+            
+            
+            
+            ](/websets/api/websets/preview-a-webset)
+        *   [POST
+            
             Cancel a running Webset
             
             
@@ -213,6 +220,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -229,6 +237,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -400,6 +418,7 @@ Ask AI
       "id": "<string>",
       "object": "webset_search",
       "status": "created",
+      "websetId": "<string>",
       "query": "<string>",
       "entity": {
         "type": "company"
@@ -416,6 +435,16 @@ Ask AI
         {
           "source": "import",
           "id": "<string>"
+        }
+      ],
+      "scope": [
+        {
+          "source": "import",
+          "id": "<string>",
+          "relationship": {
+            "definition": "<string>",
+            "limit": 5.5
+          }
         }
       ],
       "progress": {
@@ -535,10 +564,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -577,4 +602,8 @@ Webset canceled
 
 The response is of type `object`.
 
-[Delete a Webset](/websets/api/websets/delete-a-webset)[List all Websets](/websets/api/websets/list-all-websets)
+[Preview a webset](/websets/api/websets/preview-a-webset)[List all Websets](/websets/api/websets/list-all-websets)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

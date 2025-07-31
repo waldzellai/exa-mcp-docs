@@ -1,7 +1,7 @@
 # List all Events - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/events/list-all-events  
-> **Last Updated:** 2025-07-16T10:35:05.548Z
+> **Last Updated:** 2025-07-31T04:44:55.051Z
 
 ---
 
@@ -31,7 +31,7 @@ List all Events
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -190,6 +190,7 @@ Ask AI
             "id": "<string>",
             "object": "<string>",
             "status": "created",
+            "websetId": "<string>",
             "query": "<string>",
             "entity": {
               "type": "<string>"
@@ -206,6 +207,16 @@ Ask AI
               {
                 "source": "import",
                 "id": "<string>"
+              }
+            ],
+            "scope": [
+              {
+                "source": "import",
+                "id": "<string>",
+                "relationship": {
+                  "definition": "<string>",
+                  "limit": 5.5
+                }
               }
             ],
             "progress": {
@@ -381,6 +392,7 @@ Ask AI
             "id": "<string>",
             "object": "<string>",
             "status": "created",
+            "websetId": "<string>",
             "query": "<string>",
             "entity": {
               "type": "<string>"
@@ -397,6 +409,16 @@ Ask AI
               {
                 "source": "import",
                 "id": "<string>"
+              }
+            ],
+            "scope": [
+              {
+                "source": "import",
+                "id": "<string>",
+                "relationship": {
+                  "definition": "<string>",
+                  "limit": 5.5
+                }
               }
             ],
             "progress": {
@@ -522,10 +544,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -588,7 +606,7 @@ Show child attributes
 
 createdBefore
 
-string
+string<date-time>
 
 Filter events created before or at this timestamp (inclusive). Must be a valid ISO 8601 datetime string. All times are in UTC.
 
@@ -598,7 +616,7 @@ Filter events created before or at this timestamp (inclusive). Must be a valid I
 
 createdAfter
 
-string
+string<date-time>
 
 Filter events created after or at this timestamp (inclusive). Must be a valid ISO 8601 datetime string. All times are in UTC.
 
@@ -611,3 +629,7 @@ List of events
 The response is of type `object`.
 
 [Types](/websets/api/events/types)[Get an Event](/websets/api/events/get-an-event)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

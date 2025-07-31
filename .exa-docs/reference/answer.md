@@ -1,7 +1,7 @@
 # Answer - Exa
 
 > **Source:** https://docs.exa.ai/reference/answer  
-> **Last Updated:** 2025-07-16T10:33:41.031Z
+> **Last Updated:** 2025-07-31T04:43:30.503Z
 
 ---
 
@@ -31,7 +31,7 @@ Answer
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -411,10 +411,6 @@ Ask AI
 
 ](https://dashboard.exa.ai/api-keys)
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -448,3 +444,7 @@ OK
 The response is of type `object`.
 
 [Find similar links](/reference/find-similar-links)[Create a task](/reference/research/create-a-task)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

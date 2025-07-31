@@ -1,7 +1,7 @@
 # Downloading and Sharing Your Results - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/walkthroughs/Sharing-and-Downloading-Your-Results  
-> **Last Updated:** 2025-07-16T10:36:44.226Z
+> **Last Updated:** 2025-07-31T04:46:56.500Z
 
 ---
 
@@ -31,7 +31,7 @@ Downloading and Sharing Your Results
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -193,8 +193,8 @@ Download
 
 Download a CSV by clicking the “Download” button. You can easily upload the CSV to any CRM, candidate management systems, etc.
 
+[Prompting Websets](/websets/dashboard/walkthroughs/Prompting)[Overview](/websets/api/overview)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Prompting Websets](/websets/dashboard/walkthroughs/Prompting)[Overview](/websets/api/overview)

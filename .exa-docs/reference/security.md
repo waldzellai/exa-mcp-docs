@@ -1,7 +1,7 @@
 # Enterprise Documentation & Security - Exa
 
 > **Source:** https://docs.exa.ai/reference/security  
-> **Last Updated:** 2025-07-16T10:34:32.641Z
+> **Last Updated:** 2025-07-31T04:44:22.342Z
 
 ---
 
@@ -31,7 +31,7 @@ Enterprise Documentation & Security
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -255,20 +255,10 @@ Enterprise Documentation & Security
 
 * * *
 
-Exa takes data security and privacy seriously. We are proud to be SOC 2 Type I certified, demonstrating our commitment to maintaining rigorous information security practices and controls.
+Exa takes data security and privacy seriously. We are proud to be SOC 2 Type I certified, demonstrating our commitment to maintaining rigorous information security practices and controls. Contact us at [\[email protected\]](/cdn-cgi/l/email-protection#e088858c8c8fa0859881ce8189) to discuss an Enterprise plan if you are interested in Zero Data Retention or other customized data security solutions. [Click here](https://exa-public.s3.us-east-1.amazonaws.com/%5B20250529%5D%2BAuthorized%2BSubprocessors%2B\(Subcontractors\).pdf) to see a list of our Authorized Subcontractors per our standard Enterprise Data Processing Agreement (DPA). [Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+Labs+Inc.+SOC2+Type+I+Report+-+Final.pdf) to view our SOC2 Type I Report [Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+-+Online+Master+Subscription+Agreement.pdf) to see our standard Master Subscription Agreement [Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+Data+Processing+Addendum.pdf) to see our standard Data Processing Agreement
 
-Contact us at [\[email protected\]](/cdn-cgi/l/email-protection#39515c555556795c4158175850) to discuss an Enterprise plan if you are interested in Zero Data Retention or other customized data security solutions.
-
-[Click here](https://exa-public.s3.us-east-1.amazonaws.com/%5B20250529%5D%2BAuthorized%2BSubprocessors%2B\(Subcontractors\).pdf) to see a list of our Authorized Subcontractors per our standard Enterprise Data Processing Agreement (DPA).
-
-[Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+Labs+Inc.+SOC2+Type+I+Report+-+Final.pdf) to view our SOC2 Type I Report
-
-[Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+-+Online+Master+Subscription+Agreement.pdf) to see our standard Master Subscription Agreement
-
-[Click here](https://exa-public.s3.us-east-1.amazonaws.com/Exa+Data+Processing+Addendum.pdf) to see our standard Data Processing Agreement
+[Rate Limits](/reference/rate-limits)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Rate Limits](/reference/rate-limits)

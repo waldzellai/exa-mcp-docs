@@ -1,7 +1,7 @@
 # Update a Webhook - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/update-a-webhook  
-> **Last Updated:** 2025-07-16T10:35:44.104Z
+> **Last Updated:** 2025-07-31T04:45:46.983Z
 
 ---
 
@@ -31,7 +31,7 @@ Update a Webhook
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -288,10 +288,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -339,3 +335,7 @@ Webhook
 The response is of type `object`.
 
 [Get a Webhook](/websets/api/webhooks/get-a-webhook)[Delete a Webhook](/websets/api/webhooks/delete-a-webhook)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

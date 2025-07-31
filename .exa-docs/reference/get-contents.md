@@ -1,7 +1,7 @@
 # Get contents - Exa
 
 > **Source:** https://docs.exa.ai/reference/get-contents  
-> **Last Updated:** 2025-07-16T10:34:00.148Z
+> **Last Updated:** 2025-07-31T04:43:49.660Z
 
 ---
 
@@ -31,7 +31,7 @@ Get contents
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -479,10 +479,6 @@ Ask AI
 
 ](https://dashboard.exa.ai/api-keys)
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -512,3 +508,7 @@ OK
 The response is of type `object`.
 
 [Search](/reference/search)[Find similar links](/reference/find-similar-links)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

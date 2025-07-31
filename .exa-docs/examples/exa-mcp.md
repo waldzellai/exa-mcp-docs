@@ -1,7 +1,7 @@
 # Exa MCP - Exa
 
 > **Source:** https://docs.exa.ai/examples/exa-mcp  
-> **Last Updated:** 2025-07-16T10:33:02.301Z
+> **Last Updated:** 2025-07-31T04:42:51.610Z
 
 ---
 
@@ -31,7 +31,7 @@ Exa MCP
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -181,6 +181,7 @@ On this page
 *   [Usage Examples](#usage-examples)
 *   [Local Installation](#local-installation)
 *   [Prerequisites](#prerequisites)
+*   [Using Claude Code](#using-claude-code)
 *   [Using NPX](#using-npx)
 *   [Configuring Claude Desktop](#configuring-claude-desktop)
 *   [Troubleshooting](#troubleshooting)
@@ -260,13 +261,17 @@ Tool
 
 Description
 
+`deep_researcher_start`
+
+Start a smart AI researcher for complex questions. The AI will search the web, read many sources, and think deeply about your question to create a detailed research report
+
+`deep_researcher_check`
+
+Check if your research is ready and get the results. Use this after starting a research task to see if it’s done and get your comprehensive report
+
 `web_search_exa`
 
 Performs real-time web searches with optimized results and content extraction
-
-`research_paper_search`
-
-Specialized search focused on academic papers and research content
 
 `company_research`
 
@@ -276,21 +281,9 @@ Comprehensive company research tool that crawls company websites to gather detai
 
 Extracts content from specific URLs, useful for reading articles, PDFs, or any web page when you have the exact URL
 
-`competitor_finder`
-
-Identifies competitors of a company by searching for businesses offering similar products or services
-
 `linkedin_search`
 
 Search LinkedIn for companies and people using Exa AI. Simply include company names, person names, or specific LinkedIn URLs in your query
-
-`wikipedia_search_exa`
-
-Search and retrieve information from Wikipedia articles on specific topics, giving you accurate, structured knowledge from the world’s largest encyclopedia
-
-`github_search`
-
-Search GitHub repositories using Exa AI - performs real-time searches on GitHub.com to find relevant repositories, issues, and GitHub accounts
 
 ## 
 
@@ -302,9 +295,8 @@ Usage Examples
 
 Once configured, you can ask Claude to perform searches:
 
-*   “Find and analyze recent research papers about climate change solutions”
 *   “Research the company exa.ai and find information about their pricing”
-*   “Find competitors for a company that provides web search API services”
+*   “Start a deep research project on the impact of artificial intelligence on healthcare, then check when it’s complete to get a comprehensive report”
 
 ## 
 
@@ -325,6 +317,26 @@ Prerequisites
 *   [Node.js](https://nodejs.org/) v18 or higher.
 *   [Claude Desktop](https://claude.ai/download) installed (optional). Exa MCP also works with other MCP-compatible clients like Cursor, Windsurf, and more).
 *   An [Exa API key](https://dashboard.exa.ai/api-keys).
+
+### 
+
+[​
+
+](#using-claude-code)
+
+Using Claude Code
+
+The quickest way to set up Exa MCP is using Claude Code:
+
+Copy
+
+Ask AI
+
+```
+claude mcp add exa -e EXA_API_KEY=YOUR_API_KEY -- npx -y exa-mcp-server
+```
+
+Replace `YOUR_API_KEY` with your actual Exa API key from [dashboard.exa.ai/api-keys](https://dashboard.exa.ai/api-keys).
 
 ### 
 
@@ -358,8 +370,8 @@ Ask AI
 # Enable only web search
 npx exa-mcp-server --tools=web_search
 
-# Enable multiple tools
-npx exa-mcp-server --tools=web_search,research_paper_search,twitter_search
+# Enable deep researcher tools
+npx exa-mcp-server --tools=deep_researcher_start,deep_researcher_check
 
 # List all available tools
 npx exa-mcp-server --list-tools
@@ -376,7 +388,6 @@ Configuring Claude Desktop
 To configure Claude Desktop to use Exa MCP:
 
 1.  **Enable Developer Mode in Claude Desktop**
-    
     *   Open Claude Desktop
     *   Click on the top-left menu
     *   Enable Developer Mode
@@ -386,9 +397,7 @@ To configure Claude Desktop to use Exa MCP:
     *   Navigate to the Developer Option
     *   Click “Edit Config” to open the configuration file
     
-    Alternatively, you can open it directly:
-    
-    **macOS:**
+    Alternatively, you can open it directly: **macOS:**
     
     Copy
     
@@ -408,9 +417,7 @@ To configure Claude Desktop to use Exa MCP:
     code %APPDATA%\Claude\claude_desktop_config.json
     ```
     
-3.  **Add Exa MCP Configuration**
-    
-    Add the following to your configuration:
+3.  **Add Exa MCP Configuration** Add the following to your configuration:
     
     Copy
     
@@ -434,10 +441,7 @@ To configure Claude Desktop to use Exa MCP:
     ```
     
     Replace `your-api-key-here` with your actual Exa API key. You can get your (Exa API here)\[[https://dashboard.exa.ai/api-keys](https://dashboard.exa.ai/api-keys)\].
-    
-4.  **Enabling Specific Tools**
-    
-    To enable only specific tools:
+4.  **Enabling Specific Tools** To enable only specific tools:
     
     Copy
     
@@ -451,7 +455,31 @@ To configure Claude Desktop to use Exa MCP:
           "args": [
             "-y",
             "exa-mcp-server",
-            "--tools=web_search,research_paper_search"
+            "--tools=web_search"
+          ],
+          "env": {
+            "EXA_API_KEY": "your-api-key-here"
+          }
+        }
+      }
+    }
+    ```
+    
+    To enable deep researcher tools:
+    
+    Copy
+    
+    Ask AI
+    
+    ```
+    {
+      "mcpServers": {
+        "exa": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "exa-mcp-server",
+            "--tools=deep_researcher_start,deep_researcher_check"
           ],
           "env": {
             "EXA_API_KEY": "your-api-key-here"
@@ -462,7 +490,6 @@ To configure Claude Desktop to use Exa MCP:
     ```
     
 5.  **Restart Claude Desktop**
-    
     *   Completely quit Claude Desktop (not just close the window)
     *   Start Claude Desktop again
     *   Look for the 🔌 icon to verify the Exa server is connected
@@ -484,14 +511,11 @@ Troubleshooting
 Common Issues
 
 1.  **Server Not Found**
-    
     *   Ensure the npm package is correctly installed
 2.  **API Key Issues**
-    
     *   Confirm your EXA\_API\_KEY is valid
     *   Make sure there are no spaces or quotes around the API key
 3.  **Connection Problems**
-    
     *   Restart Claude Desktop completely
 
 ## 
@@ -504,8 +528,8 @@ Additional Resources
 
 For more information, visit the [Exa MCP Server GitHub repository](https://github.com/exa-labs/exa-mcp-server/).
 
+[Websets News Monitor](/examples/demo-websets-news-monitor)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Websets News Monitor](/examples/demo-websets-news-monitor)

@@ -1,7 +1,7 @@
 # Import from CSV - Exa
 
 > **Source:** https://docs.exa.ai/websets/dashboard/import-from-csv  
-> **Last Updated:** 2025-07-16T10:36:29.192Z
+> **Last Updated:** 2025-07-31T04:46:34.815Z
 
 ---
 
@@ -31,7 +31,7 @@ Import from CSV
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -150,9 +150,7 @@ On this page
 
 Overview
 
-The Import from CSV feature allows you to transform your existing CSV files containing URLs into fully-functional Websets. This is perfect when you already have a list of websites, companies, or resources that you want to enrich with additional data or apply search criteria to filter.
-
-  
+The Import from CSV feature allows you to transform your existing CSV files containing URLs into fully-functional Websets. This is perfect when you already have a list of websites, companies, or resources that you want to enrich with additional data or apply search criteria to filter.  
 
 ## 
 
@@ -185,9 +183,7 @@ Ensure your CSV file has a URL column
 *   For Company search: URLs must be company homepage URLs (e.g., [https://example.com](https://example.com))
 *   For other searches: use any type of URL
 
-If you do not have URLs, Websets will attempt to infer URLs based on the information in each CSV row and any extra info you provide.
-
-The maximum number of results you can import is determined by your plan.
+If you do not have URLs, Websets will attempt to infer URLs based on the information in each CSV row and any extra info you provide. The maximum number of results you can import is determined by your plan.
 
 ## 
 
@@ -229,8 +225,8 @@ Filter your imported URLs based on specific criteria:
 *   Geographic location
 *   Content type or topic
 
+[Example queries](/websets/dashboard/websets-example-queries)[Exclude Results](/websets/dashboard/exclude-results)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[Example queries](/websets/dashboard/websets-example-queries)[Exclude Results](/websets/dashboard/exclude-results)

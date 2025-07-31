@@ -1,7 +1,7 @@
 # Delete a Webhook - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/webhooks/delete-a-webhook  
-> **Last Updated:** 2025-07-16T10:35:37.696Z
+> **Last Updated:** 2025-07-31T04:45:40.501Z
 
 ---
 
@@ -31,7 +31,7 @@ Delete a Webhook
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -272,10 +272,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -319,3 +315,7 @@ Webhook
 The response is of type `object`.
 
 [Update a Webhook](/websets/api/webhooks/update-a-webhook)[List webhooks](/websets/api/webhooks/list-webhooks)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

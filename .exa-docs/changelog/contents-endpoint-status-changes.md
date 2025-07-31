@@ -1,7 +1,7 @@
 # Contents Endpoint Status Changes - Exa
 
 > **Source:** https://docs.exa.ai/changelog/contents-endpoint-status-changes  
-> **Last Updated:** 2025-07-16T10:32:47.247Z
+> **Last Updated:** 2025-07-31T04:42:36.567Z
 
 ---
 
@@ -15,7 +15,7 @@ Search...
 
 Navigation
 
-Changelog
+May 2025
 
 Contents Endpoint Status Changes
 
@@ -31,7 +31,7 @@ Contents Endpoint Status Changes
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -40,7 +40,31 @@ Contents Endpoint Status Changes
     
     Blog](https://exa.ai/blog)
 
-##### Changelog
+##### July 2025
+
+*   [
+    
+    Geolocation Filter Support
+    
+    
+    
+    ](/changelog/geolocation-filter-support)
+*   [
+    
+    New Fast Search Type
+    
+    
+    
+    ](/changelog/new-fast-search-type)
+*   [
+    
+    Score Deprecation in Auto and Keyword Search
+    
+    
+    
+    ](/changelog/auto-keyword-score-deprecation)
+
+##### June 2025
 
 *   [
     
@@ -56,6 +80,9 @@ Contents Endpoint Status Changes
     
     
     ](/changelog/livecrawl-preferred-option)
+
+##### May 2025
+
 *   [
     
     Contents Endpoint Status Changes
@@ -81,9 +108,7 @@ On this page
 
 * * *
 
-**Date: 22 May 2025**
-
-We’ve updated the `/contents` endpoint to provide more granular status information for each URL you request. Instead of returning HTTP error codes directly, the endpoint now includes a `statuses` field that gives you detailed information about each content fetch operation.
+**Date: 22 May 2025** We’ve updated the `/contents` endpoint to provide more granular status information for each URL you request. Instead of returning HTTP error codes directly, the endpoint now includes a `statuses` field that gives you detailed information about each content fetch operation.
 
 The `/contents` endpoint will now only return an error if there’s an internal issue on our end. All other cases are handled through the new `statuses` field.
 
@@ -95,9 +120,7 @@ The `/contents` endpoint will now only return an error if there’s an internal 
 
 What Changed
 
-Previously, the `/contents` endpoint would return HTTP error codes when content fetching failed. This approach had limitations when multiple URLs failed for different reasons, making it unclear which specific error to return.
-
-Now, the endpoint returns a `statuses` field containing individual status information for each URL, allowing you to handle different failure scenarios appropriately.
+Previously, the `/contents` endpoint would return HTTP error codes when content fetching failed. This approach had limitations when multiple URLs failed for different reasons, making it unclear which specific error to return. Now, the endpoint returns a `statuses` field containing individual status information for each URL, allowing you to handle different failure scenarios appropriately.
 
 ## 
 
@@ -185,10 +208,10 @@ for status in result.statuses:
 
 Need More Information?
 
-If you’d like more information about the status of a crawl or have specific use cases that require additional status details, please contact us at [\[email protected\]](/cdn-cgi/l/email-protection#3b535e5757547b5e435a155a52) with your use case.
+If you’d like more information about the status of a crawl or have specific use cases that require additional status details, please contact us at [\[email protected\]](/cdn-cgi/l/email-protection#99f1fcf5f5f6d9fce1f8b7f8f0) with your use case.
+
+[New Livecrawl Option: Preferred](/changelog/livecrawl-preferred-option)[Auto search as Default](/changelog/auto-search-as-default)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[New Livecrawl Option: Preferred](/changelog/livecrawl-preferred-option)[Auto search as Default](/changelog/auto-search-as-default)

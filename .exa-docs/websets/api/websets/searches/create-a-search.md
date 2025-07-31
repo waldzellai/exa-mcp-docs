@@ -1,7 +1,7 @@
 # Create a Search - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/searches/create-a-search  
-> **Last Updated:** 2025-07-16T10:36:20.721Z
+> **Last Updated:** 2025-07-31T04:46:26.236Z
 
 ---
 
@@ -31,7 +31,7 @@ Create a Search
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -190,6 +190,16 @@ curl --request POST \
       "id": "<string>"
     }
   ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
+    }
+  ],
   "recall": true,
   "behavior": "override",
   "metadata": {}
@@ -207,6 +217,7 @@ Ask AI
   "id": "<string>",
   "object": "webset_search",
   "status": "created",
+  "websetId": "<string>",
   "query": "<string>",
   "entity": {
     "type": "company"
@@ -223,6 +234,16 @@ Ask AI
     {
       "source": "import",
       "id": "<string>"
+    }
+  ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
     }
   ],
   "progress": {
@@ -300,6 +321,16 @@ curl --request POST \
       "id": "<string>"
     }
   ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
+    }
+  ],
   "recall": true,
   "behavior": "override",
   "metadata": {}
@@ -317,6 +348,7 @@ Ask AI
   "id": "<string>",
   "object": "webset_search",
   "status": "created",
+  "websetId": "<string>",
   "query": "<string>",
   "entity": {
     "type": "company"
@@ -333,6 +365,16 @@ Ask AI
     {
       "source": "import",
       "id": "<string>"
+    }
+  ],
+  "scope": [
+    {
+      "source": "import",
+      "id": "<string>",
+      "relationship": {
+        "definition": "<string>",
+        "limit": 5.5
+      }
     }
   ],
   "progress": {
@@ -359,10 +401,6 @@ Ask AI
   "updatedAt": "2023-11-07T05:31:56Z"
 }
 ```
-
-Assistant
-
-Responses are generated using AI and may contain mistakes.
 
 #### Authorizations
 
@@ -407,3 +445,7 @@ Webset Search created
 The response is of type `object`.
 
 [List all Items for a Webset](/websets/api/websets/items/list-all-items-for-a-webset)[Get a Search](/websets/api/websets/searches/get-a-search)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

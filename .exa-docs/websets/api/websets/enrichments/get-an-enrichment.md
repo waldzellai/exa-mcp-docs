@@ -1,7 +1,7 @@
 # Get an Enrichment - Exa
 
 > **Source:** https://docs.exa.ai/websets/api/websets/enrichments/get-an-enrichment  
-> **Last Updated:** 2025-07-16T10:36:09.985Z
+> **Last Updated:** 2025-07-31T04:46:14.244Z
 
 ---
 
@@ -31,7 +31,7 @@ Get an Enrichment
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -273,10 +273,6 @@ Ask AI
 }
 ```
 
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
 #### Authorizations
 
 [​
@@ -328,3 +324,7 @@ Enrichment
 The response is of type `object`.
 
 [Create an Enrichment](/websets/api/websets/enrichments/create-an-enrichment)[Delete an Enrichment](/websets/api/websets/enrichments/delete-an-enrichment)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

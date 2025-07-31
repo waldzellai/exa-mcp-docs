@@ -1,7 +1,7 @@
 # OpenAI Exa Wrapper - Exa
 
 > **Source:** https://docs.exa.ai/reference/openai  
-> **Last Updated:** 2025-07-16T10:34:10.893Z
+> **Last Updated:** 2025-07-31T04:44:00.395Z
 
 ---
 
@@ -31,7 +31,7 @@ OpenAI Exa Wrapper
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -264,9 +264,7 @@ On this page
 
 * * *
 
-Exa is designed from the ground up to enable seamless, accurate, and performant RAG (Retrieval-Augmented Generation). Exa provides factual, up to date information needed to ground LLM generations.
-
-But good RAG requires more than just great search. The client needs to decide _when_ to use RAG, with _what_ queries. They need to handle chunking, prompting, and chaining LLM calls. We provide the Exa OpenAI wrapper that, **with one line of code**, does all that and turns any OpenAI chat completion into an Exa-powered RAG system.
+Exa is designed from the ground up to enable seamless, accurate, and performant RAG (Retrieval-Augmented Generation). Exa provides factual, up to date information needed to ground LLM generations. But good RAG requires more than just great search. The client needs to decide _when_ to use RAG, with _what_ queries. They need to handle chunking, prompting, and chaining LLM calls. We provide the Exa OpenAI wrapper that, **with one line of code**, does all that and turns any OpenAI chat completion into an Exa-powered RAG system.
 
 * * *
 
@@ -278,9 +276,7 @@ But good RAG requires more than just great search. The client needs to decide _w
 
 Get Started
 
-First, create an account and grab a free API key.
-
-[
+First, create an account and grab a free API key.[
 
 ## Get your Exa API key
 
@@ -563,8 +559,8 @@ exa_openai.chat.completions.create(
 )
 ```
 
+[RAG with LangChain](/reference/langchain)[CrewAI agents with Exa](/reference/crewai)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[RAG with LangChain](/reference/langchain)[CrewAI agents with Exa](/reference/crewai)

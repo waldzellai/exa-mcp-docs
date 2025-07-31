@@ -1,7 +1,7 @@
 # LlamaIndex Docs - Exa
 
 > **Source:** https://docs.exa.ai/integrations/llamaIndex-docs  
-> **Last Updated:** 2025-07-16T10:33:34.611Z
+> **Last Updated:** 2025-07-31T04:43:24.078Z
 
 ---
 
@@ -31,7 +31,7 @@ LlamaIndex Docs
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -85,12 +85,10 @@ LlamaIndex Docs
     
     ](/integrations/ibm-watsonx-docs)
 
-Learn how to use Exa’s search API with LlamaIndex. LlamaIndex has a dedicated Exa tool. This enables AI agents to perform web search.
+Learn how to use Exa’s search API with LlamaIndex. LlamaIndex has a dedicated Exa tool. This enables AI agents to perform web search. For detailed instructions on using Exa with LlamaIndex, visit the [LlamaIndex documentation](https://docs.llamaindex.ai/en/stable/api_reference/tools/exa/).
 
-For detailed instructions on using Exa with LlamaIndex, visit the [LlamaIndex documentation](https://docs.llamaindex.ai/en/stable/api_reference/tools/exa/).
+[LangChain Docs](/integrations/langchain-docs)[CrewAI Docs](/integrations/crew-ai-docs)
 
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[LangChain Docs](/integrations/langchain-docs)[CrewAI Docs](/integrations/crew-ai-docs)

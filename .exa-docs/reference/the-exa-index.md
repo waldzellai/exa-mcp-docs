@@ -1,7 +1,7 @@
 # The Exa Index - Exa
 
 > **Source:** https://docs.exa.ai/reference/the-exa-index  
-> **Last Updated:** 2025-07-16T10:34:39.331Z
+> **Last Updated:** 2025-07-31T04:44:28.854Z
 
 ---
 
@@ -31,7 +31,7 @@ The Exa Index
 
 ](/websets/overview)[Changelog
 
-](/changelog/markdown-contents-as-default)
+](/changelog/geolocation-filter-support)
 
 *   [
     
@@ -255,7 +255,7 @@ The Exa Index
 
 * * *
 
-There are many types of content, and we’re constantly discovering new things to search for as well. If there’s anything you want to be more highly covered, just reach out to [\[email protected\]](/cdn-cgi/l/email-protection#93fbf6fffffcd3f6ebf2bdf2fa). See the following table for a high level overview of what is available in our index:
+There are many types of content, and we’re constantly discovering new things to search for as well. If there’s anything you want to be more highly covered, just reach out to [\[email protected\]](/cdn-cgi/l/email-protection#bed6dbd2d2d1fedbc6df90dfd7). See the following table for a high level overview of what is available in our index:
 
 Category
 
@@ -385,8 +385,8 @@ Can find some job listings
 
 [If you’re looking for a software engineering job at a small startup working on an important mission, check out](https://search.exa.ai/search?q=If+you%27re+looking+for+a+software+engineering+job+at+a+small+startup+working+on+an+important+mission%2C+check+out&filters=%7B%22numResults%22%3A30%2C%22domainFilterType%22%3A%22include%22%2C%22type%22%3A%22neural%22%2C%22useAutoprompt%22%3Afalse%2C%22resolvedSearchType%22%3A%22neural%22%7D&resolvedSearchType=neural)
 
+[How Exa Search Works](/reference/how-exa-search-works)[Contents retrieval with Exa API](/reference/contents-retrieval-with-exa-api)
+
 Assistant
 
 Responses are generated using AI and may contain mistakes.
-
-[How Exa Search Works](/reference/how-exa-search-works)[Contents retrieval with Exa API](/reference/contents-retrieval-with-exa-api)
