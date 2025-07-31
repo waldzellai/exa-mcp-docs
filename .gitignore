@@ -72,3 +72,5 @@ src/tools/start-tutorial.ts
 src/tools/get-status.ts
 
 package-lock.json
+REDUNDANCY_REPORT.md
+TODOS.md

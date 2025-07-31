@@ -5,11 +5,12 @@ A comprehensive Model Context Protocol (MCP) server providing AI assistants with
 ## How It Works
 
 When you ask your MCP client (such as Claude Desktop, Cursor IDE, or other MCP-compatible AI assistants) for help with Exa's technology, the assistant will automatically call this server to retrieve the relevant documentation, code examples, and integration guides. This means you can ask questions like:
-- "How do I use Exa's search API?"
-- "Show me an example of RAG with Exa"
-- "Help me integrate Exa with LangChain"
+- "How do I use Exa's neural search API?"
+- "Show me how to search for similar content with Exa"
+- "Help me find recent news articles using Exa"
+- "How do I integrate Exa with LangChain?"
 
-And your AI assistant will use this MCP server to provide accurate, up-to-date information from Exa's documentation.
+Your AI assistant will use this MCP server to provide accurate, up-to-date information from Exa's documentation.
 
 ## Features
 
@@ -63,11 +64,11 @@ Access version history and API changes
 
 ```bash
 # Run directly with npx
-npx @exa/mcp-docs-server
+npx @waldzellai/exa-mcp-docs
 
 # Or install globally
-npm install -g @exa/mcp-docs-server
-exa-docs-server
+npm install -g @waldzellai/exa-mcp-docs
+exa-mcp-docs
 ```
 
 ### MCP Client Configuration
@@ -81,7 +82,7 @@ Add to your Claude Desktop configuration (`~/.claude/claude_desktop_config.json`
   "mcpServers": {
     "exa-docs": {
       "command": "npx",
-      "args": ["-y", "@exa/mcp-docs-server"]
+      "args": ["-y", "@waldzellai/exa-mcp-docs"]
     }
   }
 }
@@ -96,7 +97,7 @@ Add to your Cursor MCP configuration:
   "mcpServers": {
     "exa-docs": {
       "command": "npx",
-      "args": ["-y", "@exa/mcp-docs-server"]
+      "args": ["-y", "@waldzellai/exa-mcp-docs"]
     }
   }
 }
@@ -111,7 +112,7 @@ If you have an Exa API key (optional for enhanced features):
   "mcpServers": {
     "exa-docs": {
       "command": "npx",
-      "args": ["-y", "@exa/mcp-docs-server"],
+      "args": ["-y", "@waldzellai/exa-mcp-docs"],
       "env": {
         "EXA_API_KEY": "your-api-key-here"
       }

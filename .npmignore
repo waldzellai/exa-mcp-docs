@@ -63,3 +63,7 @@ src/tools/next-step.ts
 src/tools/reset-progress.ts
 src/tools/start-tutorial.ts
 src/tools/get-status.ts
+
+node_modules/
+REDUNDANCY_REPORT.md
+TODOS.md 
