@@ -1,6 +1,6 @@
 {
   "name": "@waldzellai/exa-mcp-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exa API Documentation MCP Server - Comprehensive offline-first access to Exa.ai documentation",
   "main": "dist/index.mjs",
   "bin": {
