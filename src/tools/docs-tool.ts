@@ -70,10 +70,12 @@ export class ExaDocsTool extends BaseTool {
   }
 
   private getOverview(): string {
+    this.ensureDocumentationLoaded();
     const categories = new Map<string, number>();
     
     for (const [, doc] of this.docs) {
       const mainCategory = doc.category.split('/')[0];
+      if (!mainCategory) continue;
       categories.set(mainCategory, (categories.get(mainCategory) || 0) + 1);
     }
 

@@ -55,6 +55,7 @@ export class ExaExamplesTool extends BaseTool {
   }
 
   private getExampleByName(name: string): DocumentationFile {
+    this.ensureDocumentationLoaded();
     // Try exact match first
     let targetPath = `examples/${name}.md`;
     let doc = this.docs.get(targetPath);
@@ -80,6 +81,7 @@ export class ExaExamplesTool extends BaseTool {
   }
 
   private getExamplesByUseCase(useCase: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const useCaseMap: Record<string, string[]> = {
       'research': ['exa-researcher', 'exa-research', 'company-analyst'],
       'rag': ['exa-rag', 'rag-in-langgraph'],
@@ -107,6 +109,7 @@ export class ExaExamplesTool extends BaseTool {
   }
 
   private getExamplesByLanguage(language: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const languageMap: Record<string, string[]> = {
       'python': ['python', 'py'],
       'typescript': ['typescript', 'ts'],

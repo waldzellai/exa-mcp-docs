@@ -41,6 +41,7 @@ export class ExaWebsetsTool extends BaseTool {
   }
 
   private getWebsetsByFeature(feature: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const [, doc] of this.docs) {
@@ -54,6 +55,7 @@ export class ExaWebsetsTool extends BaseTool {
   }
 
   private getWebsetsByOperation(operation: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const [, doc] of this.docs) {

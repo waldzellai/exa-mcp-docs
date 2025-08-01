@@ -48,6 +48,7 @@ export class ExaChangelogTool extends BaseTool {
   }
 
   private getChangesByVersion(version: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const [, doc] of this.docs) {
@@ -62,6 +63,7 @@ export class ExaChangelogTool extends BaseTool {
   }
 
   private getChangesByType(changeType: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const typeKeywords: Record<string, string[]> = {
       'breaking': ['breaking', 'break', 'removed', 'deprecated', 'incompatible'],
       'feature': ['feature', 'new', 'added', 'enhancement', 'improved'],
@@ -90,7 +92,8 @@ export class ExaChangelogTool extends BaseTool {
     return results.sort((a, b) => this.extractDate(b.content).localeCompare(this.extractDate(a.content)));
   }
 
-  private getChangesByDateRange(dateRange: { start?: string; end?: string }): DocumentationFile[] {
+  private getChangesByDateRange(dateRange: { start?: string | undefined; end?: string | undefined }): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     const start = dateRange.start ? new Date(dateRange.start) : null;
     const end = dateRange.end ? new Date(dateRange.end) : null;
@@ -145,8 +148,8 @@ export class ExaChangelogTool extends BaseTool {
     for (const line of lines) {
       for (const pattern of datePatterns) {
         const match = line.match(pattern);
-        if (match) {
-          return match[1];
+        if (match!) {
+          return match[1] || '';
         }
       }
     }
@@ -177,7 +180,7 @@ export class ExaChangelogTool extends BaseTool {
     return types;
   }
 
-  private formatResults(results: DocumentationFile[]): string {
+  protected override formatResults(results: DocumentationFile[]): string {
     if (results.length === 0) {
       return 'No changelog entries found matching your query.';
     }
@@ -320,8 +323,8 @@ export class ExaChangelogTool extends BaseTool {
     startDate.setDate(startDate.getDate() - days);
     
     return this.getChangesByDateRange({
-      start: startDate.toISOString(),
-      end: endDate.toISOString()
+      start: startDate.toISOString() as string,
+      end: endDate.toISOString() as string
     });
   }
 }
