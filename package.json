@@ -1,9 +1,9 @@
 {
   "name": "@waldzellai/exa-mcp-docs",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Exa API Documentation MCP Server - Comprehensive offline-first access to Exa.ai documentation",
   "main": "dist/index.js",
-  "module": "./src/index.ts",
+  "module": "./src/smithery.ts",
   "type": "module",
   "bin": {
     "exa-docs-server": "dist/index.js"
