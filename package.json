@@ -4,6 +4,7 @@
   "description": "Exa API Documentation MCP Server - Comprehensive offline-first access to Exa.ai documentation",
   "main": "dist/index.js",
   "module": "./src/index.ts",
+  "type": "module",
   "bin": {
     "exa-docs-server": "dist/index.js"
   },
@@ -21,7 +22,6 @@
     "exa",
     "mcp",
     "documentation",
-    "api",
     "search",
     "ai",
     "assistant"
