@@ -85,6 +85,7 @@ src/tools/get-status.ts
 package-lock.json
 REDUNDANCY_REPORT.md
 TODOS.md
+CHECKLIST.md
 tutorials/
 
 specs/
