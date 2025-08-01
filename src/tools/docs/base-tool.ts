@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 export interface DocumentationFile {
   path: string;
@@ -23,8 +24,20 @@ export abstract class BaseTool {
   private docsLoaded: boolean = false;
 
   constructor(docsPath?: string) {
-    // Use absolute path to the documentation directory
-    this.docsPath = docsPath || '/Users/b.c.nims/glassBead-MASTER/Exa/exa-docs-server/exa-mcp-docs/.exa-docs';
+    if (docsPath) {
+      this.docsPath = docsPath;
+    } else {
+      // Try to resolve the path relative to this file
+      try {
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+        // Go up to the project root and look for .exa-docs
+        this.docsPath = path.join(__dirname, '../../../.exa-docs');
+      } catch {
+        // Fallback to current working directory
+        this.docsPath = path.join(process.cwd(), '.exa-docs');
+      }
+    }
     // Remove eager loading - documentation will be loaded on first use
   }
 
@@ -40,12 +53,32 @@ export abstract class BaseTool {
   }
 
   protected loadDocumentation(): void {
-    if (!fs.existsSync(this.docsPath)) {
-      console.error(`Documentation path ${this.docsPath} does not exist`);
-      return;
+    // Try multiple paths to find the documentation
+    const pathsToTry = [
+      this.docsPath,
+      path.join(process.cwd(), '.exa-docs'),
+      '/app/.exa-docs', // Docker/Smithery path
+    ];
+
+    // Try to add path relative to this file
+    try {
+      const __filename = fileURLToPath(import.meta.url);
+      const __dirname = path.dirname(__filename);
+      pathsToTry.push(path.join(__dirname, '../../../.exa-docs'));
+    } catch {
+      // Ignore if we can't resolve the path
     }
 
-    this.loadDocsFromDirectory(this.docsPath);
+    for (const tryPath of pathsToTry) {
+      if (fs.existsSync(tryPath)) {
+        this.docsPath = tryPath;
+        console.log(`Found documentation at: ${tryPath}`);
+        this.loadDocsFromDirectory(this.docsPath);
+        return;
+      }
+    }
+
+    console.error(`Documentation directory not found in any of: ${pathsToTry.join(', ')}`);
   }
 
   private loadDocsFromDirectory(dir: string, category: string = ''): void {
