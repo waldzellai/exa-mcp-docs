@@ -1,25 +1,31 @@
 # Exa Documentation MCP Server
 
-A comprehensive Model Context Protocol (MCP) server providing AI assistants with complete, offline-first access to Exa.ai's documentation. This server enables developers to seamlessly integrate Exa's search capabilities into their workflows through their AI assistants.
+A Model Context Protocol (MCP) server that helps developers build powerful applications with Exa's neural search API. Get instant access to documentation, code examples, and integration guides directly through your AI assistant while coding.
+
+## Why Use This?
+
+**Build Faster with Exa**: Whether you're creating a research tool, news aggregator, competitive intelligence system, or RAG application, this server gives you instant access to everything you need to implement Exa's powerful search capabilities.
+
+**Perfect for:**
+- 🔍 Building semantic search into your applications
+- 📰 Creating real-time news and content monitoring systems
+- 🤖 Implementing RAG (Retrieval-Augmented Generation) pipelines
+- 📊 Developing competitive intelligence and market research tools
+- 🎯 Finding similar content and recommendations
+- 📝 Building content curation and summarization tools
 
 ## How It Works
 
-When you ask your MCP client (such as Claude Desktop, Cursor IDE, or other MCP-compatible AI assistants) for help with Exa's technology, the assistant will automatically call this server to retrieve the relevant documentation, code examples, and integration guides. This means you can ask questions like:
-- "How do I use Exa's neural search API?"
-- "Show me how to search for similar content with Exa"
-- "Help me find recent news articles using Exa"
-- "How do I integrate Exa with LangChain?"
-
-Your AI assistant will use this MCP server to provide accurate, up-to-date information from Exa's documentation.
+Your AI assistant automatically fetches the exact Exa documentation, code examples, and best practices you need while you're coding. Just ask natural questions about implementing Exa features, and get immediate, context-aware answers with working code examples.
 
 ## Features
 
-- **Complete Documentation Coverage**: Access to all Exa API documentation, examples, integrations, and changelogs
-- **Offline-First Architecture**: No internet connection required for basic functionality
-- **Single Unified Tool**: One `exa_docs` tool that intelligently interprets natural language queries
-- **Smart Query Understanding**: Automatically determines the best documentation to retrieve based on your question
-- **Context-Aware Search**: Searches across all documentation types to find the most relevant information
-- **Pre-Scraped Content**: All documentation is pre-processed and bundled for fast access
+- **Developer-Focused**: Get exactly what you need to build with Exa's API, when you need it
+- **Complete Code Examples**: Production-ready examples for common use cases like news monitoring, research tools, and RAG
+- **Smart Context Understanding**: Knows when you need API docs, code examples, or troubleshooting help
+- **Framework Integration Guides**: Instant access to LangChain, LlamaIndex, Next.js, and other integration docs
+- **Offline-First**: All documentation cached locally for fast, reliable access
+- **Real-Time Updates**: Stay current with the latest API changes and new features
 
 ## How to Use: Simply Ask Natural Questions
 
