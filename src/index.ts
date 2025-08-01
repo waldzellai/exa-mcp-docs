@@ -10,19 +10,14 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 
 import { UnifiedExaTool, UnifiedExaToolSchema } from './tools/unified-exa-tool.js';
-import { IntelligentUnifiedExaTool, EnhancedUnifiedExaToolSchema } from './tools/intelligent-unified-tool.js';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
-// Check if intelligent mode is enabled
-const INTELLIGENT_MODE = process.env.EXA_INTELLIGENT_MODE === 'true';
-
 // Lazy initialization of tools
-let unifiedTool: UnifiedExaTool | IntelligentUnifiedExaTool | null = null;
-const toolSchema = INTELLIGENT_MODE ? EnhancedUnifiedExaToolSchema : UnifiedExaToolSchema;
+let unifiedTool: UnifiedExaTool | null = null;
 
 function getUnifiedTool() {
   if (!unifiedTool) {
-    unifiedTool = INTELLIGENT_MODE ? new IntelligentUnifiedExaTool() : new UnifiedExaTool();
+    unifiedTool = new UnifiedExaTool();
   }
   return unifiedTool;
 }
@@ -43,12 +38,10 @@ async function main() {
 
   // List tools handler
   server.setRequestHandler(ListToolsRequestSchema, async () => {
-    const toolDefinition = INTELLIGENT_MODE 
-      ? IntelligentUnifiedExaTool.getEnhancedDefinition()
-      : UnifiedExaTool.getDefinition();
+    const toolDefinition = UnifiedExaTool.getDefinition();
     
     // Convert zod schema to JSON Schema format
-    const jsonSchema = zodToJsonSchema(toolSchema, {
+    const jsonSchema = zodToJsonSchema(UnifiedExaToolSchema, {
       target: 'openApi3',
       $refStrategy: 'none',
     });
@@ -69,22 +62,14 @@ async function main() {
     const { name, arguments: args } = request.params;
 
     try {
-      const validNames = INTELLIGENT_MODE ? ['exa', 'exa_docs'] : ['exa_docs'];
-      if (!validNames.includes(name)) {
+      if (name !== 'exa_docs') {
         throw new McpError(ErrorCode.MethodNotFound, `Unknown tool: ${name}`);
       }
 
-      let result: string;
-      
-      // Handle natural language queries in intelligent mode
+      // Validate and parse arguments
+      const parsedArgs = UnifiedExaToolSchema.parse(args || {});
       const tool = getUnifiedTool();
-      if (INTELLIGENT_MODE && args && 'query' in args && typeof args.query === 'string' && !('operation' in args)) {
-        result = await (tool as IntelligentUnifiedExaTool).executeNatural(args.query);
-      } else {
-        // Validate and parse arguments for structured queries
-        const parsedArgs = UnifiedExaToolSchema.parse(args || {});
-        result = await tool.execute(parsedArgs);
-      }
+      const result = await tool.execute(parsedArgs);
       
       return { content: [{ type: 'text', text: result }] };
     } catch (error) {
