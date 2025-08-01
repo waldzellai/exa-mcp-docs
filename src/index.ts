@@ -16,9 +16,16 @@ import { zodToJsonSchema } from 'zod-to-json-schema';
 // Check if intelligent mode is enabled
 const INTELLIGENT_MODE = process.env.EXA_INTELLIGENT_MODE === 'true';
 
-// Initialize appropriate tool instance
-const unifiedTool = INTELLIGENT_MODE ? new IntelligentUnifiedExaTool() : new UnifiedExaTool();
+// Lazy initialization of tools
+let unifiedTool: UnifiedExaTool | IntelligentUnifiedExaTool | null = null;
 const toolSchema = INTELLIGENT_MODE ? EnhancedUnifiedExaToolSchema : UnifiedExaToolSchema;
+
+function getUnifiedTool() {
+  if (!unifiedTool) {
+    unifiedTool = INTELLIGENT_MODE ? new IntelligentUnifiedExaTool() : new UnifiedExaTool();
+  }
+  return unifiedTool;
+}
 
 // Main entry point
 async function main() {
@@ -70,12 +77,13 @@ async function main() {
       let result: string;
       
       // Handle natural language queries in intelligent mode
+      const tool = getUnifiedTool();
       if (INTELLIGENT_MODE && args && 'query' in args && typeof args.query === 'string' && !('operation' in args)) {
-        result = await (unifiedTool as IntelligentUnifiedExaTool).executeNatural(args.query);
+        result = await (tool as IntelligentUnifiedExaTool).executeNatural(args.query);
       } else {
         // Validate and parse arguments for structured queries
         const parsedArgs = UnifiedExaToolSchema.parse(args || {});
-        result = await unifiedTool.execute(parsedArgs);
+        result = await tool.execute(parsedArgs);
       }
       
       return { content: [{ type: 'text', text: result }] };

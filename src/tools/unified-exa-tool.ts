@@ -106,18 +106,49 @@ const UnifiedExaToolSchema = BaseOperationSchema.extend({
 });
 
 export class UnifiedExaTool {
-  private docsTool: ExaDocsTool;
-  private examplesTool: ExaExamplesTool;
-  private integrationsTool: ExaIntegrationsTool;
-  private websetsTool: ExaWebsetsTool;
-  private changelogTool: ExaChangelogTool;
+  private docsTool: ExaDocsTool | null = null;
+  private examplesTool: ExaExamplesTool | null = null;
+  private integrationsTool: ExaIntegrationsTool | null = null;
+  private websetsTool: ExaWebsetsTool | null = null;
+  private changelogTool: ExaChangelogTool | null = null;
 
   constructor() {
-    this.docsTool = new ExaDocsTool();
-    this.examplesTool = new ExaExamplesTool();
-    this.integrationsTool = new ExaIntegrationsTool();
-    this.websetsTool = new ExaWebsetsTool();
-    this.changelogTool = new ExaChangelogTool();
+    // Lazy initialization - tools will be created when first used
+  }
+
+  private getDocsTool(): ExaDocsTool {
+    if (!this.docsTool) {
+      this.docsTool = new ExaDocsTool();
+    }
+    return this.docsTool;
+  }
+
+  private getExamplesTool(): ExaExamplesTool {
+    if (!this.examplesTool) {
+      this.examplesTool = new ExaExamplesTool();
+    }
+    return this.examplesTool;
+  }
+
+  private getIntegrationsTool(): ExaIntegrationsTool {
+    if (!this.integrationsTool) {
+      this.integrationsTool = new ExaIntegrationsTool();
+    }
+    return this.integrationsTool;
+  }
+
+  private getWebsetsTool(): ExaWebsetsTool {
+    if (!this.websetsTool) {
+      this.websetsTool = new ExaWebsetsTool();
+    }
+    return this.websetsTool;
+  }
+
+  private getChangelogTool(): ExaChangelogTool {
+    if (!this.changelogTool) {
+      this.changelogTool = new ExaChangelogTool();
+    }
+    return this.changelogTool;
   }
 
   static getDefinition() {
@@ -190,7 +221,7 @@ Available operations:
 
   // Documentation handlers
   private async handleGetDocs(params: any): Promise<string> {
-    return await this.docsTool.execute({
+    return await this.getDocsTool().execute({
       paths: params?.paths,
       category: params?.category,
       query: params?.query
@@ -201,7 +232,7 @@ Available operations:
     if (!params?.query || params.query.length === 0) {
       throw new Error("Query keywords are required for searching documentation");
     }
-    return await this.docsTool.execute({
+    return await this.getDocsTool().execute({
       query: params.query,
       category: params?.category
     });
@@ -210,7 +241,7 @@ Available operations:
   // Example handlers
   private async handleListExamples(params: any): Promise<string> {
     // List examples without specific filters returns all
-    return await this.examplesTool.execute({
+    return await this.getExamplesTool().execute({
       useCase: params?.useCase,
       language: params?.language
     });
@@ -220,7 +251,7 @@ Available operations:
     if (!params?.name) {
       throw new Error("Example name is required");
     }
-    return await this.examplesTool.execute({
+    return await this.getExamplesTool().execute({
       example: params.name
     });
   }
@@ -229,7 +260,7 @@ Available operations:
     if (!params?.query || params.query.length === 0) {
       throw new Error("Query keywords are required for searching examples");
     }
-    return await this.examplesTool.execute({
+    return await this.getExamplesTool().execute({
       query: params.query,
       useCase: params?.useCase,
       language: params?.language
@@ -241,7 +272,7 @@ Available operations:
     if (!params?.platform) {
       throw new Error("Platform is required to get integration documentation");
     }
-    return await this.integrationsTool.execute({
+    return await this.getIntegrationsTool().execute({
       platform: params.platform,
       method: params?.method,
       topic: params?.topic
@@ -250,14 +281,14 @@ Available operations:
 
   private async handleListIntegrations(params: any): Promise<string> {
     // List all available integrations
-    return await this.integrationsTool.execute({});
+    return await this.getIntegrationsTool().execute({});
   }
 
   private async handleSearchIntegrations(params: any): Promise<string> {
     if (!params?.query || params.query.length === 0) {
       throw new Error("Query keywords are required for searching integrations");
     }
-    return await this.integrationsTool.execute({
+    return await this.getIntegrationsTool().execute({
       query: params.query,
       platform: params?.platform
     });
@@ -265,7 +296,7 @@ Available operations:
 
   // Websets handlers
   private async handleGetWebsetsDocs(params: any): Promise<string> {
-    return await this.websetsTool.execute({
+    return await this.getWebsetsTool().execute({
       feature: params?.feature,
       operation: params?.operation,
       includeExamples: params?.includeExamples
@@ -274,7 +305,7 @@ Available operations:
 
   private async handleSearchWebsets(params: any): Promise<string> {
     // For websets, we'll interpret search as looking for specific features
-    return await this.websetsTool.execute({
+    return await this.getWebsetsTool().execute({
       feature: params?.feature,
       operation: params?.operation,
       includeExamples: params?.includeExamples
@@ -283,7 +314,7 @@ Available operations:
 
   // Changelog handlers
   private async handleGetChangelog(params: any): Promise<string> {
-    return await this.changelogTool.execute({
+    return await this.getChangelogTool().execute({
       version: params?.version,
       changeType: params?.changeType,
       dateRange: params?.dateRange
@@ -291,7 +322,7 @@ Available operations:
   }
 
   private async handleGetLatestChanges(params: any): Promise<string> {
-    return await this.changelogTool.execute({
+    return await this.getChangelogTool().execute({
       version: 'latest',
       changeType: params?.changeType
     });
@@ -299,7 +330,7 @@ Available operations:
 
   private async handleSearchChanges(params: any): Promise<string> {
     // Changelog tool doesn't have direct search, but we can filter by type
-    return await this.changelogTool.execute({
+    return await this.getChangelogTool().execute({
       changeType: params?.changeType,
       dateRange: params?.dateRange
     });
