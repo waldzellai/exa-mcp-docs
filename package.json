@@ -1,15 +1,15 @@
 {
   "name": "@waldzellai/exa-mcp-docs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Exa API Documentation MCP Server - Comprehensive offline-first access to Exa.ai documentation",
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "module": "./src/index.ts",
   "bin": {
-    "exa-docs-server": "dist/index.mjs"
+    "exa-docs-server": "dist/index.js"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "scrape": "tsx scripts/scrape-exa-docs.ts",
     "update-docs": "npm run scrape && git add .exa-docs",
     "test": "vitest",
@@ -29,7 +29,6 @@
   "author": "Exa Labs",
   "license": "MIT",
   "dependencies": {
-    "@mastra/mcp-docs-server": "^0.13.8",
     "@modelcontextprotocol/sdk": "^1.7.0",
     "claude-flow": "^2.0.0-alpha.81",
     "zod": "^3.22.4",
@@ -40,7 +39,6 @@
     "@types/turndown": "^5.0.4",
     "cheerio": "^1.0.0-rc.12",
     "node-fetch": "^3.3.2",
-    "tsup": "^8.0.0",
     "tsx": "^4.7.0",
     "turndown": "^7.1.2",
     "typescript": "^5.3.3",
