@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { fileURLToPath } from 'url';
 
 export interface DocumentationFile {
   path: string;
@@ -27,16 +26,7 @@ export abstract class BaseTool {
     if (docsPath) {
       this.docsPath = docsPath;
     } else {
-      // Try to resolve the path relative to this file
-      try {
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-        // Go up to the project root and look for .exa-docs
-        this.docsPath = path.join(__dirname, '../../../.exa-docs');
-      } catch {
-        // Fallback to current working directory
-        this.docsPath = path.join(process.cwd(), '.exa-docs');
-      }
+      this.docsPath = '/app/.exa-docs';
     }
     // Remove eager loading - documentation will be loaded on first use
   }
@@ -60,14 +50,6 @@ export abstract class BaseTool {
       '/app/.exa-docs', // Docker/Smithery path
     ];
 
-    // Try to add path relative to this file
-    try {
-      const __filename = fileURLToPath(import.meta.url);
-      const __dirname = path.dirname(__filename);
-      pathsToTry.push(path.join(__dirname, '../../../.exa-docs'));
-    } catch {
-      // Ignore if we can't resolve the path
-    }
 
     for (const tryPath of pathsToTry) {
       if (fs.existsSync(tryPath)) {
