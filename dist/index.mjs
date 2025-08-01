@@ -4062,9 +4062,19 @@ import * as path from "path";
 var BaseTool = class {
   docsPath;
   docs = /* @__PURE__ */ new Map();
+  docsLoaded = false;
   constructor(docsPath) {
     this.docsPath = docsPath || "/Users/b.c.nims/glassBead-MASTER/Exa/exa-docs-server/exa-mcp-docs/.exa-docs";
-    this.loadDocumentation();
+  }
+  /**
+   * Ensures documentation is loaded before any operations that require it.
+   * This implements lazy loading to improve build performance.
+   */
+  ensureDocumentationLoaded() {
+    if (!this.docsLoaded) {
+      this.loadDocumentation();
+      this.docsLoaded = true;
+    }
   }
   loadDocumentation() {
     if (!fs.existsSync(this.docsPath)) {
@@ -4106,6 +4116,7 @@ var BaseTool = class {
     return "Untitled";
   }
   searchDocumentation(query, category) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [filePath, doc] of this.docs) {
       if (category && !doc.category.includes(category)) {
@@ -4138,6 +4149,7 @@ var BaseTool = class {
     return results.sort((a, b) => b.relevanceScore - a.relevanceScore);
   }
   getDocumentationByPath(paths) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const requestedPath of paths) {
       let found = false;
@@ -4167,6 +4179,7 @@ ${fuzzyMatches.slice(0, 5).map((p) => `- ${p}`).join("\n")}`,
     return results;
   }
   findSimilarPaths(target) {
+    this.ensureDocumentationLoaded();
     const allPaths = Array.from(this.docs.keys());
     const similarities = allPaths.map((path2) => ({
       path: path2,
@@ -4178,7 +4191,7 @@ ${fuzzyMatches.slice(0, 5).map((p) => `- ${p}`).join("\n")}`,
     const aLower = a.toLowerCase();
     const bLower = b.toLowerCase();
     if (bLower.includes(aLower)) return 0.9;
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(0));
     for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
     for (let j = 0; j <= b.length; j++) matrix[j][0] = j;
     for (let j = 1; j <= b.length; j++) {
@@ -4222,6 +4235,7 @@ ${fuzzyMatches.slice(0, 5).map((p) => `- ${p}`).join("\n")}`,
     return output.trim();
   }
   getDocumentationByCategory(category) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [, doc] of this.docs) {
       if (doc.category === category || doc.category.startsWith(`${category}/`)) {
@@ -4231,6 +4245,7 @@ ${fuzzyMatches.slice(0, 5).map((p) => `- ${p}`).join("\n")}`,
     return results.sort((a, b) => a.path.localeCompare(b.path));
   }
   listAvailablePaths(category) {
+    this.ensureDocumentationLoaded();
     const paths = [];
     for (const [filePath, doc] of this.docs) {
       if (!category || doc.category.includes(category)) {
@@ -4301,9 +4316,11 @@ var ExaDocsTool = class extends BaseTool {
     return output.trim();
   }
   getOverview() {
+    this.ensureDocumentationLoaded();
     const categories = /* @__PURE__ */ new Map();
     for (const [, doc] of this.docs) {
       const mainCategory = doc.category.split("/")[0];
+      if (!mainCategory) continue;
       categories.set(mainCategory, (categories.get(mainCategory) || 0) + 1);
     }
     let output = "# Exa Documentation Overview\n\n";
@@ -4403,6 +4420,7 @@ var ExaExamplesTool = class extends BaseTool {
     }
   }
   getExampleByName(name) {
+    this.ensureDocumentationLoaded();
     let targetPath = `examples/${name}.md`;
     let doc = this.docs.get(targetPath);
     if (doc) return doc;
@@ -4424,6 +4442,7 @@ ${this.listAvailableExamples().join("\n")}`,
     };
   }
   getExamplesByUseCase(useCase) {
+    this.ensureDocumentationLoaded();
     const useCaseMap = {
       "research": ["exa-researcher", "exa-research", "company-analyst"],
       "rag": ["exa-rag", "rag-in-langgraph"],
@@ -4447,6 +4466,7 @@ ${this.listAvailableExamples().join("\n")}`,
     return results;
   }
   getExamplesByLanguage(language) {
+    this.ensureDocumentationLoaded();
     const languageMap = {
       "python": ["python", "py"],
       "typescript": ["typescript", "ts"],
@@ -4633,6 +4653,7 @@ var ExaIntegrationsTool = class extends BaseTool {
     }
   }
   getIntegrationsByPlatform(platform) {
+    this.ensureDocumentationLoaded();
     const platformMap = {
       "python-sdk": ["sdks/python-sdk-specification", "sdks/cheat-sheet"],
       "js-sdk": ["sdks/typescript-sdk-specification", "sdks/cheat-sheet"],
@@ -4661,6 +4682,7 @@ var ExaIntegrationsTool = class extends BaseTool {
     return results;
   }
   getIntegrationsByTopic(topic) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [, doc] of this.docs) {
       if ((doc.category === "integrations" || doc.category === "sdks" || doc.category === "reference") && (doc.title.toLowerCase().includes(topic.toLowerCase()) || doc.content.toLowerCase().includes(topic.toLowerCase()))) {
@@ -4872,6 +4894,7 @@ var ExaWebsetsTool = class extends BaseTool {
     }
   }
   getWebsetsByFeature(feature) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [, doc] of this.docs) {
       if (doc.category.startsWith("websets") && (doc.path.includes(`/${feature}/`) || doc.path.includes(`${feature}.md`))) {
@@ -4881,6 +4904,7 @@ var ExaWebsetsTool = class extends BaseTool {
     return results.sort((a, b) => a.path.localeCompare(b.path));
   }
   getWebsetsByOperation(operation) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [, doc] of this.docs) {
       if (doc.category.startsWith("websets") && (doc.path.includes(`${operation}-`) || doc.title.toLowerCase().includes(operation))) {
@@ -5122,6 +5146,7 @@ var ExaChangelogTool = class extends BaseTool {
     }
   }
   getChangesByVersion(version) {
+    this.ensureDocumentationLoaded();
     const results = [];
     for (const [, doc] of this.docs) {
       if (doc.category === "changelog" && (doc.content.toLowerCase().includes(version.toLowerCase()) || doc.title.toLowerCase().includes(version.toLowerCase()))) {
@@ -5131,6 +5156,7 @@ var ExaChangelogTool = class extends BaseTool {
     return results.sort((a, b) => this.extractDate(b.content).localeCompare(this.extractDate(a.content)));
   }
   getChangesByType(changeType) {
+    this.ensureDocumentationLoaded();
     const typeKeywords = {
       "breaking": ["breaking", "break", "removed", "deprecated", "incompatible"],
       "feature": ["feature", "new", "added", "enhancement", "improved"],
@@ -5155,6 +5181,7 @@ var ExaChangelogTool = class extends BaseTool {
     return results.sort((a, b) => this.extractDate(b.content).localeCompare(this.extractDate(a.content)));
   }
   getChangesByDateRange(dateRange) {
+    this.ensureDocumentationLoaded();
     const results = [];
     const start = dateRange.start ? new Date(dateRange.start) : null;
     const end = dateRange.end ? new Date(dateRange.end) : null;
@@ -5200,7 +5227,7 @@ var ExaChangelogTool = class extends BaseTool {
       for (const pattern of datePatterns) {
         const match = line.match(pattern);
         if (match) {
-          return match[1];
+          return match[1] || "";
         }
       }
     }
@@ -5372,7 +5399,7 @@ async function main() {
   const server = new Server(
     {
       name: "exa-docs-server",
-      version: "1.0.0"
+      version: "1.0.1"
     },
     {
       capabilities: {

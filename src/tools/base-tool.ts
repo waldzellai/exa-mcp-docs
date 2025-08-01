@@ -20,11 +20,23 @@ export interface SearchResult {
 export abstract class BaseTool {
   protected docsPath: string;
   protected docs: Map<string, DocumentationFile> = new Map();
+  private docsLoaded: boolean = false;
 
   constructor(docsPath?: string) {
     // Use absolute path to the documentation directory
     this.docsPath = docsPath || '/Users/b.c.nims/glassBead-MASTER/Exa/exa-docs-server/exa-mcp-docs/.exa-docs';
-    this.loadDocumentation();
+    // Remove eager loading - documentation will be loaded on first use
+  }
+
+  /**
+   * Ensures documentation is loaded before any operations that require it.
+   * This implements lazy loading to improve build performance.
+   */
+  protected ensureDocumentationLoaded(): void {
+    if (!this.docsLoaded) {
+      this.loadDocumentation();
+      this.docsLoaded = true;
+    }
   }
 
   protected loadDocumentation(): void {
@@ -74,6 +86,7 @@ export abstract class BaseTool {
   }
 
   protected searchDocumentation(query: string[], category?: string): SearchResult[] {
+    this.ensureDocumentationLoaded();
     const results: SearchResult[] = [];
     
     for (const [filePath, doc] of this.docs) {
@@ -114,6 +127,7 @@ export abstract class BaseTool {
   }
 
   protected getDocumentationByPath(paths: string[]): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const requestedPath of paths) {
@@ -146,6 +160,7 @@ export abstract class BaseTool {
   }
 
   private findSimilarPaths(target: string): string[] {
+    this.ensureDocumentationLoaded();
     const allPaths = Array.from(this.docs.keys());
     const similarities = allPaths.map(path => ({
       path,
@@ -166,24 +181,24 @@ export abstract class BaseTool {
     if (bLower.includes(aLower)) return 0.9;
     
     // Levenshtein distance-based similarity
-    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+    const matrix: number[][] = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(0));
     
-    for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
-    for (let j = 0; j <= b.length; j++) matrix[j][0] = j;
+    for (let i = 0; i <= a.length; i++) matrix[0]![i] = i;
+    for (let j = 0; j <= b.length; j++) matrix[j]![0] = j;
     
     for (let j = 1; j <= b.length; j++) {
       for (let i = 1; i <= a.length; i++) {
         const cost = aLower[i - 1] === bLower[j - 1] ? 0 : 1;
-        matrix[j][i] = Math.min(
-          matrix[j - 1][i] + 1,
-          matrix[j][i - 1] + 1,
-          matrix[j - 1][i - 1] + cost
+        matrix[j]![i] = Math.min(
+          matrix[j - 1]![i]! + 1,
+          matrix[j]![i - 1]! + 1,
+          matrix[j - 1]![i - 1]! + cost
         );
       }
     }
     
     const maxLen = Math.max(a.length, b.length);
-    return 1 - (matrix[b.length][a.length] / maxLen);
+    return 1 - (matrix[b.length]![a.length]! / maxLen);
   }
 
   protected truncateContent(content: string, maxLength: number): string {
@@ -217,6 +232,7 @@ export abstract class BaseTool {
   }
 
   protected getDocumentationByCategory(category: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const [, doc] of this.docs) {
@@ -229,6 +245,7 @@ export abstract class BaseTool {
   }
 
   protected listAvailablePaths(category?: string): string[] {
+    this.ensureDocumentationLoaded();
     const paths: string[] = [];
     
     for (const [filePath, doc] of this.docs) {
