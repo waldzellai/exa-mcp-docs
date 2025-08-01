@@ -88,7 +88,7 @@ async function main() {
   // Start the server
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error(`Exa Documentation MCP Server running on stdio (${INTELLIGENT_MODE ? 'Intelligent' : 'Standard'} mode)`);
+  // Don't write to stderr after connecting - it can interfere with stdio protocol
 }
 
 // Run the server

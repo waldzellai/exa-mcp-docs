@@ -72,13 +72,13 @@ export abstract class BaseTool {
     for (const tryPath of pathsToTry) {
       if (fs.existsSync(tryPath)) {
         this.docsPath = tryPath;
-        console.log(`Found documentation at: ${tryPath}`);
+        // Found documentation at tryPath
         this.loadDocsFromDirectory(this.docsPath);
         return;
       }
     }
 
-    console.error(`Documentation directory not found in any of: ${pathsToTry.join(', ')}`);
+    // Documentation directory not found - will return empty results
   }
 
   private loadDocsFromDirectory(dir: string, category: string = ''): void {
