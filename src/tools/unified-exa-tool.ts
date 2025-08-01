@@ -7,11 +7,11 @@
  */
 
 import { z } from 'zod';
-import { ExaDocsTool } from './docs-tool.js';
-import { ExaExamplesTool } from './examples-tool.js';
-import { ExaIntegrationsTool } from './integrations-tool.js';
-import { ExaWebsetsTool } from './websets-tool.js';
-import { ExaChangelogTool } from './changelog-tool.js';
+import { ExaDocsTool } from './docs/docs-tool.js';
+import { ExaExamplesTool } from './docs/examples-tool.js';
+import { ExaIntegrationsTool } from './docs/integrations-tool.js';
+import { ExaWebsetsTool } from './docs/websets-tool.js';
+import { ExaChangelogTool } from './docs/changelog-tool.js';
 
 // Operation schemas with progressive disclosure
 const BaseOperationSchema = z.object({
