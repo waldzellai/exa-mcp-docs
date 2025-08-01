@@ -23,7 +23,7 @@ export class PathResolver {
     for (const candidate of candidates) {
       if (await this.isValidDocsPath(candidate)) {
         this.docsPath = candidate;
-        console.log(`Found .exa-docs at: ${candidate}`);
+        // Found .exa-docs at candidate
         return candidate;
       }
     }

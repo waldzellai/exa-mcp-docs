@@ -64,6 +64,7 @@ export class ExaIntegrationsTool extends BaseTool {
   }
 
   private getIntegrationsByPlatform(platform: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const platformMap: Record<string, string[]> = {
       'python-sdk': ['sdks/python-sdk-specification', 'sdks/cheat-sheet'],
       'js-sdk': ['sdks/typescript-sdk-specification', 'sdks/cheat-sheet'],
@@ -101,6 +102,7 @@ export class ExaIntegrationsTool extends BaseTool {
   }
 
   private getIntegrationsByTopic(topic: string): DocumentationFile[] {
+    this.ensureDocumentationLoaded();
     const results: DocumentationFile[] = [];
     
     for (const [, doc] of this.docs) {
