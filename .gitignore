@@ -70,6 +70,9 @@ temp/
 local-notes.md
 scratch/
 src/tutorial/
+.claude/
+.claude-flow/
+.swarm/
 
 # Documentation build artifacts (keep .exa-docs for npm)
 docs-build/
