@@ -93,6 +93,6 @@ async function main() {
 
 // Run the server
 main().catch((error) => {
-  console.error('Fatal error:', error);
+  // Cannot use console.error in MCP stdio servers - just exit with error code
   process.exit(1);
 });
